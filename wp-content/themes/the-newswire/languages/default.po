@@ -1,0 +1,615 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: the newswire\n"
+"POT-Creation-Date: 2014-02-04 16:01+0800\n"
+"PO-Revision-Date: 2014-02-04 16:01+0800\n"
+"Last-Translator: ed cardinal <lizardking67@gmail.com>\n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.3\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: C:\\xampp\\htdocs\\wordpress\\wp-content\\themes"
+"\\newswire\n"
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/404.php:9
+msgid "Error 404 - Page Not Found"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/404.php:13
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching, or one of the links below, can help."
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/404.php:19
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/search.php:50
+msgid "Most Used Categories"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/404.php:27
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/search.php:58
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/archive.php:13
+#, php-format
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/archive.php:15
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/archive.php:17
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/archive.php:19
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:104
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/sidebar-home.php:44
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/sidebar-posts.php:44
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/sidebar.php:44
+msgid "Archives"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/archive.php:54
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/author.php:58
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/category.php:46
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/index.php:107
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/search.php:38
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/tag.php:52
+msgid "Nothing Found"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/archive.php:58
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/author.php:62
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/category.php:50
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/index.php:111
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/tag.php:56
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/author.php:20
+#, php-format
+msgid "Author: %s"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/category.php:10
+#, php-format
+msgid "Category: %s"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/comments.php:8
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/comments.php:39
+msgid "Comment navigation"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/comments.php:40
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/comments.php:41
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/comments.php:51
+msgid "Comments are closed."
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-aside.php:17
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-audio.php:17
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-chat.php:17
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-gallery.php:58
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-image.php:26
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-link.php:17
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-quote.php:17
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-status.php:17
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-video.php:12
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-aside.php:18
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-audio.php:18
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-chat.php:18
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-gallery.php:71
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-image.php:27
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-link.php:18
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-page.php:9
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-quote.php:18
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-single.php:14
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-status.php:18
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-video.php:13
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/image.php:78
+msgid "Pages:"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-aside.php:31
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-audio.php:28
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-chat.php:27
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-gallery.php:84
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-gallery.php:95
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-gallery.php:117
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-image.php:37
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-link.php:27
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-quote.php:31
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-single.php:20
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-status.php:31
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-video.php:23
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content.php:39
+msgid ", "
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-aside.php:35
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-audio.php:32
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-chat.php:31
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-gallery.php:121
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-image.php:41
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-link.php:31
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-quote.php:35
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-single.php:24
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-status.php:35
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-video.php:27
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content.php:43
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:730
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-gallery.php:88
+#, php-format
+msgid "Posted in %1$s"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-gallery.php:99
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-gallery.php:106
+msgid "Leave a comment"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-gallery.php:106
+msgid "1 Comment"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-gallery.php:106
+msgid "% Comments"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-gallery.php:110
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-page.php:11
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-single.php:42
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/image.php:24
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/image.php:92
+msgid "Edit"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/content-single.php:39
+#, php-format
+msgid "<span class=\"tag-meta\">Tagged %s</span>"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/footer.php:5
+msgid "&copy; "
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/footer.php:7
+msgid "- Powered by "
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/footer.php:7
+msgid "http://wordpress.org/"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/footer.php:7
+msgid "WordPress"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/footer.php:8
+msgid " and "
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/footer.php:8
+msgid "http://wpdevshed.com/"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/footer.php:8
+msgid "WP Dev Shed"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:33
+msgid "Top Navigation Menu"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:34
+msgid "Main Navigation Menu"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:101
+msgid "Category"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:102
+msgid "Tag"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:103
+msgid "Author"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:109
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:113
+msgid "Page "
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:140
+msgid "Site Logo"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:142
+msgid "Upload a logo to replace the default site name in the header"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:150
+msgid ""
+"Choose your logo (ideal width is 100-300px and ideal height is 40-100px)"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:163
+msgid "Site Title Color"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:176
+msgid "Theme Color Scheme"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:189
+msgid "Navigation Bar Background Color"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:211
+msgid "Banner Codes"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:213
+msgid "Enter the code for the header and sidebar banner."
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:222
+msgid "Header Banner (468 x 60)"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:233
+msgid "Sidebar Banner (max 300px wide)"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:241
+msgid "Social Media Icons"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:243
+msgid "Optional social media buttons in the header"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:251
+msgid "Enter your Facebook url"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:262
+msgid "Enter your Twitter url"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:273
+msgid "Enter your Google+ url"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:284
+msgid "Enter your Pinterest url"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:295
+msgid "Enter your Linkedin url"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:306
+msgid "Enter your Youtube url"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:317
+msgid "Enter your Tumblr url"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:328
+msgid "Enter your Instagram url"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:339
+msgid "Enter your Flickr url"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:350
+msgid "Enter your Vimeo url"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:361
+msgid "Enter your Yelp url"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:372
+msgid "Enter your RSS url"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:383
+msgid "Enter your Mailto url"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:393
+msgid "Slider Options"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:395
+msgid "Adjust the behavior of the image slider."
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:406
+msgid "Select Effect:"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:423
+msgid "Autoplay Speed in Seconds"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:431
+msgid "Fonts"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:433
+msgid "Choose Google fonts for Newswire"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:444
+msgid "Site Title (Logo) Font:"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:464
+msgid "Nav, Widget, Link Button, Footer:"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:484
+msgid "Headings, Post/Page Title"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:504
+msgid "Body Text"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:646
+msgid "Sidebar Home"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:655
+msgid "Sidebar Main"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:664
+msgid "Sidebar Posts"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:684
+msgid "Post navigation"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:694
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:698
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:720
+msgid "Pingback:"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:720
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:743
+msgid "(Edit)"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:733
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:741
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:766
+#, php-format
+msgid ""
+"<span class=\"sep\">Posted on </span><a href=\"%1$s\" title=\"%2$s\" rel="
+"\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\">%4$s</time></"
+"a><span class=\"byline\"> <span class=\"sep\"> by </span> <span class="
+"\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel="
+"\"author\">%7$s</a></span></span>"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:772
+#, php-format
+msgid "View all posts by %s"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:861
+msgid "&lsaquo; Prev"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:862
+msgid "Next &rsaquo;"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/functions.php:877
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/sidebar-home.php:35
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/sidebar-posts.php:35
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/sidebar.php:35
+msgid "Untitled"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/header.php:17
+msgid "x"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/header.php:37
+msgid "Facebook"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/header.php:41
+msgid "Twitter"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/header.php:45
+msgid "Google+"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/header.php:49
+msgid "Pinterest"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/header.php:53
+msgid "Linkedin"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/header.php:57
+msgid "Youtube"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/header.php:61
+msgid "Tumblr"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/header.php:65
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/header.php:69
+msgid "Instagram"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/header.php:73
+msgid "Vimeo"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/header.php:77
+msgid "Yelp"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/header.php:81
+msgid "RSS"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/header.php:85
+msgid "E-mail"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/header.php:114
+msgid "Main menu"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/header.php:115
+msgid "Skip to content"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/image.php:14
+#, php-format
+msgid ""
+"Published <span class=\"entry-date\"><abbr class=\"published\" title=\"%1$s"
+"\">%2$s</abbr></span> at <a href=\"%3$s\" title=\"Link to full-size image\">"
+"%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel="
+"\"gallery\">%7$s</a>"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/image.php:31
+msgid "&larr; Previous"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/image.php:32
+msgid "Next &rarr;"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/image.php:84
+#, php-format
+msgid ""
+"<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a "
+"comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" "
+"title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/image.php:86
+#, php-format
+msgid ""
+"Comments are closed, but you can leave a trackback: <a class=\"trackback-link"
+"\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback"
+"\">Trackback URL</a>."
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/image.php:88
+msgid ""
+"Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond"
+"\" title=\"Post a comment\">post a comment</a>."
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/image.php:90
+msgid "Both comments and trackbacks are currently closed."
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/index.php:55
+msgid "Continue Reading &rarr;"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/index.php:76
+msgid "Latest News"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/search.php:14
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/search.php:42
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/search.php:45
+msgid "Or you can try these links below."
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/sidebar-home.php:17
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/sidebar-posts.php:17
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/sidebar.php:17
+msgid "Categories"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/sidebar-home.php:27
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/sidebar-posts.php:27
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/sidebar.php:27
+msgid "Latest Posts"
+msgstr ""
+
+#: C:\xampp\htdocs\wordpress\wp-content\themes\newswire/tag.php:11
+#, php-format
+msgid "Tag: %s"
+msgstr ""

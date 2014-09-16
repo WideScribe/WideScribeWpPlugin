@@ -1,0 +1,253 @@
+/*
+Theme Name: Singl
+
+Adding support for language written in a Right To Left (RTL) direction is easy -
+it's just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+http://codex.wordpress.org/Right_to_Left_Language_Support
+
+*/
+
+
+/* =Reset
+----------------------------------------------- */
+
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+caption, th, td {
+	text-align: right;
+}
+
+
+/* =Global
+----------------------------------------------- */
+
+/* Text elements */
+ul,
+ol {
+	margin: 0 20px 20px 0;
+}
+li > ul,
+li > ol {
+	margin-left: auto;
+	margin-right: 20px;
+}
+dd {
+	margin: 0 0 20px 20px;
+}
+
+
+/* =Theme
+----------------------------------------------- */
+
+/* Subscribe form */
+.subscribe-form-wrapper input[type="submit"] {
+	right: auto;
+	left: 0;
+}
+
+
+/* =Menu
+----------------------------------------------- */
+
+/* Wrapper */
+.main-menu > ul:first-of-type {
+	border-top: 1px solid #222;
+}
+.main-navigation {
+	left: auto;
+	right: 0;
+	text-align: right;
+}
+
+/* Toggle */
+.menu-toggle {
+	float: left;
+}
+
+/* Lists */
+.main-navigation ul {
+	left: auto;
+	right: 0;
+}
+.main-navigation ul ul {
+	padding: 0 40px 0 0;
+}
+
+
+/* =Social links
+----------------------------------------------- */
+
+#social-links-wrapper {
+	left: auto;
+	right: 40px;
+}
+.social-links li {
+	float: right;
+}
+
+
+/* =Content
+----------------------------------------------- */
+
+.entry-thumbnail {
+	margin: -40px -40px 40px 0;
+}
+
+/* Page links */
+.page-link {
+	margin-right: 0;
+	margin-left: 1px;
+}
+
+
+/* =Navigation
+----------------------------------------------- */
+
+[class*="navigation"] .nav-previous {
+	float: right;
+}
+[class*="navigation"] .nav-next {
+	float: left;
+}
+.site-main [class*="navigation"] .nav-next a {
+	float: left;
+}
+.site-main [class*="navigation"] .nav-previous a:before {
+	content: '\f429';
+}
+.site-main [class*="navigation"] .nav-next a:before {
+	content: '\f430';
+}
+
+
+/* =Comments
+----------------------------------------------- */
+
+.comment-list .comment .children .depth-2 .comment-body {
+	padding-left: 0;
+	padding-right: 80px;
+}
+.comment-list .comment .children .depth-3 .comment-body {
+	padding-left: 0;
+	padding-right: 160px;
+}
+.comment-list .comment .children .depth-4 .comment-body {
+	padding-left: 0;
+	padding-right: 240px;
+}
+.comment-list .comment .children .depth-5 .comment-body {
+	padding-left: 0;
+	padding-right: 320px;
+}
+.comment-list .comment .children .depth-6 .comment-body {
+	padding-left: 0;
+	padding-right: 400px;
+}
+.comment-list .comment .children .depth-7 .comment-body {
+	padding-left: 0;
+	padding-right: 480px;
+}
+.comment-author {
+	float: right;
+}
+.comment-content {
+	padding-left: 0;
+	padding-right: 80px;
+}
+.no-avatar .comment-content {
+	padding-right: 0;
+}
+.comment-meta time {
+	margin-right: 0;
+	margin-left: 7px;
+}
+
+
+/* =Widgets
+----------------------------------------------- */
+
+/* Widget area */
+.widget-area {
+	float: right;
+	margin-right: 0;
+	margin-left: 20px;
+}
+.widget-area:last-of-type {
+	margin-left: 0;
+}
+.widgets-trigger {
+	float: left;
+	margin-right: 0;
+	margin-left: 40px;
+}
+
+/* Search */
+.search-submit {
+	right: auto;
+	left: 0;
+}
+
+/* List */
+.widget_archive ul,
+.widget_categories ul,
+.widget_links ul,
+.widget_nav_menu ul,
+.widget_meta ul,
+.widget_pages ul,
+.widget_recent_comments ul,
+.widget_recent_entries ul,
+.widget_rss ul,
+.widget_rss_links ul {
+	margin-right: 0;
+}
+.widget_categories .children,
+.widget_nav_menu .sub-menu,
+.widget_pages .children {
+	margin-left: 0;
+	margin-right: 20px;
+}
+
+
+/* =Responsive
+----------------------------------------------- */
+
+/* 769px > x */
+@media only screen and (max-width: 767px) {
+
+	.menu-toggle {
+		margin-right: auto;
+		margin-left: -40px;
+	}
+	.main-navigation ul ul {
+		padding: 0 10% 0 0;
+	}
+	.comment-list .comment .children .depth-2 .comment-body {
+		padding-left: 0;
+		padding-right: 5%;
+	}
+	.comment-list .comment .children .depth-3 .comment-body {
+		padding-left: 0;
+		padding-right: 10%;
+	}
+	.comment-list .comment .children .depth-4 .comment-body {
+		padding-left: 0;
+		padding-right: 15%;
+	}
+	.comment-list .comment .children .depth-5 .comment-body {
+		padding-left: 0;
+		padding-right: 20%;
+	}
+	.comment-list .comment .children .depth-6 .comment-body {
+		padding-left: 0;
+		padding-right: 25%;
+	}
+	.comment-list .comment .children .depth-7 .comment-body {
+		padding-left: 0;
+		padding-right: 30%;
+	}
+
+}

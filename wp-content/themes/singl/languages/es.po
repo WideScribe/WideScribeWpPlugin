@@ -1,0 +1,408 @@
+# Translation of Singl in Spanish (Spain)
+# This file is distributed under the same license as the Singl package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2014-06-30 17:26:15+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/0.1\n"
+"Project-Id-Version: Singl\n"
+
+msgid "Front Page"
+msgstr "Portada"
+
+msgid "Singl is a minimalist theme that helps you to create a strong — yet beautiful — online presence. Primarily designed for music artists, Singl is a powerful and flexible theme."
+msgstr "Singl es un tema minimalista que te ayuda a crear una presencia en línea sólida, aunque atractiva. Diseñado en primera instancia para músicos, Singl es un tema poderoso y flexible."
+
+#: searchform.php:13
+msgctxt "submit button"
+msgid "Search"
+msgstr "Buscar"
+
+#: searchform.php:11
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Buscar &hellip;"
+
+#: searchform.php:10
+msgctxt "label"
+msgid "Search for:"
+msgstr "Buscar: "
+
+#: inc/template-tags.php:153
+msgid "<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by %2$s</span>"
+msgstr ""
+
+#: search.php:16
+msgid "Search Results for: %s"
+msgstr "Resultados de la búsqueda para: %s"
+
+#: inc/template-tags.php:125
+msgid "Your comment is awaiting moderation."
+msgstr "Tu comentario está pendiente de moderación."
+
+#: inc/template-tags.php:118
+msgctxt "time"
+msgid "%s ago"
+msgstr "hace %s"
+
+#: inc/template-tags.php:109
+msgid "Reply"
+msgstr "Responder"
+
+#: inc/template-tags.php:101
+msgid "Author"
+msgstr "Autor"
+
+#: inc/template-tags.php:59
+msgctxt "Previous post link"
+msgid "&laquo; Previous Post"
+msgstr "&laquo; Entrada anterior"
+
+#: inc/template-tags.php:60
+msgctxt "Next post link"
+msgid "Next Post &raquo;"
+msgstr "Siguiente entrada &raquo;"
+
+#: inc/template-tags.php:82
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: inc/template-tags.php:56
+msgid "Post navigation"
+msgstr "Navegador de artículos"
+
+#: inc/template-tags.php:31
+msgid "Newer posts &raquo;"
+msgstr "Entradas recientes &raquo; "
+
+#: inc/template-tags.php:27
+msgid "&laquo; Older posts"
+msgstr "&laquo; Entradas antiguas"
+
+#: inc/template-tags.php:23
+msgid "Posts navigation"
+msgstr "Ir a las entradas"
+
+#: inc/customizer.php:156
+msgid "Last.fm Link"
+msgstr ""
+
+#: inc/customizer.php:168
+msgid "Spotify Link"
+msgstr ""
+
+#: inc/customizer.php:180
+msgid "iTunes Link"
+msgstr ""
+
+#: inc/extras.php:89
+msgid "Page %s"
+msgstr "Página %s"
+
+#: inc/customizer.php:96
+msgid "Instagram Link"
+msgstr ""
+
+#: inc/customizer.php:108
+msgid "YouTube Link"
+msgstr "Enlace de Youtube"
+
+#: inc/customizer.php:120
+msgid "Vimeo Link"
+msgstr ""
+
+#: inc/customizer.php:132
+msgid "Vine Link"
+msgstr ""
+
+#: inc/customizer.php:144
+msgid "SoundCloud Link"
+msgstr ""
+
+#: inc/customizer.php:72
+msgid "Pinterest Link"
+msgstr "Enlace de Pinterest"
+
+#: inc/customizer.php:84
+msgid "Google+ Link"
+msgstr "Enlace a Google+"
+
+#: inc/customizer.php:27
+msgid "Full Page Background Image"
+msgstr ""
+
+#: inc/customizer.php:38
+msgid "Subscribe Form"
+msgstr "Formulario de suscripción"
+
+#: inc/customizer.php:49
+msgid "Twitter Link"
+msgstr "Enlace de Twitter"
+
+#: inc/customizer.php:60
+msgid "Facebook Link"
+msgstr "Enlace de Facebook"
+
+#: header.php:163 header.php:164
+msgid "iTunes"
+msgstr "iTunes"
+
+#: inc/customizer.php:18
+msgid "Theme Options"
+msgstr "Opciones del tema"
+
+#: header.php:131 header.php:132
+msgid "Vine"
+msgstr ""
+
+#: header.php:139 header.php:140
+msgid "SoundCloud"
+msgstr "SoundCloud"
+
+#: header.php:147 header.php:148
+msgid "Last.fm"
+msgstr "Last.fm"
+
+#: header.php:155 header.php:156
+msgid "Spotify"
+msgstr ""
+
+#: header.php:107 header.php:108
+msgid "Instagram"
+msgstr "Instagram"
+
+#: header.php:115 header.php:116
+msgid "YouTube"
+msgstr "YouTube"
+
+#: header.php:123 header.php:124
+msgid "Vimeo"
+msgstr "Vimeo"
+
+#: header.php:99 header.php:100
+msgid "Google Plus"
+msgstr "Google Plus"
+
+#: header.php:91 header.php:92
+msgid "Pinterest"
+msgstr "Pinterest"
+
+#: header.php:83 header.php:84
+msgid "Facebook"
+msgstr "Facebook"
+
+#: header.php:75 header.php:76
+msgid "Twitter"
+msgstr "Twitter"
+
+#: header.php:59
+msgid "Skip to content"
+msgstr "Saltar al contenido."
+
+#: header.php:58
+msgid "Menu"
+msgstr "Menú"
+
+#: functions.php:83
+msgid "Footer Widget Area Two"
+msgstr "Área de widgets a pie de página Dos"
+
+#: functions.php:92
+msgid "Footer Widget Area Three"
+msgstr "Área de widgets a pie de página Tres"
+
+#: functions.php:109
+msgctxt "Roboto font: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:113
+msgctxt "Roboto font: add new subset (cyrillic, greek or vietnamese)"
+msgid "no-subset"
+msgstr ""
+
+#: functions.php:74
+msgid "Footer Widget Area One"
+msgstr "Área de widgets a pie de página Uno"
+
+#: functions.php:50
+msgid "Primary Menu"
+msgstr "Menú Principal"
+
+#: footer.php:41
+msgid "Theme: %1$s by %2$s."
+msgstr "Tema: %1$s por %2$s."
+
+#: footer.php:32
+msgid "Get email updates"
+msgstr ""
+
+#: footer.php:39
+msgid "Proudly powered by %s"
+msgstr "Funciona con %s"
+
+#: footer.php:21 footer.php:22
+msgid "Widgets"
+msgstr "Widgets"
+
+#: content.php:11
+msgid "Permalink to %s"
+msgstr "Enlace permanente a %s"
+
+#: content-single.php:63 content-video.php:79 content.php:68
+msgid "This entry was tagged %2$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Esta entrada se ha etiquetado como %2$s. Marca el <a href=\"%3$s\" rel=\"bookmark\">vínculo permanente</a>."
+
+#: content-single.php:65 content-video.php:81 content.php:70
+msgid "Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Marca el <a href=\"%3$s\" rel=\"bookmark\">vínculo permanente</a>."
+
+#: content-single.php:71 content-video.php:87 content.php:76
+msgid "This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Esta entrada se ha publicado en %1$s y se ha etiquetado como %2$s. Marca el <a href=\"%3$s\" rel=\"bookmark\">vínculo permanente</a>."
+
+#: content-single.php:73 content-video.php:89 content.php:78
+msgid "This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Esta entrada se publicó en %1$s. Marca el <a href=\"%3$s\" rel=\"bookmark\">vínculo permanente</a>."
+
+#: content-video.php:10 content.php:45
+msgid "Continue reading"
+msgstr "Continuar leyendo"
+
+#: content-single.php:55 content-single.php:58 content-video.php:71
+#: content-video.php:74 content.php:60 content.php:63
+msgid ", "
+msgstr ", "
+
+#: content-single.php:35 content-video.php:44 content.php:33
+msgid "% Comments"
+msgstr "% comentarios"
+
+#: content-single.php:35 content-video.php:44 content.php:33
+msgid "1 Comment"
+msgstr "1 comentario"
+
+#: content-single.php:35 content-video.php:44 content.php:33
+msgid "Leave a comment"
+msgstr "Deja un comentario"
+
+#: content-single.php:32 content-video.php:42 content.php:30
+msgid "All %s posts"
+msgstr "Las %s entradas"
+
+#: content-page.php:30 content-single.php:87 content-video.php:102
+#: content.php:91 inc/template-tags.php:82 inc/template-tags.php:121
+msgid "Edit"
+msgstr "Editar"
+
+#: content-none.php:28
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Parece que no podemos encontrar lo que estás buscando. Tal vez la búsqueda le pueda ayudar."
+
+#: content-none.php:23
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Lo sentimos, pero nada coincidió con su búsqueda. Por favor inténtelo de nuevo con otras palabras clave."
+
+#: content-none.php:19
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "¿Preparado para publicar tu primera entrada? <a href=\"%1$s\">Empieza aquí</a>."
+
+#: content-none.php:13
+msgid "Nothing Found"
+msgstr "No se ha encontrado nada"
+
+#: comments.php:72
+msgid "Comments are closed."
+msgstr "Los comentarios están cerrados."
+
+#: comments.php:54 comments.php:62
+msgid "Newer Comments &rarr;"
+msgstr "Comentarios recientes &rarr;"
+
+#: comments.php:53 comments.php:61
+msgid "&larr; Older Comments"
+msgstr "&larr; Comentarios antiguos"
+
+#: comments.php:30
+msgctxt "comments title"
+msgid "1 Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] "1 comentario"
+msgstr[1] "%1$s Comentarios"
+
+#: comments.php:52 comments.php:60
+msgid "Comment navigation"
+msgstr "Navegación de comentarios"
+
+#: archive.php:66
+msgid "Archives"
+msgstr "Archivos"
+
+#: archive.php:63
+msgid "Galleries"
+msgstr "Galerías"
+
+#: archive.php:60
+msgid "Links"
+msgstr "Enlaces"
+
+#: archive.php:57
+msgid "Quotes"
+msgstr "Citas"
+
+#: archive.php:54
+msgid "Videos"
+msgstr "Vídeos"
+
+#: archive.php:51
+msgid "Images"
+msgstr "Imágenes"
+
+#: archive.php:48
+msgid "Asides"
+msgstr "Apartados"
+
+#: archive.php:45
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: archive.php:45
+msgid "Year: %s"
+msgstr "Año: %s"
+
+#: archive.php:42
+msgid "Month: %s"
+msgstr "Mes: %s"
+
+#: archive.php:42
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: archive.php:39
+msgid "Day: %s"
+msgstr "Día: %s"
+
+#: archive.php:31
+msgid "Author: %s"
+msgstr "Autor: %s"
+
+#: 404.php:44
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Trata de buscar en los archivos mensuales. %1$s"
+
+#: 404.php:27
+msgid "Most Used Categories"
+msgstr "Categorías más usadas"
+
+#: 404.php:19
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr "Parece que no se encontró nada en esta ubicación. ¿Quizás pruebes con uno de los enlaces de abajo o una búsqueda?"
+
+#: 404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "¡Vaya! Esa página no se puede encontrar."

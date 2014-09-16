@@ -1,0 +1,411 @@
+# Translation of Singl in Irish
+# This file is distributed under the same license as the Singl package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2014-06-02 04:14:18+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n<11 ? 3 : 4;\n"
+"X-Generator: GlotPress/0.1\n"
+"Project-Id-Version: Singl\n"
+
+msgid "Front Page"
+msgstr "Leathanach Tosaigh"
+
+msgid "Singl is a minimalist theme that helps you to create a strong — yet beautiful — online presence. Primarily designed for music artists, Singl is a powerful and flexible theme."
+msgstr ""
+
+#: searchform.php:13
+msgctxt "submit button"
+msgid "Search"
+msgstr "Cuartaigh"
+
+#: searchform.php:11
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Cuartú …"
+
+#: searchform.php:10
+msgctxt "label"
+msgid "Search for:"
+msgstr "Cuartú:"
+
+#: inc/template-tags.php:153
+msgid "<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by %2$s</span>"
+msgstr "<span class=\"posted-on\">Foilsiú: %1$s</span><span class=\"byline\"> ag %2$s</span>"
+
+#: search.php:16
+msgid "Search Results for: %s"
+msgstr "Torthaí ar: %s"
+
+#: inc/template-tags.php:125
+msgid "Your comment is awaiting moderation."
+msgstr "Tá do fhreagra fós le ceadú."
+
+#: inc/template-tags.php:118
+msgctxt "time"
+msgid "%s ago"
+msgstr "%s ó shin"
+
+#: inc/template-tags.php:109
+msgid "Reply"
+msgstr "Freagra"
+
+#: inc/template-tags.php:101
+msgid "Author"
+msgstr "Údar"
+
+#: inc/template-tags.php:59
+msgctxt "Previous post link"
+msgid "&laquo; Previous Post"
+msgstr "&laquo; Siar"
+
+#: inc/template-tags.php:60
+msgctxt "Next post link"
+msgid "Next Post &raquo;"
+msgstr ""
+
+#: inc/template-tags.php:82
+msgid "Pingback:"
+msgstr "Ping:"
+
+#: inc/template-tags.php:56
+msgid "Post navigation"
+msgstr "Treoraíocht alt"
+
+#: inc/template-tags.php:31
+msgid "Newer posts &raquo;"
+msgstr "Chun tosaigh &raquo;"
+
+#: inc/template-tags.php:27
+msgid "&laquo; Older posts"
+msgstr "&laquo; Chun deiridh"
+
+#: inc/template-tags.php:23
+msgid "Posts navigation"
+msgstr "Treoraíocht alt"
+
+#: inc/customizer.php:156
+msgid "Last.fm Link"
+msgstr "Nasc le Last.fm"
+
+#: inc/customizer.php:168
+msgid "Spotify Link"
+msgstr "Nasc le Spotify"
+
+#: inc/customizer.php:180
+msgid "iTunes Link"
+msgstr "Nasc le iTunes"
+
+#: inc/extras.php:89
+msgid "Page %s"
+msgstr "Leathanach %s"
+
+#: inc/customizer.php:96
+msgid "Instagram Link"
+msgstr "Nasc le Instagram"
+
+#: inc/customizer.php:108
+msgid "YouTube Link"
+msgstr "Nasc le YouTube"
+
+#: inc/customizer.php:120
+msgid "Vimeo Link"
+msgstr "Nasc le Vimeo"
+
+#: inc/customizer.php:132
+msgid "Vine Link"
+msgstr "Nasc Vine"
+
+#: inc/customizer.php:144
+msgid "SoundCloud Link"
+msgstr "Nasc le SoundCloud"
+
+#: inc/customizer.php:72
+msgid "Pinterest Link"
+msgstr "Nasc le Pinterest"
+
+#: inc/customizer.php:84
+msgid "Google+ Link"
+msgstr "Nasc Google+"
+
+#: inc/customizer.php:27
+msgid "Full Page Background Image"
+msgstr ""
+
+#: inc/customizer.php:38
+msgid "Subscribe Form"
+msgstr ""
+
+#: inc/customizer.php:49
+msgid "Twitter Link"
+msgstr "Nasc le Twitter"
+
+#: inc/customizer.php:60
+msgid "Facebook Link"
+msgstr "Nasc Facebook"
+
+#: header.php:163 header.php:164
+msgid "iTunes"
+msgstr "iTunes"
+
+#: inc/customizer.php:18
+msgid "Theme Options"
+msgstr "Roghanna Téama"
+
+#: header.php:131 header.php:132
+msgid "Vine"
+msgstr "Vine"
+
+#: header.php:139 header.php:140
+msgid "SoundCloud"
+msgstr "SoundCloud"
+
+#: header.php:147 header.php:148
+msgid "Last.fm"
+msgstr "Last.fm"
+
+#: header.php:155 header.php:156
+msgid "Spotify"
+msgstr "Spotify"
+
+#: header.php:107 header.php:108
+msgid "Instagram"
+msgstr ""
+
+#: header.php:115 header.php:116
+msgid "YouTube"
+msgstr "YouTube"
+
+#: header.php:123 header.php:124
+msgid "Vimeo"
+msgstr "Vimeo"
+
+#: header.php:99 header.php:100
+msgid "Google Plus"
+msgstr "Google Plus"
+
+#: header.php:91 header.php:92
+msgid "Pinterest"
+msgstr "Pinterest"
+
+#: header.php:83 header.php:84
+msgid "Facebook"
+msgstr "Facebook"
+
+#: header.php:75 header.php:76
+msgid "Twitter"
+msgstr "Twitter"
+
+#: header.php:59
+msgid "Skip to content"
+msgstr "Beir go dtí an t-alt féin mé"
+
+#: header.php:58
+msgid "Menu"
+msgstr "Roghchlár"
+
+#: functions.php:83
+msgid "Footer Widget Area Two"
+msgstr "Limistéar Giúirléidí Buntáisc a Dó"
+
+#: functions.php:92
+msgid "Footer Widget Area Three"
+msgstr "Limistéar Giúirléidí Buntáisc a Trí"
+
+#: functions.php:109
+msgctxt "Roboto font: on or off"
+msgid "on"
+msgstr "on"
+
+#: functions.php:113
+msgctxt "Roboto font: add new subset (cyrillic, greek or vietnamese)"
+msgid "no-subset"
+msgstr "latin-ext"
+
+#: functions.php:74
+msgid "Footer Widget Area One"
+msgstr "Limistéar Giúirléidí Buntáisc a hAon"
+
+#: functions.php:50
+msgid "Primary Menu"
+msgstr "Príomhroghchlár"
+
+#: footer.php:41
+msgid "Theme: %1$s by %2$s."
+msgstr "Téama: %1$s le %2$s."
+
+#: footer.php:32
+msgid "Get email updates"
+msgstr "Seoltar fógraí ríomhphoist chugam"
+
+#: footer.php:39
+msgid "Proudly powered by %s"
+msgstr "Le cumhacht %s"
+
+#: footer.php:21 footer.php:22
+msgid "Widgets"
+msgstr "Giúirléidí"
+
+#: content.php:11
+msgid "Permalink to %s"
+msgstr "Buan-nasc le %s"
+
+#: content-single.php:63 content-video.php:79 content.php:68
+msgid "This entry was tagged %2$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Clibeanna: %2$s. Sábháil an <a href=\"%3$s\" rel=\"bookmark\">buan-nasc</a>."
+
+#: content-single.php:65 content-video.php:81 content.php:70
+msgid "Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Sábháil an <a href=\"%3$s\" rel=\"bookmark\">buan-nasc</a>."
+
+#: content-single.php:71 content-video.php:87 content.php:76
+msgid "This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Ranganna: %1$s. Clibeanna: %2$s. Sábháil an <a href=\"%3$s\" rel=\"bookmark\">buan-nasc</a>."
+
+#: content-single.php:73 content-video.php:89 content.php:78
+msgid "This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Ranganna: %1$s. <a href=\"%3$s\" rel=\"bookmark\">Buan-nasc</a>."
+
+#: content-video.php:10 content.php:45
+msgid "Continue reading"
+msgstr "Coinnigh á léamh"
+
+#: content-single.php:55 content-single.php:58 content-video.php:71
+#: content-video.php:74 content.php:60 content.php:63
+msgid ", "
+msgstr ", "
+
+#: content-single.php:35 content-video.php:44 content.php:33
+msgid "% Comments"
+msgstr "Freagraí: %"
+
+#: content-single.php:35 content-video.php:44 content.php:33
+msgid "1 Comment"
+msgstr ""
+
+#: content-single.php:35 content-video.php:44 content.php:33
+msgid "Leave a comment"
+msgstr "Freagra"
+
+#: content-single.php:32 content-video.php:42 content.php:30
+msgid "All %s posts"
+msgstr "Na %s alt uile"
+
+#: content-page.php:30 content-single.php:87 content-video.php:102
+#: content.php:91 inc/template-tags.php:82 inc/template-tags.php:121
+msgid "Edit"
+msgstr "Eagar"
+
+#: content-none.php:28
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Sén chaoi nár frítheadh an rud a bhí tú a iarraidh. B’fhéidir go gcuartófá é."
+
+#: content-none.php:23
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Sén chaoi nár frítheadh na téarmaí a chuartaigh tú. D’fhéadfá focla eile a chuartú."
+
+#: content-none.php:19
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "bhFuil tú réidh le halt a fhoilsiú? <a href=\"%1$s\">Féadfaidh tú tosaí anseo</a>."
+
+#: content-none.php:13
+msgid "Nothing Found"
+msgstr "Gan Toradh"
+
+#: comments.php:72
+msgid "Comments are closed."
+msgstr "Freagraí dúnta."
+
+#: comments.php:54 comments.php:62
+msgid "Newer Comments &rarr;"
+msgstr "Freagraí Nua &rarr;"
+
+#: comments.php:53 comments.php:61
+msgid "&larr; Older Comments"
+msgstr "&larr; Seanfhreagraí"
+
+#: comments.php:30
+msgctxt "comments title"
+msgid "1 Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+
+#: comments.php:52 comments.php:60
+msgid "Comment navigation"
+msgstr "Treoraíocht freagartha"
+
+#: archive.php:66
+msgid "Archives"
+msgstr "Cartlanna"
+
+#: archive.php:63
+msgid "Galleries"
+msgstr "Dánlanna"
+
+#: archive.php:60
+msgid "Links"
+msgstr "Naisc"
+
+#: archive.php:57
+msgid "Quotes"
+msgstr "Athfhriotail"
+
+#: archive.php:54
+msgid "Videos"
+msgstr "Físeáin"
+
+#: archive.php:51
+msgid "Images"
+msgstr "Íomhánna"
+
+#: archive.php:48
+msgid "Asides"
+msgstr "Seachfhocla"
+
+#: archive.php:45
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: archive.php:45
+msgid "Year: %s"
+msgstr "Bliain: %s"
+
+#: archive.php:42
+msgid "Month: %s"
+msgstr "Mí: %s"
+
+#: archive.php:42
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: archive.php:39
+msgid "Day: %s"
+msgstr "Lá: %s"
+
+#: archive.php:31
+msgid "Author: %s"
+msgstr "Údar: %s"
+
+#: 404.php:44
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Amharc ar na cartlanna míosa. %1$s"
+
+#: 404.php:27
+msgid "Most Used Categories"
+msgstr "Ranganna Coitianta"
+
+#: 404.php:19
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr "Sén chaoi nár fríothadh tada anseo. B’fhéidir go mbreathnófá ar cheann de na naisc seo thíos nó go gcuartófá rud éigin."
+
+#: 404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Ab bu búna! Dheamhan fáil ar bith ar an leathanach sin."
