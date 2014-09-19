@@ -2892,3 +2892,234 @@
 [16-Sep-2014 09:31:22 UTC] PHP Notice:  Undefined property: VxlpayWpPlugin::$partnerName in /Users/bruker/Dropbox/Sources/vxlpay/wp-content/plugins/vxlpay/public/ClassVxlpayPlugin.php on line 439
 [16-Sep-2014 09:31:22 UTC] PHP Notice:  Undefined property: VxlpayWpPlugin::$partnerName in /Users/bruker/Dropbox/Sources/vxlpay/wp-content/plugins/vxlpay/public/ClassVxlpayPlugin.php on line 439
 [16-Sep-2014 09:31:23 UTC] PHP Notice:  Undefined property: VxlpayWpPlugin::$partnerName in /Users/bruker/Dropbox/Sources/vxlpay/wp-content/plugins/vxlpay/public/ClassVxlpayPlugin.php on line 439
+[16-Sep-2014 10:45:41 UTC] PHP Strict Standards:  Only variables should be assigned by reference in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/themes/the-newswire/index.php on line 43
+[16-Sep-2014 10:45:41 UTC] PHP Strict Standards:  Only variables should be assigned by reference in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/themes/the-newswire/content.php on line 14
+[16-Sep-2014 10:45:42 UTC] PHP Notice:  Undefined property: VxlpayWpPlugin::$partnerName in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayPlugin.php on line 439
+[17-Sep-2014 09:31:18 UTC] PHP Strict Standards:  Only variables should be assigned by reference in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/themes/the-newswire/index.php on line 43
+[17-Sep-2014 09:31:18 UTC] PHP Strict Standards:  Only variables should be assigned by reference in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/themes/the-newswire/content.php on line 14
+[17-Sep-2014 09:31:19 UTC] PHP Notice:  Undefined property: VxlpayWpPlugin::$partnerName in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayPlugin.php on line 439
+[17-Sep-2014 09:31:41 UTC] PHP Strict Standards:  Only variables should be assigned by reference in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/themes/the-newswire/index.php on line 43
+[17-Sep-2014 09:31:41 UTC] PHP Strict Standards:  Only variables should be assigned by reference in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/themes/the-newswire/content.php on line 14
+[17-Sep-2014 09:31:41 UTC] PHP Notice:  Undefined property: VxlpayWpPlugin::$partnerName in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayPlugin.php on line 439
+[17-Sep-2014 09:34:08 UTC] PHP Strict Standards:  Only variables should be assigned by reference in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/themes/the-newswire/index.php on line 43
+[17-Sep-2014 09:34:08 UTC] PHP Strict Standards:  Only variables should be assigned by reference in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/themes/the-newswire/content.php on line 14
+[17-Sep-2014 09:34:08 UTC] PHP Notice:  Undefined property: VxlpayWpPlugin::$partnerName in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayPlugin.php on line 439
+[17-Sep-2014 09:34:51 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-includes/update.php on line 287
+[17-Sep-2014 09:35:12 UTC] PHP Notice:  Constant vxlApi already defined in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php on line 24
+[17-Sep-2014 09:35:12 UTC] PHP Notice:  Constant VXLPAY_FAVICON already defined in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php on line 25
+[17-Sep-2014 09:36:57 UTC] PHP Notice:  Use of undefined constant VXLPAY_FAVICON - assumed 'VXLPAY_FAVICON' in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/admin/ClassVxlpayWPAdmin.php on line 178
+[17-Sep-2014 09:39:01 UTC] PHP Fatal error:  Class 'VxlpayWpPost' not found in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/admin/ClassVxlpayWPAdmin.php on line 523
+[17-Sep-2014 09:40:34 UTC] PHP Warning:  require_once(/Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPAdmin.php): failed to open stream: No such file or directory in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/VxlpayWPplugin.php on line 95
+[17-Sep-2014 09:40:34 UTC] PHP Fatal error:  require_once(): Failed opening required '/Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPAdmin.php' (include_path='.:/Applications/MAMP/bin/php/php5.5.10/lib/php') in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/VxlpayWPplugin.php on line 95
+[17-Sep-2014 09:40:45 UTC] PHP Notice:  Constant vxlApi already defined in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php on line 24
+[17-Sep-2014 09:40:45 UTC] PHP Notice:  Constant VXLPAY_FAVICON already defined in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php on line 25
+[17-Sep-2014 09:40:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php:24) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-admin/post.php on line 235
+[17-Sep-2014 09:40:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php:24) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-includes/pluggable.php on line 1121
+[17-Sep-2014 09:40:47 UTC] PHP Fatal error:  Call to a member function insert() on a non-object in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/admin/ClassVxlpayWPAdmin.php on line 559
+[17-Sep-2014 09:41:09 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php:52) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-admin/post.php on line 235
+[17-Sep-2014 09:41:09 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php:52) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-includes/pluggable.php on line 1121
+[17-Sep-2014 09:41:09 UTC] PHP Fatal error:  Call to a member function insert() on a non-object in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/admin/ClassVxlpayWPAdmin.php on line 559
+[17-Sep-2014 09:41:58 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php:52) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-admin/post.php on line 235
+[17-Sep-2014 09:41:58 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php:52) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-includes/pluggable.php on line 1121
+[17-Sep-2014 09:41:58 UTC] PHP Fatal error:  Call to a member function insert() on a non-object in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/admin/ClassVxlpayWPAdmin.php on line 559
+[17-Sep-2014 10:54:12 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php:52) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-admin/post.php on line 235
+[17-Sep-2014 10:54:12 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php:52) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-includes/pluggable.php on line 1121
+[17-Sep-2014 10:54:12 UTC] PHP Fatal error:  Call to a member function insert() on a non-object in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/admin/ClassVxlpayWPAdmin.php on line 559
+[17-Sep-2014 11:02:30 UTC] PHP Notice:  Undefined property: VxlpayWpPlugin::$partnerName in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayPlugin.php on line 439
+[17-Sep-2014 11:02:55 UTC] PHP Notice:  Undefined property: VxlpayWpPlugin::$partnerName in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayPlugin.php on line 439
+[17-Sep-2014 11:12:00 UTC] PHP Notice:  Undefined property: VxlpayWpPlugin::$partnerName in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayPlugin.php on line 439
+[17-Sep-2014 11:13:00 UTC] PHP Notice:  Undefined property: VxlpayWpPlugin::$partnerName in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayPlugin.php on line 439
+[17-Sep-2014 11:13:34 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php:52) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-admin/post.php on line 235
+[17-Sep-2014 11:13:34 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php:52) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-includes/pluggable.php on line 1121
+[17-Sep-2014 11:13:34 UTC] PHP Fatal error:  Call to a member function insert() on a non-object in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/admin/ClassVxlpayWPAdmin.php on line 558
+[17-Sep-2014 11:14:38 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php:52) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-admin/post.php on line 235
+[17-Sep-2014 11:14:38 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php:52) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-includes/pluggable.php on line 1121
+[17-Sep-2014 11:14:38 UTC] PHP Fatal error:  Call to a member function insert() on a non-object in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/admin/ClassVxlpayWPAdmin.php on line 558
+[17-Sep-2014 11:15:19 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php:52) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-admin/post.php on line 235
+[17-Sep-2014 11:15:19 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php:52) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-includes/pluggable.php on line 1121
+[17-Sep-2014 11:15:19 UTC] PHP Fatal error:  Call to a member function insert() on a non-object in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/admin/ClassVxlpayWPAdmin.php on line 558
+[17-Sep-2014 11:15:23 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php:52) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-admin/post.php on line 235
+[17-Sep-2014 11:15:23 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php:52) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-includes/pluggable.php on line 1121
+[17-Sep-2014 11:15:23 UTC] PHP Fatal error:  Call to a member function insert() on a non-object in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/admin/ClassVxlpayWPAdmin.php on line 558
+[17-Sep-2014 11:15:32 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php:52) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-admin/post.php on line 235
+[17-Sep-2014 11:15:32 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php:52) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-includes/pluggable.php on line 1121
+[17-Sep-2014 11:15:32 UTC] PHP Fatal error:  Call to a member function insert() on a non-object in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/admin/ClassVxlpayWPAdmin.php on line 558
+[17-Sep-2014 11:16:01 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php:52) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-admin/post.php on line 235
+[17-Sep-2014 11:16:01 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php:52) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-includes/pluggable.php on line 1121
+[17-Sep-2014 11:19:11 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php:52) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-admin/post.php on line 235
+[17-Sep-2014 11:19:11 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php:52) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-includes/pluggable.php on line 1121
+[17-Sep-2014 11:19:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php:52) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-admin/post.php on line 235
+[17-Sep-2014 11:19:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php:52) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-includes/pluggable.php on line 1121
+[17-Sep-2014 11:19:18 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php:52) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-admin/post.php on line 235
+[17-Sep-2014 11:19:18 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php:52) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-includes/pluggable.php on line 1121
+[17-Sep-2014 11:19:50 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php:52) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-admin/post.php on line 235
+[17-Sep-2014 11:19:50 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayWPPost.php:52) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-includes/pluggable.php on line 1121
+[17-Sep-2014 11:23:12 UTC] PHP Notice:  Undefined property: VxlpayWpPlugin::$partnerName in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayPlugin.php on line 439
+[17-Sep-2014 11:23:16 UTC] PHP Notice:  Undefined property: VxlpayWpPlugin::$partnerName in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayPlugin.php on line 439
+[17-Sep-2014 11:28:56 UTC] PHP Notice:  Undefined property: VxlpayWpPlugin::$partnerName in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayPlugin.php on line 440
+[17-Sep-2014 11:29:30 UTC] PHP Fatal error:  Call to undefined function register_setting() in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/public/ClassVxlpayPlugin.php on line 67
+[17-Sep-2014 11:34:15 UTC] PHP Strict Standards:  Only variables should be assigned by reference in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/themes/the-newswire/index.php on line 43
+[17-Sep-2014 11:34:15 UTC] PHP Strict Standards:  Only variables should be assigned by reference in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/themes/the-newswire/index.php on line 43
+[17-Sep-2014 11:34:15 UTC] PHP Strict Standards:  Only variables should be assigned by reference in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/themes/the-newswire/content.php on line 14
+[17-Sep-2014 11:34:15 UTC] PHP Strict Standards:  Only variables should be assigned by reference in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/themes/the-newswire/content.php on line 14
+[17-Sep-2014 11:35:24 UTC] PHP Strict Standards:  Only variables should be assigned by reference in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/themes/the-newswire/index.php on line 43
+[17-Sep-2014 11:35:24 UTC] PHP Strict Standards:  Only variables should be assigned by reference in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/themes/the-newswire/index.php on line 43
+[17-Sep-2014 11:35:24 UTC] PHP Strict Standards:  Only variables should be assigned by reference in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/themes/the-newswire/content.php on line 14
+[17-Sep-2014 11:35:24 UTC] PHP Strict Standards:  Only variables should be assigned by reference in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/themes/the-newswire/content.php on line 14
+[17-Sep-2014 11:36:25 UTC] PHP Notice:  Undefined variable: free in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/admin/ClassVxlpayWPAdmin.php on line 471
+[17-Sep-2014 11:36:27 UTC] PHP Notice:  Undefined variable: free in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/admin/ClassVxlpayWPAdmin.php on line 471
+[17-Sep-2014 11:36:27 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/admin/ClassVxlpayWPAdmin.php:471) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-admin/post.php on line 235
+[17-Sep-2014 11:36:27 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/vxlpay/admin/ClassVxlpayWPAdmin.php:471) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-includes/pluggable.php on line 1121
+[17-Sep-2014 12:10:17 UTC] PHP Strict Standards:  Only variables should be assigned by reference in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/themes/the-newswire/index.php on line 43
+[17-Sep-2014 12:10:17 UTC] PHP Strict Standards:  Only variables should be assigned by reference in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/themes/the-newswire/content.php on line 14
+[17-Sep-2014 12:10:49 UTC] PHP Warning:  require_once(/Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/public/ClassVxlpayPlugin.php): failed to open stream: No such file or directory in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/WideScribeWPplugin.php on line 45
+[17-Sep-2014 12:10:49 UTC] PHP Fatal error:  require_once(): Failed opening required '/Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/public/ClassVxlpayPlugin.php' (include_path='.:/Applications/MAMP/bin/php/php5.5.10/lib/php') in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/WideScribeWPplugin.php on line 45
+[17-Sep-2014 12:10:51 UTC] PHP Warning:  require_once(/Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/public/ClassVxlpayPlugin.php): failed to open stream: No such file or directory in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/WideScribeWPplugin.php on line 45
+[17-Sep-2014 12:10:51 UTC] PHP Fatal error:  require_once(): Failed opening required '/Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/public/ClassVxlpayPlugin.php' (include_path='.:/Applications/MAMP/bin/php/php5.5.10/lib/php') in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/WideScribeWPplugin.php on line 45
+[17-Sep-2014 12:10:51 UTC] PHP Warning:  require_once(/Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/public/ClassVxlpayPlugin.php): failed to open stream: No such file or directory in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/WideScribeWPplugin.php on line 45
+[17-Sep-2014 12:10:51 UTC] PHP Fatal error:  require_once(): Failed opening required '/Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/public/ClassVxlpayPlugin.php' (include_path='.:/Applications/MAMP/bin/php/php5.5.10/lib/php') in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/WideScribeWPplugin.php on line 45
+[17-Sep-2014 12:12:06 UTC] PHP Warning:  require_once(/Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/public/ClassVxlpayPlugin.php): failed to open stream: No such file or directory in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/WideScribeWPplugin.php on line 45
+[17-Sep-2014 12:12:06 UTC] PHP Fatal error:  require_once(): Failed opening required '/Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/public/ClassVxlpayPlugin.php' (include_path='.:/Applications/MAMP/bin/php/php5.5.10/lib/php') in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/WideScribeWPplugin.php on line 45
+[17-Sep-2014 12:12:08 UTC] PHP Warning:  require_once(/Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/public/ClassVxlpayPlugin.php): failed to open stream: No such file or directory in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/WideScribeWPplugin.php on line 45
+[17-Sep-2014 12:12:08 UTC] PHP Fatal error:  require_once(): Failed opening required '/Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/public/ClassVxlpayPlugin.php' (include_path='.:/Applications/MAMP/bin/php/php5.5.10/lib/php') in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/WideScribeWPplugin.php on line 45
+[17-Sep-2014 12:12:08 UTC] PHP Warning:  require_once(/Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/public/ClassVxlpayPlugin.php): failed to open stream: No such file or directory in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/WideScribeWPplugin.php on line 45
+[17-Sep-2014 12:12:08 UTC] PHP Fatal error:  require_once(): Failed opening required '/Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/public/ClassVxlpayPlugin.php' (include_path='.:/Applications/MAMP/bin/php/php5.5.10/lib/php') in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/WideScribeWPplugin.php on line 45
+[17-Sep-2014 12:12:46 UTC] PHP Warning:  require_once(/Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/public/ClassVxlpayPlugin.php): failed to open stream: No such file or directory in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/WideScribeWPplugin.php on line 45
+[17-Sep-2014 12:12:46 UTC] PHP Fatal error:  require_once(): Failed opening required '/Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/public/ClassVxlpayPlugin.php' (include_path='.:/Applications/MAMP/bin/php/php5.5.10/lib/php') in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/WideScribeWPplugin.php on line 45
+[17-Sep-2014 12:12:47 UTC] PHP Warning:  require_once(/Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/public/ClassVxlpayPlugin.php): failed to open stream: No such file or directory in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/WideScribeWPplugin.php on line 45
+[17-Sep-2014 12:12:47 UTC] PHP Fatal error:  require_once(): Failed opening required '/Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/public/ClassVxlpayPlugin.php' (include_path='.:/Applications/MAMP/bin/php/php5.5.10/lib/php') in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/WideScribeWPplugin.php on line 45
+[17-Sep-2014 12:12:47 UTC] PHP Warning:  require_once(/Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/public/ClassVxlpayPlugin.php): failed to open stream: No such file or directory in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/WideScribeWPplugin.php on line 45
+[17-Sep-2014 12:12:47 UTC] PHP Fatal error:  require_once(): Failed opening required '/Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/public/ClassVxlpayPlugin.php' (include_path='.:/Applications/MAMP/bin/php/php5.5.10/lib/php') in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/WideScribeWPplugin.php on line 45
+[17-Sep-2014 12:15:31 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF NOT EXISTS (
+        context varchar(10)  NOT NULL,
+        funcName varchar(' at line 1 for query CREATE TABLE wp_widescribe_error IF NOT EXISTS (
+        context varchar(10)  NOT NULL,
+        funcName varchar(55)  NOT NULL,
+        message varchar(250)  NOT NULL,
+        data varchar(250)  NOT NULL
+        ) DEFAULT CHARACTER SET utf8 made by activate_plugin, do_action('activate_widescribe/WideScribeWPplugin.php'), call_user_func_array, WideScribeWpAdmin::activate, WideScribeWpAdmin::createVxlTables, dbDelta
+[17-Sep-2014 12:15:31 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF NOT EXISTS (
+        context varchar(10)  NOT NULL,
+        funcName varchar(' at line 1 for query CREATE TABLE wp_widescribe_log IF NOT EXISTS (
+        context varchar(10)  NOT NULL,
+        funcName varchar(55)  NOT NULL,
+        message varchar(250)  NOT NULL,
+        data varchar(250)  NOT NULL
+        ) DEFAULT CHARACTER SET utf8 made by activate_plugin, do_action('activate_widescribe/WideScribeWPplugin.php'), call_user_func_array, WideScribeWpAdmin::activate, WideScribeWpAdmin::createVxlTables, dbDelta
+[17-Sep-2014 12:15:31 UTC] WordPress database error Table 'wp_vxlpay.wp_widescribe_log' doesn't exist for query INSERT INTO `wp_widescribe_log` (`context`,`funcName`,`message`,`data`) VALUES ('admin','createVxlTables','Successfully created VXL log and error tables','unset') made by activate_plugin, do_action('activate_widescribe/WideScribeWPplugin.php'), call_user_func_array, WideScribeWpAdmin::activate, WideScribeWpAdmin::createVxlTables, WideScribeWpAdmin::log
+[17-Sep-2014 12:15:42 UTC] PHP Notice:  Constant TINYPASS_PLUGIN_FILE_PATH already defined in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/tinypass/jslite/tinypass.php on line 12
+[17-Sep-2014 12:15:43 UTC] PHP Notice:  Constant TINYPASS_PLUGIN_FILE_PATH already defined in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/tinypass/jslite/tinypass.php on line 12
+[17-Sep-2014 12:15:51 UTC] PHP Notice:  Constant TINYPASS_PLUGIN_FILE_PATH already defined in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/tinypass/jslite/tinypass.php on line 12
+[17-Sep-2014 12:15:51 UTC] PHP Notice:  Constant TINYPASS_PLUGIN_FILE_PATH already defined in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/tinypass/jslite/tinypass.php on line 12
+[17-Sep-2014 12:15:54 UTC] PHP Notice:  Constant TINYPASS_PLUGIN_FILE_PATH already defined in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/tinypass/jslite/tinypass.php on line 12
+[17-Sep-2014 12:15:57 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF NOT EXISTS (
+        context varchar(10)  NOT NULL,
+        funcName varchar(' at line 1 for query CREATE TABLE wp_widescribe_error IF NOT EXISTS (
+        context varchar(10)  NOT NULL,
+        funcName varchar(55)  NOT NULL,
+        message varchar(250)  NOT NULL,
+        data varchar(250)  NOT NULL
+        ) DEFAULT CHARACTER SET utf8 made by activate_plugin, do_action('activate_widescribe/WideScribeWPplugin.php'), call_user_func_array, WideScribeWpAdmin::activate, WideScribeWpAdmin::createVxlTables, dbDelta
+[17-Sep-2014 12:15:57 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF NOT EXISTS (
+        context varchar(10)  NOT NULL,
+        funcName varchar(' at line 1 for query CREATE TABLE wp_widescribe_log IF NOT EXISTS (
+        context varchar(10)  NOT NULL,
+        funcName varchar(55)  NOT NULL,
+        message varchar(250)  NOT NULL,
+        data varchar(250)  NOT NULL
+        ) DEFAULT CHARACTER SET utf8 made by activate_plugin, do_action('activate_widescribe/WideScribeWPplugin.php'), call_user_func_array, WideScribeWpAdmin::activate, WideScribeWpAdmin::createVxlTables, dbDelta
+[17-Sep-2014 12:15:57 UTC] WordPress database error Table 'wp_vxlpay.wp_widescribe_log' doesn't exist for query INSERT INTO `wp_widescribe_log` (`context`,`funcName`,`message`,`data`) VALUES ('admin','createVxlTables','Successfully created VXL log and error tables','unset') made by activate_plugin, do_action('activate_widescribe/WideScribeWPplugin.php'), call_user_func_array, WideScribeWpAdmin::activate, WideScribeWpAdmin::createVxlTables, WideScribeWpAdmin::log
+[17-Sep-2014 12:16:06 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF NOT EXISTS (
+        context varchar(10)  NOT NULL,
+        funcName varchar(' at line 1 for query CREATE TABLE wp_widescribe_error IF NOT EXISTS (
+        context varchar(10)  NOT NULL,
+        funcName varchar(55)  NOT NULL,
+        message varchar(250)  NOT NULL,
+        data varchar(250)  NOT NULL
+        ) DEFAULT CHARACTER SET utf8 made by activate_plugin, do_action('activate_widescribe/WideScribeWPplugin.php'), call_user_func_array, WideScribeWpAdmin::activate, WideScribeWpAdmin::createVxlTables, dbDelta
+[17-Sep-2014 12:16:06 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF NOT EXISTS (
+        context varchar(10)  NOT NULL,
+        funcName varchar(' at line 1 for query CREATE TABLE wp_widescribe_log IF NOT EXISTS (
+        context varchar(10)  NOT NULL,
+        funcName varchar(55)  NOT NULL,
+        message varchar(250)  NOT NULL,
+        data varchar(250)  NOT NULL
+        ) DEFAULT CHARACTER SET utf8 made by activate_plugin, do_action('activate_widescribe/WideScribeWPplugin.php'), call_user_func_array, WideScribeWpAdmin::activate, WideScribeWpAdmin::createVxlTables, dbDelta
+[17-Sep-2014 12:16:06 UTC] WordPress database error Table 'wp_vxlpay.wp_widescribe_log' doesn't exist for query INSERT INTO `wp_widescribe_log` (`context`,`funcName`,`message`,`data`) VALUES ('admin','createVxlTables','Successfully created VXL log and error tables','unset') made by activate_plugin, do_action('activate_widescribe/WideScribeWPplugin.php'), call_user_func_array, WideScribeWpAdmin::activate, WideScribeWpAdmin::createVxlTables, WideScribeWpAdmin::log
+[17-Sep-2014 12:19:16 UTC] PHP Fatal error:  Call to undefined method WideScribeWpAdmin::createVXLtables() in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/admin/ClassWideScribeWPAdmin.php on line 745
+[17-Sep-2014 12:19:17 UTC] PHP Fatal error:  Call to undefined method WideScribeWpAdmin::createVXLtables() in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/admin/ClassWideScribeWPAdmin.php on line 745
+[17-Sep-2014 12:19:17 UTC] PHP Fatal error:  Call to undefined method WideScribeWpAdmin::createVXLtables() in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/admin/ClassWideScribeWPAdmin.php on line 745
+[17-Sep-2014 12:19:49 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF NOT EXISTS (
+        context varchar(10)  NOT NULL,
+        funcName varchar(' at line 1 for query CREATE TABLE wp_widescribe_error IF NOT EXISTS (
+        context varchar(10)  NOT NULL,
+        funcName varchar(55)  NOT NULL,
+        message varchar(250)  NOT NULL,
+        data varchar(250)  NOT NULL
+        ) DEFAULT CHARACTER SET utf8 made by activate_plugin, do_action('activate_widescribe/WideScribeWPplugin.php'), call_user_func_array, WideScribeWpAdmin::activate, WideScribeWpAdmin::createWSTables, dbDelta
+[17-Sep-2014 12:19:49 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF NOT EXISTS (
+        context varchar(10)  NOT NULL,
+        funcName varchar(' at line 1 for query CREATE TABLE wp_widescribe_log IF NOT EXISTS (
+        context varchar(10)  NOT NULL,
+        funcName varchar(55)  NOT NULL,
+        message varchar(250)  NOT NULL,
+        data varchar(250)  NOT NULL
+        ) DEFAULT CHARACTER SET utf8 made by activate_plugin, do_action('activate_widescribe/WideScribeWPplugin.php'), call_user_func_array, WideScribeWpAdmin::activate, WideScribeWpAdmin::createWSTables, dbDelta
+[17-Sep-2014 12:19:49 UTC] WordPress database error Table 'wp_vxlpay.wp_widescribe_log' doesn't exist for query INSERT INTO `wp_widescribe_log` (`context`,`funcName`,`message`,`data`) VALUES ('admin','createWSTables','Successfully created VXL log and error tables','unset') made by activate_plugin, do_action('activate_widescribe/WideScribeWPplugin.php'), call_user_func_array, WideScribeWpAdmin::activate, WideScribeWpAdmin::createWSTables, WideScribeWpAdmin::log
+[17-Sep-2014 12:21:18 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF NOT EXISTS (
+        context varchar(10)  NOT NULL,
+        funcName varchar(' at line 1 for query CREATE TABLE wp_widescribe_error IF NOT EXISTS (
+        context varchar(10)  NOT NULL,
+        funcName varchar(55)  NOT NULL,
+        message varchar(250)  NOT NULL,
+        data varchar(250)  NOT NULL
+        ) DEFAULT CHARACTER SET utf8 made by activate_plugin, do_action('activate_widescribe/WideScribeWPplugin.php'), call_user_func_array, WideScribeWpAdmin::activate, WideScribeWpAdmin::createWSTables, dbDelta
+[17-Sep-2014 12:21:18 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF NOT EXISTS (
+        context varchar(10)  NOT NULL,
+        funcName varchar(' at line 1 for query CREATE TABLE wp_widescribe_log IF NOT EXISTS (
+        context varchar(10)  NOT NULL,
+        funcName varchar(55)  NOT NULL,
+        message varchar(250)  NOT NULL,
+        data varchar(250)  NOT NULL
+        ) DEFAULT CHARACTER SET utf8 made by activate_plugin, do_action('activate_widescribe/WideScribeWPplugin.php'), call_user_func_array, WideScribeWpAdmin::activate, WideScribeWpAdmin::createWSTables, dbDelta
+[17-Sep-2014 12:21:18 UTC] WordPress database error Table 'wp_vxlpay.wp_widescribe_log' doesn't exist for query INSERT INTO `wp_widescribe_log` (`context`,`funcName`,`message`,`data`) VALUES ('admin','createWSTables','Successfully created VXL log and error tables','unset') made by activate_plugin, do_action('activate_widescribe/WideScribeWPplugin.php'), call_user_func_array, WideScribeWpAdmin::activate, WideScribeWpAdmin::createWSTables, WideScribeWpAdmin::log
+[17-Sep-2014 12:22:03 UTC] WordPress database error Table 'wp_vxlpay.wp_widescribe_log' doesn't exist for query INSERT INTO `wp_widescribe_log` (`context`,`funcName`,`message`,`data`) VALUES ('admin','WideScribeWpPost.testVXLconnection','Successfully negotiated connection with widescribe','unset') made by do_action('widescribe_page_Operational'), call_user_func_array, WideScribeWpAdmin->operationalPanel, WideScribeWpPost::testVXLconnection, WideScribeWpPost::log
+[17-Sep-2014 12:29:53 UTC] WordPress database error Table 'wp_vxlpay.wp_widescribe_log' doesn't exist for query INSERT INTO `wp_widescribe_log` (`context`,`funcName`,`message`,`data`) VALUES ('admin','WideScribeWpPost.testVXLconnection','Successfully negotiated connection with widescribe','unset') made by do_action('widescribe_page_Operational'), call_user_func_array, WideScribeWpAdmin->operationalPanel, WideScribeWpPost::testVXLconnection, WideScribeWpPost::log
+[17-Sep-2014 12:29:58 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF NOT EXISTS (
+        context varchar(10)  NOT NULL,
+        funcName varchar(' at line 1 for query CREATE TABLE wp_widescribe_error IF NOT EXISTS (
+        context varchar(10)  NOT NULL,
+        funcName varchar(55)  NOT NULL,
+        message varchar(250)  NOT NULL,
+        data varchar(250)  NOT NULL
+        ) DEFAULT CHARACTER SET utf8 made by do_action('widescribe_page_Operational'), call_user_func_array, WideScribeWpAdmin->operationalPanel, WideScribeWpAdmin::createWSTables, dbDelta
+[17-Sep-2014 12:29:58 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF NOT EXISTS (
+        context varchar(10)  NOT NULL,
+        funcName varchar(' at line 1 for query CREATE TABLE wp_widescribe_log IF NOT EXISTS (
+        context varchar(10)  NOT NULL,
+        funcName varchar(55)  NOT NULL,
+        message varchar(250)  NOT NULL,
+        data varchar(250)  NOT NULL
+        ) DEFAULT CHARACTER SET utf8 made by do_action('widescribe_page_Operational'), call_user_func_array, WideScribeWpAdmin->operationalPanel, WideScribeWpAdmin::createWSTables, dbDelta
+[17-Sep-2014 12:29:58 UTC] WordPress database error Table 'wp_vxlpay.wp_widescribe_log' doesn't exist for query INSERT INTO `wp_widescribe_log` (`context`,`funcName`,`message`,`data`) VALUES ('admin','createWSTables','Successfully created VXL log and error tables','unset') made by do_action('widescribe_page_Operational'), call_user_func_array, WideScribeWpAdmin->operationalPanel, WideScribeWpAdmin::createWSTables, WideScribeWpAdmin::log
+[17-Sep-2014 12:37:02 UTC] PHP Notice:  Undefined variable: message in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/admin/ClassWideScribeWPAdmin.php on line 719
+[17-Sep-2014 12:37:02 UTC] PHP Notice:  Undefined variable: message in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/admin/ClassWideScribeWPAdmin.php on line 721
+[17-Sep-2014 12:38:44 UTC] PHP Fatal error:  Call to undefined method WideScribeWpPost::truncateError() in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/admin/ClassWideScribeWPAdmin.php on line 330
+[17-Sep-2014 12:39:10 UTC] WordPress database error  for query INSERT INTO `wp_widescribe_error` (`context`,`funcName`,`message`,`data`) VALUES ('admin','truncateErrors','Error attempting to truncate error table. ','unset') made by do_action('widescribe_page_Operational'), call_user_func_array, WideScribeWpAdmin->operationalPanel, WideScribeWpAdmin->truncateError
+[17-Sep-2014 12:39:10 UTC] PHP Fatal error:  Call to a member function insert() on a non-object in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/admin/ClassWideScribeWPAdmin.php on line 596
+[17-Sep-2014 12:40:43 UTC] PHP Notice:  Undefined index: vxlACtion in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/admin/ClassWideScribeWPAdmin.php on line 333
+[17-Sep-2014 12:40:58 UTC] WordPress database error  for query INSERT INTO `wp_widescribe_error` (`context`,`funcName`,`message`,`data`) VALUES ('admin','truncateErrors','Error attempting to truncate error table. ','unset') made by do_action('widescribe_page_Operational'), call_user_func_array, WideScribeWpAdmin->operationalPanel, WideScribeWpAdmin->truncateError
+[17-Sep-2014 12:40:58 UTC] PHP Fatal error:  Call to a member function insert() on a non-object in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/admin/ClassWideScribeWPAdmin.php on line 596
+[17-Sep-2014 12:41:31 UTC] WordPress database error  for query SELECT option_value FROM wp_options WHERE option_name = 'auto_core_update_failed' LIMIT 1 made by do_action('widescribe_page_Operational'), call_user_func_array, WideScribeWpAdmin->operationalPanel, WideScribeWpAdmin->truncateLog
+[17-Sep-2014 12:41:31 UTC] PHP Fatal error:  Call to a member function insert() on a non-object in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/plugins/widescribe/admin/ClassWideScribeWPAdmin.php on line 596
+[18-Sep-2014 13:47:48 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-includes/update.php on line 287
+[18-Sep-2014 13:47:48 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-includes/update.php on line 435
+[18-Sep-2014 13:47:48 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-includes/update.php on line 119
+[18-Sep-2014 13:47:48 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-includes/update.php on line 435
+[18-Sep-2014 13:47:48 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-includes/update.php on line 287
+[18-Sep-2014 13:47:48 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-includes/update.php on line 287
+[18-Sep-2014 13:47:48 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Users/bruker/GitHub/WideScribeWpPlugin/wp-includes/update.php on line 435
+[18-Sep-2014 13:47:48 UTC] PHP Strict Standards:  Only variables should be assigned by reference in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/themes/the-newswire/index.php on line 43
+[18-Sep-2014 13:47:48 UTC] PHP Strict Standards:  Only variables should be assigned by reference in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/themes/the-newswire/content.php on line 14
+[19-Sep-2014 14:07:22 UTC] PHP Strict Standards:  Only variables should be assigned by reference in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/themes/the-newswire/index.php on line 43
+[19-Sep-2014 14:07:22 UTC] PHP Strict Standards:  Only variables should be assigned by reference in /Users/bruker/GitHub/WideScribeWpPlugin/wp-content/themes/the-newswire/content.php on line 14

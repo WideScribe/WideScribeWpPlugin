@@ -1,0 +1,72 @@
+# Copyright (C) 2013 TODO
+# This file is distributed under the same license as the TODO package.
+msgid ""
+msgstr ""
+"Project-Id-Version: TODO 1.0.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/plugins/plugin-name\n"
+"POT-Creation-Date: 2014-07-27 17:24+0100\n"
+"PO-Revision-Date: 2014-07-27 17:25+0100\n"
+"Last-Translator: \n"
+"Language-Team: LANGUAGE <translations@example.com >\n"
+"Language: nb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.7\n"
+"X-Poedit-KeywordsList: __;_e;_n;_x;esc_html_e;esc_html__;esc_attr_e;"
+"esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2\n"
+"X-Poedit-Basepath: ../\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/ClassWideScribeWPAdmin.php:217
+msgid "Page Title"
+msgstr "Sidetittel"
+
+#: admin/ClassWideScribeWPAdmin.php:218
+msgid "Menu Text"
+msgstr "Meny tekst"
+
+#: admin/ClassWideScribeWPAdmin.php:253 admin/views/admin.php:18
+msgid "Settings"
+msgstr "Instillinger"
+
+#: admin/ClassWideScribeWPAdmin.php:303 public/ClassWideScribePlugin.php:327
+msgid "nonce field is missing. Settings NOT saved."
+msgstr "nonce felt mangler, instillingene ble ikke lagret"
+
+#: admin/ClassWideScribeWPAdmin.php:306 public/ClassWideScribePlugin.php:330
+msgid "Invalid nonce specified. Settings NOT saved."
+msgstr "Invaliv nonce spesifisert, instillingene ble ikke lagret"
+
+#: admin/ClassWideScribeWPAdmin.php:311 public/ClassWideScribePlugin.php:335
+msgid "Settings Saved."
+msgstr "Instillinger"
+
+#: admin/views/admin.php:39
+msgid "Administration"
+msgstr "Instillinger"
+
+#: admin/views/admin.php:43
+msgid "Welcome the the vxl administration interface"
+msgstr "Velkommen til VXL administrasjonssiden"
+
+#: admin/views/admin.php:46
+msgid "Your site name"
+msgstr "Din webside"
+
+#: admin/views/admin.php:51
+msgid ""
+"These details will be passed securley to WideScribe.com, and will used to create "
+"your profile on WideScribe.com"
+msgstr ""
+"Disse detaljene vil bli sendt kryptert til WideScribe.com, og vil bli brukt til "
+"å koble din profil til profilen du har på WideScribe.com"
+
+#: admin/views/admin.php:56
+msgid "Save"
+msgstr "Lagre"
+
+#: admin/views/admin.php:68
+msgid "Latest from WPBeginner"
+msgstr "Siste fra WPBeginner"
