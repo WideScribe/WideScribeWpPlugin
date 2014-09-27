@@ -386,19 +386,19 @@ class WideScribeWpPlugin {
             switch ($type){
                 case 'type1':
              
-                    return   '<div style="'.get_option('vxlStyle').'" onclick="vxl_getMain(event)" class="wp_trinket type1"><div class="wp_balanceText"></div></div>';
+                    return   '<div id="vxl_trinket" style="'.get_option('vxlStyle').'" onclick="vxl_getMain(event)" class="wp_trinket type1"><div class="wp_balanceText"></div></div>';
                     break;
                 case 'type2':
-                      return   '<div style="'.get_option('vxlStyle').'" onclick="vxl_getMain(event)" class="wp_trinket type2"><div class="wp_balanceText"></div></div>';
+                      return   '<div id="vxl_trinket" style="'.get_option('vxlStyle').'" onclick="vxl_getMain(event)" class="wp_trinket type2"><div class="wp_balanceText"></div></div>';
               
                 break;
                 case 'type3':
                    
-                      return   '<div  style="'.get_option('vxlStyle').'" onclick="vxl_getMain(event)" class="wp_trinket type3"><div class="wp_balanceText"></div></div>';
+                      return   '<div id="vxl_trinket" style="'.get_option('vxlStyle').'" onclick="vxl_getMain(event)" class="wp_trinket type3"><div class="wp_balanceText"></div></div>';
              
                 break;
                 default:
-                      return   '<div  style="'.get_option('vxlStyle').'" onclick="vxl_getMain(event)" class="wp_trinket type4"><div class="wp_balanceText"></div></div>';
+                      return   '<div id="vxl_trinket" style="'.get_option('vxlStyle').'" onclick="vxl_getMain(event)" class="wp_trinket type4"><div class="wp_balanceText"></div></div>';
              
                 break;
             }
