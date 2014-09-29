@@ -65,7 +65,7 @@ class WideScribeWpPlugin {
         $this->error = false;
         $this->partnerName = get_option('vxl_partnerName');
         //register_setting($this->plugin->name, 'vxl_partnerName', 'trim');
-        $this->log('WideScribePLUGIN.__Construct', 'Running constructor');
+        //$this->log('WideScribePLUGIN.__Construct', 'Running constructor');
         // Load plugin text domain
         add_action('init', array($this, 'load_plugin_textdomain'));
 
@@ -84,10 +84,9 @@ class WideScribeWpPlugin {
        
         add_filter( 'the_content', array($this, 'fltr_add_voucher_form') );
         add_filter( 'the_content', array($this, 'fltr_content_trancher') );
+        
         if(isset($_POST['submit'])){
-            
-            require_once( plugin_dir_path( __FILE__ ) . '/ClassWideScribeWPPost.php' );
-
+           require_once( plugin_dir_path( __FILE__ ) . '/ClassWideScribeWPPost.php' );
            $this->message =  WideScribeWPPost::doAction($_POST['vxlAction']);
 
         }
@@ -192,14 +191,12 @@ class WideScribeWpPlugin {
     *     */
     
     public function fltr_add_voucher_form($content){
-        global $post;
-        
+       global $post;
        if( stripos( $content, '__FORM_VOUCHER__' ) !== false){
             str_replace('__FORM_VOUCHER__', '', $content );
             include_once(WP_PLUGIN_DIR . '/' . $this->plugin_slug . '/public/views/form.php');
        }
-        
-       return '';
+       return $content;
     }
     
     
