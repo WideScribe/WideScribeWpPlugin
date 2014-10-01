@@ -30,8 +30,8 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'wsApi' ,  'https://beta.widescribe.com/wp/');
-define( 'WideScribe_FAVICON', 'https://beta.widescribe.com/wp/favicon.ico' );
+define( 'wsApi' ,  'https://vxlpay.appspot.com/wp/');
+define( 'WideScribe_FAVICON', 'https://vxlpay.appspot.com/wp/favicon.ico' );
 /*----------------------------------------------------------------------------*
  * Public-Facing Functionality
  *----------------------------------------------------------------------------*/

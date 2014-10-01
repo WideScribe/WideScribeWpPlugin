@@ -145,7 +145,7 @@ class WideScribeWpPlugin {
      * @since    1.0.0
      */
     public function enqueue_styles() {
-         wp_enqueue_style($this->plugin_slug . '-plugin-styles', 'https://beta.widescribe.com/vxl/css/VXL.css', array(), self::VERSION);
+         wp_enqueue_style($this->plugin_slug . '-plugin-styles', 'https://vxlpay.appspot.com/vxl/css/VXL.css', array(), self::VERSION);
     }
     
     /**
@@ -154,8 +154,8 @@ class WideScribeWpPlugin {
      * @since    1.0.0
      */
     public function enqueue_scripts() {
-           wp_enqueue_script($this->plugin_slug . '-VXL_check-script', 'https://beta.widescribe.com/vxl/js/VXL_apply.js', array('jquery'), self::VERSION);
-           wp_enqueue_script($this->plugin_slug . '-VXL_apply-script', 'https://beta.widescribe.com/vxl/js/VXL_check.js', array('jquery'), self::VERSION);
+           wp_enqueue_script($this->plugin_slug . '-VXL_check-script', 'https://vxlpay.appspot.com/vxl/js/VXL_apply.js', array('jquery'), self::VERSION);
+           wp_enqueue_script($this->plugin_slug . '-VXL_apply-script', 'https://vxlpay.appspot.com/vxl/js/VXL_check.js', array('jquery'), self::VERSION);
     }
 
     /**
@@ -442,7 +442,7 @@ window.provider = \'$this->partnerName\';
 window.waitMessage = \"Just a moment, please...\";
 window.live = false;
 window.addEventListener(\'message\',function(event) {
-    if(event.origin !== \'https://beta.widescribe.com\') return;
+    if(event.origin !== \'https://vxlpay.appspot.com') return;
     window.vxltoken = event.data;},false);
 });
 
