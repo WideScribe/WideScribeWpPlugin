@@ -16,13 +16,13 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'vxlpay');
+define('DB_NAME', 'vxlpay2');
 
 /** MySQL database username */
-define('DB_USER', 'vxlpay');
+define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'vxlpay');
+define('DB_PASSWORD', 'root');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');

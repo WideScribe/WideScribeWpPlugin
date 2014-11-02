@@ -1,0 +1,363 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: magazine\n"
+"POT-Creation-Date: 2014-06-23 17:13+0400\n"
+"PO-Revision-Date: 2014-07-15 17:38+0400\n"
+"Last-Translator: dianna <dianna.arakelyan@gmail.com>\n"
+"Language-Team: magazine\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.3\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__\n"
+"X-Poedit-Basepath: C:\\wamp\\www\\wordpress_for_theme\\wp-content\\themes"
+"\\magazin_new\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: C:\\wamp\\www\\wordpress_for_theme\\wp-content\\themes"
+"\\magazin_new\n"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/404.php:22
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:64
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-search.php:38
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/search.php:45
+msgid "Type here"
+msgstr "Tip aici"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/404.php:23
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-search.php:33
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/search.php:40
+msgid "Search"
+msgstr "Căutare"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:33
+msgid "Archive for the"
+msgstr "Arhiva pentru"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:33
+msgid "Category"
+msgstr "Categorie"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:35
+msgid "Posts Tagged"
+msgstr "Posts Tagged"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:37
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:39
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:41
+msgid "Archive for"
+msgstr "Arhiva pentru"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:43
+#, php-format
+msgid "All posts by %s"
+msgstr "Toate mesajele lui %s"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:45
+msgid "Blog Archives"
+msgstr "Arhivă Blog"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:65
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-search.php:39
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/search.php:46
+msgid "SEARCH"
+msgstr "CAUTA"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:26
+msgid "&#8249; Older comments"
+msgstr "< Comentarii mai vechi"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:27
+msgid "Newer comments &#8250;"
+msgstr "Mai noi comentarii>"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:38
+msgid "Pings&#47;Trackbacks"
+msgstr "Ping / Urmăritori"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:41
+#, php-format
+msgid "%1$d %2$s for \"%3$s\""
+msgstr "%1$d %2$s pentru \"%3$s\""
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:54
+msgid "Name"
+msgstr "Nume"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:55
+msgid "E-mail"
+msgstr "E-mail "
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:56
+msgid "Website"
+msgstr "Site web"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:63
+msgid "Leave a Reply"
+msgstr "Lasă un răspuns"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:64
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "Lasa un raspuns lui %s"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:65
+msgid "Cancel Reply"
+msgstr "Anulare răspuns"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:66
+msgid "Post Comment"
+msgstr "Post Comment"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:67
+msgid "Comment"
+msgstr "Comentariu"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:68
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+"Trebuie să fii <a href = \"%s\"> logat </a> pentru a posta un comentariu."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:142
+#, php-format
+msgid ""
+"<div class=\"entry-meta-cat\"><span class=\"sep date\"></span><a href=\"%1$s"
+"\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s"
+"\">%4$s</time></a><span class=\"by-author\"> <span class=\"sep author\"></"
+"span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title="
+"\"%6$s\" rel=\"author\">%7$s</a></span></span></div>"
+msgstr ""
+"<div class=\"entry-meta-cat\"><span class=\"sep date\"></span><a href=\"%1$s"
+"\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s"
+"\">%4$s</time></a><span class=\"by-author\"> <span class=\"sep author\"></"
+"span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title="
+"\"%6$s\" rel=\"author\">%7$s</a></span></span></div>"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:148
+#, php-format
+msgid "View all posts by %s"
+msgstr "Vezi toate postate de %s"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:197
+msgid "Primary Widget Area"
+msgstr "Widget Zona primară"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:201
+msgid "The primary widget area"
+msgstr "Zona widget primar"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:218
+msgid "Secondary Widget Area"
+msgstr "Secundar Widget Zona"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:222
+msgid "The secondary widget area"
+msgstr "Zona widget secundar"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:237
+msgid "Footer Left Widget Area"
+msgstr "Subsol Stânga Widget Zona"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:241
+msgid "The footer left widget area"
+msgstr "Notele de subsol din stânga zona widget"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:254
+msgid "Footer Right Widget Area"
+msgstr "Subsol dreapta Widget Zona"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:258
+msgid "The footer right widget area"
+msgstr "Subsol Zona widget drept"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:307
+msgid "Primary Menu"
+msgstr "Meniul principal"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:533
+msgid "Edit"
+msgstr "Editare"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:79
+msgid "The name field is required."
+msgstr "Este necesar câmpul Nume."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:84
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:167
+msgid "Incorrect Captcha code. Please try again."
+msgstr "Captcha code incorect. Vă rugăm să încercați din nou."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:89
+msgid "Error submitting message."
+msgstr "Eroare transmiterea mesajului."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:95
+msgid "Your message was submitted successfully"
+msgstr "Mesajul a fost transmis cu succes"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:135
+msgid "Full Name"
+msgstr "Numele complet"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:140
+msgid "Your Email"
+msgstr "E-mail-ul"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:145
+msgid "Message title"
+msgstr "Titlul mesajului"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:150
+msgid "Comments"
+msgstr "Comentarii"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:166
+msgid "Reset"
+msgstr "Resetare"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:167
+msgid "Send"
+msgstr "Trimiteți"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:167
+msgid "The Name field is required."
+msgstr "Este necesar câmpul Nume."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:167
+msgid "The Email field is required."
+msgstr "Este necesar câmpul E-mail."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:167
+msgid "Please provide a valid email address."
+msgstr "Vă rugăm să furnizați o adresă de email validă."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:167
+msgid "The Message field is required."
+msgstr "Este necesar câmpul Mesaj."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-login.php:42
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-login.php:48
+msgid "Log In"
+msgstr "Logare"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-login.php:45
+msgid "Password"
+msgstr "Parolă"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-login.php:62
+msgid "Log Out"
+msgstr "Log Out"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-most_popular.php:88
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:119
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:122
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:155
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:301
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:306
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:338
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:853
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:857
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:907
+msgid "More"
+msgstr "Mai mult"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-sitemap.php:50
+msgid "Static Pages:"
+msgstr "Pagini statice:"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-sitemap.php:66
+msgid "All Categories:"
+msgstr "Toate categoriile:"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-sitemap.php:82
+msgid "Tags:"
+msgstr "Tag-uri:"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-sitemap.php:102
+msgid "Archives:"
+msgstr "Arhiva:"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-sitemap.php:118
+msgid "Authors:"
+msgstr "Autori:"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-sitemap.php:134
+msgid "Blog Posts:"
+msgstr "Blog Mesaje:"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/searchform.php:1
+msgid "Search..."
+msgstr "Căutare ..."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/single.php:55
+msgid "Page"
+msgstr "Pagina"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/color_control.php:403
+msgid "Schemes"
+msgstr "Scheme"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/install_sampl_date.php:1406
+msgid "Home"
+msgstr "Acasă"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/typography_page.php:442
+msgid "Fonts"
+msgstr "Fonturi"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/includes/meta/seo_meta.php:22
+msgid "SEO Exclusive"
+msgstr "SEO Exclusiv"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:15
+msgid "Insert Button Shortcode"
+msgstr "Introduceți Button Shortcode"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:26
+msgid "Insert Link Shortcode"
+msgstr "Introduceți Link Shortcode"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:40
+msgid "Insert Info Box Shortcode"
+msgstr "Introduceți Info Box Shortcode"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:50
+msgid "Insert Quote Box Shortcode"
+msgstr "Introdu Comentariu Box Shortcode"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:61
+msgid "Insert Contact Form Shortcode"
+msgstr "Introduceți Formular de contact Shortcode"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:71
+msgid "Insert Tabs Creator Shortcode"
+msgstr "Introduceți Tabs Creator Shortcode"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:80
+msgid "Insert Related Posts Shortcode"
+msgstr "Introduceți Legate de posturi Shortcode"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:89
+msgid "Insert Columns Layout Shortcode"
+msgstr "Introduceți Coloane Shortcode Layout"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/categories-vertical-tabs/php/front.end.php:155
+msgid "More Information"
+msgstr "Informaţii suplimentare"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:956
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\"> mesajele ← </ span> mai vechi"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:957
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Posturi mai noi <span class=\"meta-nav\"> → </ span>"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/categories-vertical-tabs/php/front.end.php:155
+msgid "Previous page"
+msgstr "pagina anterioară  "
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/categories-vertical-tabs/php/front.end.php:155
+msgid "Next page"
+msgstr "pagina următoare"

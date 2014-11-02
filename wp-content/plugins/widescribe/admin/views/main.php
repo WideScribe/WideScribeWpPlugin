@@ -44,6 +44,13 @@
                             <?php _e('Welcome the the vxl administration interface', $this->plugin->name); ?>
                             
                         </div>
+                          <!-- Sidebar -->
+                        <div id="postbox-container-1" class="postbox-container">
+
+                            <?php require_once($this->plugin->folder.'/admin/includes/tips.php');  ?>
+
+                        </div>
+
                     </div>
                     <!-- /postbox -->
 

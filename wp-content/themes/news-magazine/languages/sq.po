@@ -1,0 +1,363 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: magazine\n"
+"POT-Creation-Date: 2014-06-23 17:13+0400\n"
+"PO-Revision-Date: 2014-07-15 17:38+0400\n"
+"Last-Translator: dianna <dianna.arakelyan@gmail.com>\n"
+"Language-Team: magazine\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.3\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__\n"
+"X-Poedit-Basepath: C:\\wamp\\www\\wordpress_for_theme\\wp-content\\themes"
+"\\magazin_new\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: C:\\wamp\\www\\wordpress_for_theme\\wp-content\\themes"
+"\\magazin_new\n"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/404.php:22
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:64
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-search.php:38
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/search.php:45
+msgid "Type here"
+msgstr "Lloji këtu"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/404.php:23
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-search.php:33
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/search.php:40
+msgid "Search"
+msgstr "Kërko"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:33
+msgid "Archive for the"
+msgstr "Arkivi për"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:33
+msgid "Category"
+msgstr "Kategori"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:35
+msgid "Posts Tagged"
+msgstr "Posts tagged"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:37
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:39
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:41
+msgid "Archive for"
+msgstr "Arkivi për"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:43
+#, php-format
+msgid "All posts by %s"
+msgstr "Gjithë mesazhet nga %s"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:45
+msgid "Blog Archives"
+msgstr "Blog Archives"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:65
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-search.php:39
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/search.php:46
+msgid "SEARCH"
+msgstr "KËRKO"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:26
+msgid "&#8249; Older comments"
+msgstr "< Komentet më të vjetra"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:27
+msgid "Newer comments &#8250;"
+msgstr "Newer Komentet>"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:38
+msgid "Pings&#47;Trackbacks"
+msgstr "Kontakteve për / Trackbacks"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:41
+#, php-format
+msgid "%1$d %2$s for \"%3$s\""
+msgstr "%1$d %2$s për \"%3$s\""
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:54
+msgid "Name"
+msgstr "Emëri"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:55
+msgid "E-mail"
+msgstr "E-mail"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:56
+msgid "Website"
+msgstr "Webfaqja"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:63
+msgid "Leave a Reply"
+msgstr "Lini një Përgjigju"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:64
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "Lini një Përgjigju me %s"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:65
+msgid "Cancel Reply"
+msgstr "Përgjigju Cancel"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:66
+msgid "Post Comment"
+msgstr "Post Comment"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:67
+msgid "Comment"
+msgstr "Komento"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:68
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+"Ju duhet të jetë <a href = \"%s\"> loguar </ a> për të postoj një koment."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:142
+#, php-format
+msgid ""
+"<div class=\"entry-meta-cat\"><span class=\"sep date\"></span><a href=\"%1$s"
+"\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s"
+"\">%4$s</time></a><span class=\"by-author\"> <span class=\"sep author\"></"
+"span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title="
+"\"%6$s\" rel=\"author\">%7$s</a></span></span></div>"
+msgstr ""
+"<div class=\"entry-meta-cat\"><span class=\"sep date\"></span><a href=\"%1$s"
+"\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s"
+"\">%4$s</time></a><span class=\"by-author\"> <span class=\"sep author\"></"
+"span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title="
+"\"%6$s\" rel=\"author\">%7$s</a></span></span></div>"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:148
+#, php-format
+msgid "View all posts by %s"
+msgstr "Shiko të gjitha postimet e bëra nga %s"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:197
+msgid "Primary Widget Area"
+msgstr "Primar Zona Widget"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:201
+msgid "The primary widget area"
+msgstr "Zona widget primar"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:218
+msgid "Secondary Widget Area"
+msgstr "Mesme Widget Area"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:222
+msgid "The secondary widget area"
+msgstr "Zona widget mesme"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:237
+msgid "Footer Left Widget Area"
+msgstr "Footer Left Widget Area"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:241
+msgid "The footer left widget area"
+msgstr "Footer la zona widget"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:254
+msgid "Footer Right Widget Area"
+msgstr "Footer drejta Widget Area"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:258
+msgid "The footer right widget area"
+msgstr "E drejta footer zonë widget"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:307
+msgid "Primary Menu"
+msgstr "Primar Menu"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:533
+msgid "Edit"
+msgstr "Ndrysho"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:79
+msgid "The name field is required."
+msgstr "Fusha emri është e nevojshme."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:84
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:167
+msgid "Incorrect Captcha code. Please try again."
+msgstr "Kodi i pasaktë Captcha. Ju lutemi provoni përsëri."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:89
+msgid "Error submitting message."
+msgstr "Gabim dorëzimin mesazh."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:95
+msgid "Your message was submitted successfully"
+msgstr "Mesazhi juaj u dërgua me sukses"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:135
+msgid "Full Name"
+msgstr "Emri i plotë"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:140
+msgid "Your Email"
+msgstr "Email juaj"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:145
+msgid "Message title"
+msgstr "Titulli Mesazh"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:150
+msgid "Comments"
+msgstr "Komente"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:166
+msgid "Reset"
+msgstr "Riseto"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:167
+msgid "Send"
+msgstr "Dërgoj"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:167
+msgid "The Name field is required."
+msgstr "Emri fushë është e nevojshme."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:167
+msgid "The Email field is required."
+msgstr "Fusha Email është e nevojshme."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:167
+msgid "Please provide a valid email address."
+msgstr "Ju lutemi të sigurojë një adresë e vlefshme email."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:167
+msgid "The Message field is required."
+msgstr "Fusha Mesazhi është e nevojshme."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-login.php:42
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-login.php:48
+msgid "Log In"
+msgstr "Identifikohu"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-login.php:45
+msgid "Password"
+msgstr "Fjalekalmi"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-login.php:62
+msgid "Log Out"
+msgstr "Log Out"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-most_popular.php:88
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:119
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:122
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:155
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:301
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:306
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:338
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:853
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:857
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:907
+msgid "More"
+msgstr "Më shumë"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-sitemap.php:50
+msgid "Static Pages:"
+msgstr "Statike Faqe:"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-sitemap.php:66
+msgid "All Categories:"
+msgstr "Të gjitha Kategoritë:"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-sitemap.php:82
+msgid "Tags:"
+msgstr "Tags:"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-sitemap.php:102
+msgid "Archives:"
+msgstr "Archives:"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-sitemap.php:118
+msgid "Authors:"
+msgstr "Autorët:"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-sitemap.php:134
+msgid "Blog Posts:"
+msgstr "Blog Postime:"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/searchform.php:1
+msgid "Search..."
+msgstr "Search..."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/single.php:55
+msgid "Page"
+msgstr "Faqe"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/color_control.php:403
+msgid "Schemes"
+msgstr "Skemat"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/install_sampl_date.php:1406
+msgid "Home"
+msgstr "Faqja kryesore"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/typography_page.php:442
+msgid "Fonts"
+msgstr "Germat"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/includes/meta/seo_meta.php:22
+msgid "SEO Exclusive"
+msgstr "SEO Exclusive"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:15
+msgid "Insert Button Shortcode"
+msgstr "Fut Button shortcode"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:26
+msgid "Insert Link Shortcode"
+msgstr "Vendos Link shortcode"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:40
+msgid "Insert Info Box Shortcode"
+msgstr "Fut Info Box shortcode"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:50
+msgid "Insert Quote Box Shortcode"
+msgstr "Fut shortcode Quote Box"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:61
+msgid "Insert Contact Form Shortcode"
+msgstr "Fut Kontakt Form shortcode"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:71
+msgid "Insert Tabs Creator Shortcode"
+msgstr "Fut Tabs Krijuesi shortcode"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:80
+msgid "Insert Related Posts Shortcode"
+msgstr "Fut Posts Related shortcode"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:89
+msgid "Insert Columns Layout Shortcode"
+msgstr "Fut Shtylla Layout shortcode"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/categories-vertical-tabs/php/front.end.php:155
+msgid "More Information"
+msgstr "Më shumë informacion"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:956
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Shkrime më të vjetra"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:957
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Postimet Newer <span class=\"meta-nav\">&rarr;</span>"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/categories-vertical-tabs/php/front.end.php:155
+msgid "Previous page"
+msgstr "tek faqja mbrapa "
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/categories-vertical-tabs/php/front.end.php:155
+msgid "Next page"
+msgstr "Faqja tjetër"

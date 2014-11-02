@@ -1,0 +1,46 @@
+<style class="gotop">
+#wd-categories-vertical-tabs{
+	float:{containerFloat};
+}
+
+
+#wd-categories-vertical-tabs .arrows-block{  
+	width:{tabsWidth};
+}
+
+#wd-categories-vertical-tabs  .arrows-block .arrow-up,#wd-categories-vertical-tabs  .arrows-block .arrow-down{
+   width:100%;
+}
+
+#wd-categories-vertical-tabs  .content-block {
+	width:{contentWidth};
+	margin-left:{tabsMargin};
+	
+}
+
+
+#wd-categories-vertical-tabs  ul.content li div.thumbnail-block  a.image-block {
+	max-height:{thumbnailMaxHeight};
+}
+
+
+</style>
+<div id="wd-categories-vertical-tabs">
+	<div class="arrows-block">
+		<div class="arrow-up"><a href="#up"></a></div>
+		<div class="arrow-down"><a href="#down"></a></div>
+		<div class="tabs-block">
+			<div class="tabs-scroll-block">
+				<ul class="tabs" data-visible="{visibleTabsCount}" data-count="{postsCount}">
+					{tabsList}
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="content-block">
+		<ul class="content">
+			{contentsList}
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>

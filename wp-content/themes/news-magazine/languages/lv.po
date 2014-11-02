@@ -1,0 +1,363 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: magazine\n"
+"POT-Creation-Date: 2014-06-23 17:13+0400\n"
+"PO-Revision-Date: 2014-07-15 17:37+0400\n"
+"Last-Translator: dianna <dianna.arakelyan@gmail.com>\n"
+"Language-Team: magazine\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.3\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__\n"
+"X-Poedit-Basepath: C:\\wamp\\www\\wordpress_for_theme\\wp-content\\themes"
+"\\magazin_new\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: C:\\wamp\\www\\wordpress_for_theme\\wp-content\\themes"
+"\\magazin_new\n"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/404.php:22
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:64
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-search.php:38
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/search.php:45
+msgid "Type here"
+msgstr "Ierakstiet šeit"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/404.php:23
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-search.php:33
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/search.php:40
+msgid "Search"
+msgstr "Meklēšana"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:33
+msgid "Archive for the"
+msgstr "Arhīvs"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:33
+msgid "Category"
+msgstr "Kategorija"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:35
+msgid "Posts Tagged"
+msgstr "Posts Tagged"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:37
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:39
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:41
+msgid "Archive for"
+msgstr "Arhīvs"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:43
+#, php-format
+msgid "All posts by %s"
+msgstr "Visi amati, ko %s"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:45
+msgid "Blog Archives"
+msgstr "Blog Archives"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:65
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-search.php:39
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/search.php:46
+msgid "SEARCH"
+msgstr "MEKLĒT"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:26
+msgid "&#8249; Older comments"
+msgstr "< Vecāki komentāri"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:27
+msgid "Newer comments &#8250;"
+msgstr "Jaunāki komentāri>"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:38
+msgid "Pings&#47;Trackbacks"
+msgstr "Impulsus / Trackbacks"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:41
+#, php-format
+msgid "%1$d %2$s for \"%3$s\""
+msgstr "%1$d %2$s uz \"%3$s\""
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:54
+msgid "Name"
+msgstr "Vārds"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:55
+msgid "E-mail"
+msgstr "E-pasts"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:56
+msgid "Website"
+msgstr "Mājas lapa"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:63
+msgid "Leave a Reply"
+msgstr "Atstāj atbildi"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:64
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "Atstāj atbildi uz %s"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:65
+msgid "Cancel Reply"
+msgstr "Atcelt atbildi"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:66
+msgid "Post Comment"
+msgstr "Post Comment"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:67
+msgid "Comment"
+msgstr "Piezīme"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:68
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+"Jums jābūt <a href = \"%s\"> ielogojies </a>, lai ievietotu komentārus."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:142
+#, php-format
+msgid ""
+"<div class=\"entry-meta-cat\"><span class=\"sep date\"></span><a href=\"%1$s"
+"\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s"
+"\">%4$s</time></a><span class=\"by-author\"> <span class=\"sep author\"></"
+"span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title="
+"\"%6$s\" rel=\"author\">%7$s</a></span></span></div>"
+msgstr ""
+"<div class=\"entry-meta-cat\"><span class=\"sep date\"></span><a href=\"%1$s"
+"\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s"
+"\">%4$s</time></a><span class=\"by-author\"> <span class=\"sep author\"></"
+"span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title="
+"\"%6$s\" rel=\"author\">%7$s</a></span></span></div>"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:148
+#, php-format
+msgid "View all posts by %s"
+msgstr "Skatīt visas ziņas, ko %s"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:197
+msgid "Primary Widget Area"
+msgstr "Primārā Widget Area"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:201
+msgid "The primary widget area"
+msgstr "Primārais widget laukums"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:218
+msgid "Secondary Widget Area"
+msgstr "Sekundārā Widget Area"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:222
+msgid "The secondary widget area"
+msgstr "Vidusskolas widget laukums"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:237
+msgid "Footer Left Widget Area"
+msgstr "Footer Left Widget Area"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:241
+msgid "The footer left widget area"
+msgstr "Atstāja widget platība footer"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:254
+msgid "Footer Right Widget Area"
+msgstr "Footer Tiesības Widget Area"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:258
+msgid "The footer right widget area"
+msgstr "Kājenes tiesības widget laukums"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:307
+msgid "Primary Menu"
+msgstr "Primārā Menu"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:533
+msgid "Edit"
+msgstr "Rediģēt"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:79
+msgid "The name field is required."
+msgstr "Nosaukums lauks ir nepieciešams."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:84
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:167
+msgid "Incorrect Captcha code. Please try again."
+msgstr "Nepareizs Captcha kodu. Lūdzu, mēģiniet vēlreiz."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:89
+msgid "Error submitting message."
+msgstr "Kļūda, iesniedzot ziņojumu."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:95
+msgid "Your message was submitted successfully"
+msgstr "Jūsu ziņojums tika iesniegts veiksmīgi"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:135
+msgid "Full Name"
+msgstr "Pilns nosaukums"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:140
+msgid "Your Email"
+msgstr "Jūsu e-pasts"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:145
+msgid "Message title"
+msgstr "Ziņa virsraksts"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:150
+msgid "Comments"
+msgstr "Komentāri"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:166
+msgid "Reset"
+msgstr "Reset"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:167
+msgid "Send"
+msgstr "Sūtīt"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:167
+msgid "The Name field is required."
+msgstr "Vārds lauks ir nepieciešams."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:167
+msgid "The Email field is required."
+msgstr "E-pasts lauks ir nepieciešams."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:167
+msgid "Please provide a valid email address."
+msgstr "Lūdzu, norādiet derīgu e-pasta adresi."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:167
+msgid "The Message field is required."
+msgstr "Message lauks ir nepieciešams."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-login.php:42
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-login.php:48
+msgid "Log In"
+msgstr "Pieteikties"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-login.php:45
+msgid "Password"
+msgstr "Parole"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-login.php:62
+msgid "Log Out"
+msgstr "Iziet"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-most_popular.php:88
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:119
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:122
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:155
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:301
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:306
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:338
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:853
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:857
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:907
+msgid "More"
+msgstr "Vairāk"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-sitemap.php:50
+msgid "Static Pages:"
+msgstr "Statiskas lapas:"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-sitemap.php:66
+msgid "All Categories:"
+msgstr "Visas kategorijas:"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-sitemap.php:82
+msgid "Tags:"
+msgstr "Tags:"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-sitemap.php:102
+msgid "Archives:"
+msgstr "Arhīvi:"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-sitemap.php:118
+msgid "Authors:"
+msgstr "Autori:"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-sitemap.php:134
+msgid "Blog Posts:"
+msgstr "Blog Ieraksti:"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/searchform.php:1
+msgid "Search..."
+msgstr "Meklēt ..."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/single.php:55
+msgid "Page"
+msgstr "Lappuse"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/color_control.php:403
+msgid "Schemes"
+msgstr "Shēmas"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/install_sampl_date.php:1406
+msgid "Home"
+msgstr "Mājas"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/typography_page.php:442
+msgid "Fonts"
+msgstr "Fonti"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/includes/meta/seo_meta.php:22
+msgid "SEO Exclusive"
+msgstr "SEO Exclusive"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:15
+msgid "Insert Button Shortcode"
+msgstr "Ievietot Pogas Neievērot"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:26
+msgid "Insert Link Shortcode"
+msgstr "Ievietot Link Neievērot"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:40
+msgid "Insert Info Box Shortcode"
+msgstr "Ievietot Info Box Neievērot"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:50
+msgid "Insert Quote Box Shortcode"
+msgstr "Ievietot Citēt Box Neievērot"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:61
+msgid "Insert Contact Form Shortcode"
+msgstr "Ievietot Contact Form Neievērot"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:71
+msgid "Insert Tabs Creator Shortcode"
+msgstr "Ievietot Tabs Creator Neievērot"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:80
+msgid "Insert Related Posts Shortcode"
+msgstr "Ievietot Related Posts Neievērot"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:89
+msgid "Insert Columns Layout Shortcode"
+msgstr "Ievietot kolonnas izkārtojuma Neievērot"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/categories-vertical-tabs/php/front.end.php:155
+msgid "More Information"
+msgstr "Vairāk informācijas"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:956
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\"> ← </ span> Older posts"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:957
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Jaunāka amatu <span class=\"meta-nav\"> → </ span>"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/categories-vertical-tabs/php/front.end.php:155
+msgid "Previous page"
+msgstr "iepriekšējā lapa  "
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/categories-vertical-tabs/php/front.end.php:155
+msgid "Next page"
+msgstr "nākamā lapa"

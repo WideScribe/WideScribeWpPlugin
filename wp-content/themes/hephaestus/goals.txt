@@ -1,0 +1,19 @@
+--There isn't a Logo Upload button in theme options anymore. Logo is the name the user sets in 
+  wordpress admin area,general settings.
+  
+--Copyright added in styles.css.
+
+--Pagination on single posts already exists.
+
+--Added next-page button in wordpress editor.
+
+--Changed Permalink when no title is submitted.
+
+--Changed default widget -recent posts- to show datetime when no title is submitted.
+
+--Added permalink structure to single post when no post is submitted.
+
+--Removed width:100% from default.css line 613
+
+--Added a div with a class of "clear" after <?php the_content ?> in single.php
+and the floats are cleared.

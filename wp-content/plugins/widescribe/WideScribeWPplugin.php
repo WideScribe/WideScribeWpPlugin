@@ -30,8 +30,12 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'wsApi' ,  'https://vxlpay.appspot.com/wp/');
-define( 'WideScribe_FAVICON', 'https://vxlpay.appspot.com/wp/favicon.ico' );
+//define( 'wsApi' ,  'https://vxlpay.appspot.com/');
+define( 'wsApi' ,  'https://beta.widescribe.com');
+//define( 'WideScribe_FAVICON', 'https://vxlpay.appspot.com/vxl/img/favicon.ico' );
+define( 'WideScribe_FAVICON', 'https://vxlpay.appspot.com/vxl/img/favicon.ico' );
+
+//define( 'wsApi' ,  'https://vxlpay.appspot.com/wp/');
 /*----------------------------------------------------------------------------*
  * Public-Facing Functionality
  *----------------------------------------------------------------------------*/
@@ -64,6 +68,7 @@ require_once( plugin_dir_path( __FILE__ ) . 'public/ClassWideScribePlugin.php' )
  * - replace Plugin_Name with the name of the class defined in
  *   `class-plugin-name.php`
  */
+
 add_action( 'plugins_loaded', array( 'WideScribeWpPlugin', 'get_instance' ) );
 
 

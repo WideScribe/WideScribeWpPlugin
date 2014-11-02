@@ -1,0 +1,362 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: magazine\n"
+"POT-Creation-Date: 2014-06-23 17:13+0400\n"
+"PO-Revision-Date: 2014-07-15 17:37+0400\n"
+"Last-Translator: dianna <dianna.arakelyan@gmail.com>\n"
+"Language-Team: magazine\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.3\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__\n"
+"X-Poedit-Basepath: C:\\wamp\\www\\wordpress_for_theme\\wp-content\\themes"
+"\\magazin_new\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: C:\\wamp\\www\\wordpress_for_theme\\wp-content\\themes"
+"\\magazin_new\n"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/404.php:22
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:64
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-search.php:38
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/search.php:45
+msgid "Type here"
+msgstr "Típus itt"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/404.php:23
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-search.php:33
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/search.php:40
+msgid "Search"
+msgstr "Keresés"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:33
+msgid "Archive for the"
+msgstr "Archívum a"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:33
+msgid "Category"
+msgstr "Kategória "
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:35
+msgid "Posts Tagged"
+msgstr "Bejegyzések"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:37
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:39
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:41
+msgid "Archive for"
+msgstr "Archívum"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:43
+#, php-format
+msgid "All posts by %s"
+msgstr "Összes üzenete %s"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:45
+msgid "Blog Archives"
+msgstr "Blog Archívum"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/archive.php:65
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-search.php:39
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/search.php:46
+msgid "SEARCH"
+msgstr "KERESÉS"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:26
+msgid "&#8249; Older comments"
+msgstr "< Régebbi hozzászólások"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:27
+msgid "Newer comments &#8250;"
+msgstr "Újabb hozzászólás>"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:38
+msgid "Pings&#47;Trackbacks"
+msgstr "Az erről / Trackbacks"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:41
+#, php-format
+msgid "%1$d %2$s for \"%3$s\""
+msgstr "%1$d %2$s a \"%3$s\""
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:54
+msgid "Name"
+msgstr "Név"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:55
+msgid "E-mail"
+msgstr "E-mail cím"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:56
+msgid "Website"
+msgstr "Weboldal"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:63
+msgid "Leave a Reply"
+msgstr "Szólj hozzá"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:64
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "Válaszolj neki: %s"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:65
+msgid "Cancel Reply"
+msgstr "Cancel Reply"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:66
+msgid "Post Comment"
+msgstr "Hozzászólás elküldése"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:67
+msgid "Comment"
+msgstr "Megjegyzés"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/comments.php:68
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "Bejegyzés írásához <a href=\"%s\">be kell jelentkeznie</a>."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:142
+#, php-format
+msgid ""
+"<div class=\"entry-meta-cat\"><span class=\"sep date\"></span><a href=\"%1$s"
+"\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s"
+"\">%4$s</time></a><span class=\"by-author\"> <span class=\"sep author\"></"
+"span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title="
+"\"%6$s\" rel=\"author\">%7$s</a></span></span></div>"
+msgstr ""
+"<div class=\"entry-meta-cat\"><span class=\"sep date\"></span><a href=\"%1$s"
+"\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s"
+"\">%4$s</time></a><span class=\"by-author\"> <span class=\"sep author\"></"
+"span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title="
+"\"%6$s\" rel=\"author\">%7$s</a></span></span></div>"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:148
+#, php-format
+msgid "View all posts by %s"
+msgstr "Az összes üzenete %s"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:197
+msgid "Primary Widget Area"
+msgstr "Elsődleges Widget Terület"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:201
+msgid "The primary widget area"
+msgstr "Az elsődleges Widget terület"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:218
+msgid "Secondary Widget Area"
+msgstr "Másodlagos Widget Area"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:222
+msgid "The secondary widget area"
+msgstr "A másodlagos Widget terület"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:237
+msgid "Footer Left Widget Area"
+msgstr "Bal lábléc Widget Area"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:241
+msgid "The footer left widget area"
+msgstr "A lábléc bal Widget terület"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:254
+msgid "Footer Right Widget Area"
+msgstr "Jobb lábléc Widget Area"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:258
+msgid "The footer right widget area"
+msgstr "A lábléc jobb Widget terület"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:307
+msgid "Primary Menu"
+msgstr "Elsődleges menü"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/functions.php:533
+msgid "Edit"
+msgstr "Szerkesztés"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:79
+msgid "The name field is required."
+msgstr "A név mező kitöltése kötelező."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:84
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:167
+msgid "Incorrect Captcha code. Please try again."
+msgstr "Helytelen Captcha code. Kérjük, próbálja újra."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:89
+msgid "Error submitting message."
+msgstr "Hiba benyújtása üzenetet."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:95
+msgid "Your message was submitted successfully"
+msgstr "Az Ön üzenete sikeresen elküldve"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:135
+msgid "Full Name"
+msgstr "Teljes név"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:140
+msgid "Your Email"
+msgstr "E-mail"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:145
+msgid "Message title"
+msgstr "Message cím"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:150
+msgid "Comments"
+msgstr "Hozzászólások:"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:166
+msgid "Reset"
+msgstr "Visszaállítás"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:167
+msgid "Send"
+msgstr "Küldés"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:167
+msgid "The Name field is required."
+msgstr "A név mező kitöltése kötelező."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:167
+msgid "The Email field is required."
+msgstr "Az e-mail mező kitöltése kötelező."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:167
+msgid "Please provide a valid email address."
+msgstr "Adjon meg egy érvényes e-mail címét."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-contact.php:167
+msgid "The Message field is required."
+msgstr "Az üzenet mező kitöltése kötelező."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-login.php:42
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-login.php:48
+msgid "Log In"
+msgstr "Bejelentkezés"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-login.php:45
+msgid "Password"
+msgstr "Jelszó"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-login.php:62
+msgid "Log Out"
+msgstr "Kijelentkezés"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-most_popular.php:88
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:119
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:122
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:155
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:301
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:306
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:338
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:853
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:857
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:907
+msgid "More"
+msgstr "Több"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-sitemap.php:50
+msgid "Static Pages:"
+msgstr "Statikus oldalak:"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-sitemap.php:66
+msgid "All Categories:"
+msgstr "Minden kategória:"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-sitemap.php:82
+msgid "Tags:"
+msgstr "TAGS:érvelés, szülő, vita, veszekedés, észérv, tinédzser, "
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-sitemap.php:102
+msgid "Archives:"
+msgstr "Archívum:"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-sitemap.php:118
+msgid "Authors:"
+msgstr "Szerzők:"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/page-sitemap.php:134
+msgid "Blog Posts:"
+msgstr "Blog hozzászólások:"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/searchform.php:1
+msgid "Search..."
+msgstr "Search ..."
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/single.php:55
+msgid "Page"
+msgstr "Oldal"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/color_control.php:403
+msgid "Schemes"
+msgstr "Rendszerek"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/install_sampl_date.php:1406
+msgid "Home"
+msgstr "Kezdőlap"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/typography_page.php:442
+msgid "Fonts"
+msgstr "Betűtípusok"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/includes/meta/seo_meta.php:22
+msgid "SEO Exclusive"
+msgstr "SEO kizárólagos"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:15
+msgid "Insert Button Shortcode"
+msgstr "Helyezze gomb Rövid"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:26
+msgid "Insert Link Shortcode"
+msgstr "Helyezze link Rövid"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:40
+msgid "Insert Info Box Shortcode"
+msgstr "Helyezze Info Box Rövid"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:50
+msgid "Insert Quote Box Shortcode"
+msgstr "Idézet beillesztése Box Rövid"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:61
+msgid "Insert Contact Form Shortcode"
+msgstr "Helyezze Kapcsolat űrlap Rövid"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:71
+msgid "Insert Tabs Creator Shortcode"
+msgstr "Helyezze Tabs Creator Rövid"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:80
+msgid "Insert Related Posts Shortcode"
+msgstr "Helyezze Kapcsolódó hozzászólások Rövid"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/admin/shortcode/tinymce/config.php:89
+msgid "Insert Columns Layout Shortcode"
+msgstr "Oszlopok beszúrása Layout Rövid"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/categories-vertical-tabs/php/front.end.php:155
+msgid "More Information"
+msgstr "További információ"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:956
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\"> ← </ span> Régebbi bejegyzések"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/front_end/front_end_functions.php:957
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Újabb hozzászólás <span class=\"meta-nav\"> → </ span>"
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/categories-vertical-tabs/php/front.end.php:155
+msgid "Previous page"
+msgstr "Előző oldal "
+
+#: C:\wamp\www\wordpress_for_theme\wp-content\themes\magazin_new/categories-vertical-tabs/php/front.end.php:155
+msgid "Next page"
+msgstr "Következő oldal"

@@ -25,8 +25,6 @@
 class WideScribeWpPost {
    
     static function vxlcURL($route, $fields) {
-       
-     
         $url = wsApi . $route;
         
         
@@ -43,9 +41,12 @@ class WideScribeWpPost {
         
         if ($result === false) {
             $errorMessage = "ERROR CURL:  " . curl_error($ch);
-            WideScribeWpPost::error("WideScribeWpPost.vxlcURL", $errorMessage );
-            $result = new StdClass();
-            $result->status = 'WideScribe API returned empty result '.$errorMessage;
+            //WideScribeWpPost::error("WideScribeWpPost.vxlcURL", $errorMessage );
+            $result = new ErrorException(
+                    'WideScribe API at '.wAPI.$route. ' returned empty result '.$errorMessage , 
+                    808,
+                    3);
+          
             curl_close($ch);
             return $result;
         }
@@ -54,16 +55,20 @@ class WideScribeWpPost {
         //print $result;
         $ro =  json_decode(utf8_encode($result));
         
-        if ($ro) {
-           
+        if (is_object($ro)) {
             return $ro;
         }
         else{
-            $errorMessage = "ERROR CURL:  , the response was not parsable json. Got : ( ".json_encode($ro)." )";
-            WideScribeWpPost::error("WideScribeWpPost.vxlcURL", $errorMessage );
-            return $errorMessage;
+            $errorMessage =   "ERROR CURL: The response was not parsable json (route attemtped : ".$url;
+            WideScribeWpPost::error("WideScribeWpPost.vxlcURL", $errorMessage , $result);
+            $result = new ErrorException(
+                    $errorMessage,
+                    809,
+                    3);
+            
+               return $result;
+          
         }
-       
     }
 
     static function testVXLconnection() {
@@ -93,21 +98,14 @@ class WideScribeWpPost {
             'secret' => $secret,
             'nonce' => 'randomNonce'
         );
-
-        $ro = WideScribeWpPost::vxlcURL('test', $fields);
-
-        if ($ro == false) {
-
-            $errorMessage = 'ERROR CURL : Curl returned empty object' . json_encode($ro);
+        
+        $ro = WideScribeWpPost::vxlcURL('/wp/test', $fields);
+     
+        if (is_a($ro, 'ErrorException')) {
             WideScribeWpPost::error("WideScribeWpPost.testVXLconnection", $errorMessage);
-            return $errorMessage;;
+            return $ro->errorMessage;
         }
-        if (!is_object($ro)) {
-          
-            $errorMessage = 'ERROR CURL : The response was not valid json, got ' . $ro;
-            WideScribeWpPost::error("WideScribeWpPost.testVXLconnection", $errorMessage);
-            return $errorMessage;
-        }
+        
 
         if (!array_key_exists('status', $ro)) {
             $errorMessage = "ERROR : The cURL attempt did not contain the required 'status' variable. : ".json_encode($ro);
@@ -131,7 +129,7 @@ class WideScribeWpPost {
 
    
 
-    static function error($funcName, $message, $data = null) {
+    static function error($funcName, $message, $data = null, $wpId = null) {
         global $wpdb;
 
         //  print $funcname . " - " . $message . " - " . $data;
@@ -141,11 +139,13 @@ class WideScribeWpPost {
         if (!isset($message)) {
             $message = 'unset';
         }
-        $wpdb->insert($wpdb->prefix . 'widescribe_error', array("context" => 'admin', "funcName" => $funcName, "message" => $message, "data" => $data));
+        
+     
+        $wpdb->insert($wpdb->prefix . 'widescribe_watchdog', array("context" => 'admin', "funcName" => $funcName, "message" => $message, "data" => $data, "wpId" => $wpId, 'error' => 1));
         return true;
     }
-
-    static function log($funcName, $message, $data = null) {
+    
+    static function log($funcName, $message, $data = null, $wpId = null) {
 
         global $wpdb;
 
@@ -157,10 +157,11 @@ class WideScribeWpPost {
             $message = 'unset';
         }
 
-        $wpdb->insert($wpdb->prefix . 'widescribe_log', array("context" => 'admin', "funcName" => $funcName, "message" => $message, "data" => $data));
+        $wpdb->insert($wpdb->prefix . 'widescribe_watchdog', array("context" => 'admin', "funcName" => $funcName, "message" => $message, "data" => $data, "wpId" => $wpId));
 
         return true;
     }
+
     
     static function doAction($vxlAction){
         
@@ -184,7 +185,7 @@ class WideScribeWpPost {
                     );
                    
                    
-                  $ro = WideScribeWpPost::vxlcURL('voucher', $fields);
+                  $ro = WideScribeWpPost::vxlcURL('/wp/voucher', $fields);
                  // print_r($ro);
                   if(! is_object($ro)){
                      return __('The request to the WideScribe API did not return an object', 'widescribe');

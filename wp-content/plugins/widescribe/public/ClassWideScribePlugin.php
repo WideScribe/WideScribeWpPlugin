@@ -3,7 +3,7 @@
 /**
  * V X L P A Y Wordpress Plugin
  *
- * @package   WideScribes
+ * @package   WideScribe
  * @author    Your Name <email@example.com>
  * @license   GPL-2.0+
  * @link      http://www.widescribe.com
@@ -44,7 +44,6 @@ class WideScribeWpPlugin {
      * @var      string
      */
     protected $plugin_slug = 'widescribe';
-
     /**
      * Instance of this class.
      *
@@ -80,19 +79,119 @@ class WideScribeWpPlugin {
         add_action('wp_head', array(&$this, 'frontendHeader'));
         add_action('wp_footer', array(&$this, 'frontendFooter'));
         
-     
+
+        // Prepare the wideScribe backdoor API
+        add_filter('query_vars', array($this, 'add_query_vars'), 0);
+        add_action('parse_request', array($this, 'sniff_requests'), 0);
        
+        // Prepare the filtering of the content delivery
         add_filter( 'the_content', array($this, 'fltr_add_voucher_form') );
         add_filter( 'the_content', array($this, 'fltr_content_trancher') );
-        
-        if(isset($_POST['submit'])){
+       
+        if(isset($_POST['submit']) && array_key_exists('vxlAction', $_POST)){
            require_once( plugin_dir_path( __FILE__ ) . '/ClassWideScribeWPPost.php' );
            $this->message =  WideScribeWPPost::doAction($_POST['vxlAction']);
 
         }
-        
     }
     
+    
+    /** Add public query vars
+     * @param array $vars List of current public query vars
+     * @return array $vars
+     */
+    public function add_query_vars($vars) {
+        
+        $vars[] = '__api';
+        $vars[] = 'route';
+      
+     
+        return $vars;
+    }
+
+   
+    /** Sniff Requests
+     * This is where we hijack all API requests
+     * If $_GET['__api'] is set, we kill WP and serve up pug bomb awesomeness
+     * @return die if API request
+     */
+    public function sniff_requests() {
+        global $wp;
+      
+        if (isset($wp->query_vars['__api'])) {
+            header('Content-Type: application/json');
+            print json_encode($this->handle_request());
+            exit;
+        }
+    }
+
+    /** Handle Requests
+     * This is where we send off for an intense pug bomb package
+     * @return void
+     */
+    protected function handle_request() {
+        global $wp;
+         //  print $this->api.'/'.$wp->query_vars['route'];
+        $ch = curl_init();
+        $curlConfig = array(
+            CURLOPT_URL            => wsApi.'/'.$wp->query_vars['route'],
+            CURLOPT_POST           => true,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_POSTFIELDS     => http_build_query($_POST),
+            CURLOPT_SSL_VERIFYPEER => FALSE
+        );
+        
+        curl_setopt_array($ch, $curlConfig);
+        
+        $result = curl_exec($ch);
+        
+        if ($result === false) {
+            $errorMessage = "ERROR CURL:  " . curl_error($ch);
+          //  WideScribeWpPost::error("WideScribeWpPost.vxlcURL", $errorMessage );
+            print $errorMessage;
+            $result = new StdClass();
+            $result->status = 'WideScribe API at '.wAPI.$route. ' returned empty result '.$errorMessage;
+            curl_close($ch);
+            return $result;
+        }
+         
+        curl_close($ch);
+        //print $result;
+        $ro =  json_decode(utf8_encode($result));
+      
+        if ($ro) {
+            return $ro;
+        }
+        else{
+            $errorMessage =  "ERROR CURL: when attempting ". wsApi.'/'.$wp->query_vars['route']." , the response was not parsable json. Got : ( ".$result." )";
+           //  WideScribeWpPost::error("WideScribeWpPost.vxlcURL", $errorMessage );
+            print $errorMessage;
+            return $errorMessage;
+        }
+        
+        /*
+        if (!$pugs)
+            $this->send_response('Please tell us how many pugs to send to widescribe.');
+        $pugs = file_get_contents($this->api . $pugs);
+        if ($pugs)
+            $this->send_response('200 OK', json_decode($pugs));
+        else
+            $this->send_response('Something went wrong with the pug bomb factory');
+         * 
+         * 
+         */
+        
+    }
+
+    /** Response Handler
+     * This sends a JSON response to the browser
+     */
+    protected function send_response($msg) {
+        $response['message'] = $msg;
+        header('content-type: application/json; charset=utf-8');
+        echo json_encode($response) . "\n";
+        exit;
+    }
     
     
     /**
@@ -145,7 +244,7 @@ class WideScribeWpPlugin {
      * @since    1.0.0
      */
     public function enqueue_styles() {
-         wp_enqueue_style($this->plugin_slug . '-plugin-styles', 'https://vxlpay.appspot.com/vxl/css/VXL.css', array(), self::VERSION);
+         wp_enqueue_style($this->plugin_slug . '-plugin-styles', wsApi.'/vxl/css/VXL.css', array(), self::VERSION);
     }
     
     /**
@@ -154,8 +253,8 @@ class WideScribeWpPlugin {
      * @since    1.0.0
      */
     public function enqueue_scripts() {
-           wp_enqueue_script($this->plugin_slug . '-VXL_check-script', 'https://vxlpay.appspot.com/vxl/js/VXL_apply.js', array('jquery'), self::VERSION);
-           wp_enqueue_script($this->plugin_slug . '-VXL_apply-script', 'https://vxlpay.appspot.com/vxl/js/VXL_check.js', array('jquery'), self::VERSION);
+           wp_enqueue_script($this->plugin_slug . '-VXL_check-script', wsApi.'/vxl/js/VXL_apply.js', array('jquery'), self::VERSION);
+           wp_enqueue_script($this->plugin_slug . '-VXL_apply-script', wsApi.'/vxl/js/VXL_check.js', array('jquery'), self::VERSION);
     }
 
     /**
@@ -209,11 +308,12 @@ class WideScribeWpPlugin {
     
     public function fltr_content_trancher($content){
         global $post;
-   
-        $this->log('fltr_comment_trancher', "Filter comment trancher running at ". $_SERVER['REQUEST_URI']);
+      
+        $this->log('fltr_comment_trancher', "Filter comment trancher running at ". $_SERVER['REQUEST_URI'], $post->ID);
         
         if(is_front_page()){
             // This is the front page, and shoud not be charged.
+        
             print $content;
             return;
         }
@@ -224,7 +324,7 @@ class WideScribeWpPlugin {
      
          if ($posttags) {
            foreach($posttags as $tag) {
-              if (strpos($tag->name, 'vxl') > 0){
+              if (strpos($tag->name, 'Premium') >= 0){
                            $free = false;
                            break;
                        }
@@ -233,6 +333,7 @@ class WideScribeWpPlugin {
          
         
         if($free){
+           
             print $content;
             return;
         }
@@ -343,14 +444,21 @@ class WideScribeWpPlugin {
       */
     function addVxlFooter(){
         $this->log('fltr_comment_trancher', "Filter addVXLfooter running");
-        return '<br>This is appended to the end of tranchered article in wordpress';
+        return '<br><div id="#VXL_inject_footer" onclick="knock()">
+            <a onclick="knock()"><h3>Please sign in</h3></a>
+            The remainder of this article is can be read by purchasing access.
+            
+            Our site has joined the WideScribe community of independent media, which give all
+            new users 50 kr to explore the quality news from a variety of sources.
+            You can get access by paying 2 kr through WideScribe or by subscribing to WideScribe network.
+            
+        If you are a new customer, please <a onClick="knock()"> register </a> and claim your 50 kr 
+        registration bonus. 
+            
+        .</div>';
     }
    
 
-	/**
-	* Constructor
-	*/
-	
 	
 	/**
 	* Register Settings
@@ -433,7 +541,7 @@ class WideScribeWpPlugin {
                 if (is_admin() OR is_feed() OR is_robots() OR is_trackback()) {
                       return;
 		}
-             
+             // IMPLEMENT : ERROR URL in below javascript
                print stripslashes("
 <script type=\"text/javascript\">
 jQuery(document).ready(function($) {
@@ -494,7 +602,7 @@ window.addEventListener(\'message\',function(event) {
         if (!isset($message)) {
             $message = 'unset';
         }
-        $wpdb->insert( $wpdb->prefix.'widescribe_error', array("context"=>'public', "funcName" => $funcName, "message" => $message, "data"=>$data ));
+        $wpdb->insert( $wpdb->prefix.'widescribe_watchdog', array("context"=>'public', "funcName" => $funcName, "message" => $message, "data"=>$data, 'error' => 1 ));
         
         return true;
     }
@@ -515,7 +623,7 @@ window.addEventListener(\'message\',function(event) {
             $message = 'unset';
         }
         
-        $wpdb->insert( $wpdb->prefix.'widescribe_log', array("context"=>'public', "funcName" => $funcName, "message" => $message, "data"=>$data ));
+        $wpdb->insert( $wpdb->prefix.'widescribe_watchdog', array("context"=>'public', "funcName" => $funcName, "message" => $message, "data"=>$data ));
        
         return true;
     }

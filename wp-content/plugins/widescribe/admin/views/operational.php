@@ -89,8 +89,9 @@
 
             <!-- Sidebar -->
             <div id="postbox-container-1" class="postbox-container">
-                Happens in the sidebar;
-                <?php //require_once($this->plugin->folder.'/_modules/dashboard/views/sidebar-donate.php');  ?>
+                
+                <?php require_once($this->plugin->folder.'/admin/includes/tips.php');  ?>
+                
             </div>
 
             <!-- /postbox-container -->
