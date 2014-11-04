@@ -306,6 +306,21 @@ class WideScribeWpPlugin {
     *  and returns a  number of words (full sentence).
     *     */
     
+    static function  isPremium(){
+        $posttags = get_the_tags();
+        $premium = false;
+        if ($posttags) {
+            foreach ($posttags as $tag) {
+                if (strpos($tag->name, 'Premium') >= 0) {
+                    $premium = true;
+                    break;
+                }
+            }
+        }
+        
+        return $premium;
+
+    }
     public function fltr_content_trancher($content){
         global $post;
       
@@ -318,22 +333,8 @@ class WideScribeWpPlugin {
             return;
         }
        
-         $free = true;
-         
-         $posttags = get_the_tags();
-     
-         if ($posttags) {
-           foreach($posttags as $tag) {
-              if (strpos($tag->name, 'Premium') >= 0){
-                           $free = false;
-                           break;
-                       }
-                }
-         }
-         
-        
-        if($free){
-           
+        // If not premium, just print the damn thing
+        if(!$this->isPremium()){
             print $content;
             return;
         }

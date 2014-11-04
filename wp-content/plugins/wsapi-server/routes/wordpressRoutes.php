@@ -54,9 +54,9 @@ $app->post('/wp/store', function() use ($app) {
       
     }
 
-    if ($secret != sha1($partner->getSecret() . $nonce)) {
-        $response['status'] = 'Error in secret code, are you are who you say you are?';
-        VXLgate::error('wpvxl/store', $response['status'], $secret);
+    if ($secret != sha1($partner->getSecret())) {
+       $response['status'] = "Error in secret code, are you are who you say you are? Comparing $secret with ".sha1($partner->getSecret() );
+         VXLgate::error('wpvxl/store', $response['status'], $secret);
         print json_encode($response); return;
           
       
@@ -144,7 +144,7 @@ $app->post('/wp/voucher', function() use ($app) {
       
     }
 
-    if ($secret != sha1($partner->getSecret() . $nonce)) {
+    if ($secret != sha1($partner->getSecret())) {
         $response['status'] = 'Error in secret code, are you are who you say you are?';
         VXLgate::error('wpvxl/voucher', $response['status'], $secret);
         print json_encode($response); return;
@@ -242,7 +242,7 @@ $app->post('/wp/test', function() use ($app) {
       
     }
 
-    if ($secret != sha1($partner->getSecret() . $nonce)) {
+    if ($secret != sha1($partner->getSecret())) {
         $response['error'] = 'Could not authenticate with WideScribe.com';
         $response['action'] = 'Please check that your have provided the correct  secret code.';
         $response['status'] = 'Error in secret code, are you are who you say you are?';

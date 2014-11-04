@@ -437,10 +437,10 @@ class WideScribeWpAdmin {
      */
 
     public function saveContentWithWideScribe($postId) {
-
+       
         // Abort if the function is loaded without an action
         if (!isset($_POST['action'])) {
-
+            
             return;
         }
         $secret = sha1(get_option('vxl_sharedSecret'));
@@ -450,26 +450,15 @@ class WideScribeWpAdmin {
         if (is_page()) {
             return;
         }
-
-        // This is a post. Check if its charged.
-        $posttags = get_the_tags();
-        $free = true;
-        if ($posttags) {
-            foreach ($posttags as $tag) {
-                if (strpos($tag->name, 'Premium') >= 0) {
-                    $free = false;
-                    break;
-                }
-            }
-        }
-
+       
         // Abort if the post is not charged for.
-        if ($free) {
-
-            return;
+        if(!$this->isPremium()){
+           return; 
         }
-
-
+        // This is a post. Check if its charged.
+        
+        WideScribeWpPost::log("WideScribeWpPost.vxlcURL", "Attempting to save a post ($postId) on the WideScribe cloud " , json_encode($fields));
+     
         // Route for saving articles in the widescribe database
         if (!isset($secret)) {
             $this->errorMessage = "ERROR : Was unable to register secret option when attemtping to store $postId to widescribe. The post will not be possible to charge using widescribe and will be handed out for free";
@@ -565,7 +554,7 @@ class WideScribeWpAdmin {
         WideScribeWpAdmin::log('widescribeAdmin.saveContentWithWideScribe', "Successfully updated post at WideScribe", null, $postId);
         return true;
     }
-
+   
     static function error($funcName, $message, $data = null, $wpId = null) {
         global $wpdb;
 
@@ -654,7 +643,7 @@ class WideScribeWpAdmin {
   `data` varchar(250) NOT NULL,
   `wpId` int(11) DEFAULT NULL,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `error` int(11) DEFAULT NULL
+  `error` int(11) DEFAULT 0
         ) $charset_collate;";
 
         require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
@@ -841,6 +830,9 @@ class WideScribeWpAdmin {
         global $wpdb;
         
         $tableStr = '<h3>Status for this p</h3>';
+        if(!$this->isPremium()){
+              return 'This article is free. If you want to charge for this content, add a tag containing the words "Premium"';
+        }
         $tableStr .= '<table><tr><td>id</td><td>Context</td><td>Function name</td><td>Message</td><td>Data</td></tr>';
 
         $ro = $wpdb->get_results("SELECT * FROM " . $wpdb->prefix . "widescribe_watchdog WHERE wpId = $wpId ORDER BY timestamp DESC LIMIT 1 ");
@@ -848,7 +840,6 @@ class WideScribeWpAdmin {
         foreach ($ro as $c) {
             if($c->error){
                 return 'An error has occured, and the WideScribe version of this article failed to syncrhonize. This is caused by a technical error. Please contanct WideScribe support with the following details : <br>'. $c->message .' at time '. $c->timestamp . 'CET<br>Additional info : '.$c->data;
-     
             }
             else{
                return $c->message .' at time '. $c->timestamp ;
@@ -929,5 +920,19 @@ class WideScribeWpAdmin {
         // create a custom nonce for submit verification later
         echo '<input type="hidden" name="news_magazine_meta_noncename" value="' . wp_create_nonce(__FILE__) . '" />';
     }
+    public function  isPremium(){
+        $posttags = get_the_tags();
+        $premium = false;
+        if ($posttags) {
+            foreach ($posttags as $tag) {
+                if (strpos($tag->name, 'Premium') >= 0) {
+                    $premium = true;
+                    break;
+                }
+            }
+        }
+        
+        return $premium;
 
+    }
 }

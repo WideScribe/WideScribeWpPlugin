@@ -26,8 +26,8 @@ class WideScribeWpPost {
    
     static function vxlcURL($route, $fields) {
         $url = wsApi . $route;
-        
-        
+   
+        WideScribeWpPost::log("WideScribeWpPost.vxlcURL", 'Attempting to coomunicate with the WideScribe cloud ' , json_encode($fields));
         $ch = curl_init();
         $curlConfig = array(
             CURLOPT_URL            => $url,
@@ -41,7 +41,8 @@ class WideScribeWpPost {
         
         if ($result === false) {
             $errorMessage = "ERROR CURL:  " . curl_error($ch);
-            //WideScribeWpPost::error("WideScribeWpPost.vxlcURL", $errorMessage );
+            WideScribeWpPost::error("WideScribeWpPost.vxlcURL", $errorMessage , json_encode($fields));
+            
             $result = new ErrorException(
                     'WideScribe API at '.wAPI.$route. ' returned empty result '.$errorMessage , 
                     808,
@@ -72,7 +73,7 @@ class WideScribeWpPost {
     }
 
     static function testVXLconnection() {
-        $secret = sha1(get_option('vxl_sharedSecret').'randomNonce');
+        $secret = sha1(get_option('vxl_sharedSecret'));
         $partnerId = get_option('vxl_partnerId');
         
         if (!isset($secret)) {
@@ -95,8 +96,7 @@ class WideScribeWpPost {
         $fields = array(
             'wpId'  => $wpId,
             'partnerId' => $partnerId,
-            'secret' => $secret,
-            'nonce' => 'randomNonce'
+            'secret' => $secret
         );
         
         $ro = WideScribeWpPost::vxlcURL('/wp/test', $fields);
@@ -156,7 +156,7 @@ class WideScribeWpPost {
         if (!isset($message)) {
             $message = 'unset';
         }
-
+    
         $wpdb->insert($wpdb->prefix . 'widescribe_watchdog', array("context" => 'admin', "funcName" => $funcName, "message" => $message, "data" => $data, "wpId" => $wpId));
 
         return true;
@@ -171,13 +171,12 @@ class WideScribeWpPost {
         // This is a request to forward a call to the widescribe API with a new user
             case 'redeem':
                 // Make a curl post call
-                   $secret = sha1(get_option('vxl_sharedSecret').'randomNonce');
+                   $secret = sha1(get_option('vxl_sharedSecret'));
                    $partnerId = get_option('vxl_partnerId');
                    
                    $fields = array(
                         'partnerId' => $partnerId,
                         'secret' => $secret,
-                        'nonce' => 'randomNonce',
                         'firstname' => $_POST['firstname'],
                         'lastname' => $_POST['lastname'], 
                         'email' => $_POST['email'],

@@ -13,7 +13,7 @@
  * @wordpress-plugin
  * Plugin Name:       WideScribe Payramp
  * Plugin URI:        http://www.widescribe.com
- * Description:       This pay per view makes it possible for you to charge for content on your newssite or blog.
+ * Description:       WideScribe makes it easy to charge for content on your newssite or blog, whilst cooperating with other sites to convert users into paying customers
  * Version:           1.0.0
  * Author:            Jens Tandstad, WIDESCRIBE AS
  * Author URI:        jens@widescribe.com
@@ -30,8 +30,8 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-//define( 'wsApi' ,  'https://vxlpay.appspot.com/');
-define( 'wsApi' ,  'https://beta.widescribe.com');
+define( 'wsApi' ,  'https://vxlpay.appspot.com');
+//define( 'wsApi' ,  'https://beta.widescribe.com');
 //define( 'WideScribe_FAVICON', 'https://vxlpay.appspot.com/vxl/img/favicon.ico' );
 define( 'WideScribe_FAVICON', 'https://vxlpay.appspot.com/vxl/img/favicon.ico' );
 
@@ -103,7 +103,7 @@ if($_POST){
 }
 
 if ( is_admin() && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {
-   
+        
 	require_once( plugin_dir_path( __FILE__ ) . 'admin/ClassWideScribeWPAdmin.php' );
 	add_action( 'plugins_loaded', array( 'WideScribeWpAdmin', 'get_instance' ) );
         register_activation_hook( __FILE__, array( 'WideSCribeWpAdmin', 'activate' ) );
