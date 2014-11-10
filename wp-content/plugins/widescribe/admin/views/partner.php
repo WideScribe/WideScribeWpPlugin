@@ -57,7 +57,24 @@
                                     <input name="vxl_provider" id="vxl_provider" class="widefat" rows="8" style="font-family:Courier New;" value ="<?php echo get_option('vxl_provider'); ?>"></input>	
                                     <label for="vxl_sharedSecret"><strong><?php _e('Shared secret', $this->plugin->name); ?></strong></label>
                                     <input name="vxl_sharedSecret" id="vxl_sharedSecret" class="widefat" rows="8" style="font-family:Courier New;" value ="<?php echo get_option('vxl_sharedSecret'); ?>"></input>
-                                   
+                                    
+                                   <?php _e('Select the environment for this installation<br> ', $this->plugin->name); ?>
+                                    
+                                    <select name="vxl_environment" id="vxl_environment" rows="8" style="font-family:Courier New;" value ="<?php echo get_option('vxl_environment'); ?>">
+                                        <option value="PROD" <?php if (get_option('vxl_environment') == 'PROD') {
+                                        print ' selected ';
+                                    } ?> >  
+                                            <?php _e('Production', $this->plugin->name); ?></option>
+                                        <option value="QA"  <?php if (get_option('vxl_environment') == 'QA') {
+                                                print ' selected ';
+                                            } ?> >    
+                                            <?php _e('QA', $this->plugin->name); ?></option>
+                                        <option value="DEV"  <?php if (get_option('vxl_environment') == 'DEV') {
+                                                print ' selected ';
+                                            } ?> >   
+            <?php _e('Development', $this->plugin->name); ?>
+                                        </option>
+                                    </select>
 
                                 </p>
 <?php _e('Please ensure that your account at widescribe.com is enabled', $this->plugin->name); ?>	

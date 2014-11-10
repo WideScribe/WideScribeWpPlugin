@@ -63,6 +63,28 @@ class WideScribeWpPlugin {
         $this->log = false;
         $this->error = false;
         $this->partnerName = get_option('vxl_partnerName');
+        $this->environment = get_option('vxl_environment');
+       
+        switch($this->environment){
+         
+            case 'PROD':
+                define( 'wsApi' ,  'https://vxlpay.appspot.com');
+                define( 'WideScribe_FAVICON', 'https://vxlpay.appspot.com/vxl/img/favicon.ico' );
+            break;
+            case 'QA':
+                define( 'wsApi' ,  'https://vxlpay.appspot.com');
+                define( 'WideScribe_FAVICON', 'https://vxlpay.appspot.com/vxl/img/favicon.ico' );
+            break;
+            case 'DEV':
+                define( 'wsApi' ,  'https://beta.widescribe.com');
+                define( 'WideScribe_FAVICON', 'https://beta.widescribe.com/vxl/img/favicon.ico' );
+            break ;   
+            default:
+               define( 'wsApi' ,  'https://vxlpay.appspot.com');
+               define( 'WideScribe_FAVICON', 'https://vxlpay.appspot.com/vxl/img/favicon.ico' );
+            break;
+           
+        }
         //register_setting($this->plugin->name, 'vxl_partnerName', 'trim');
         //$this->log('WideScribePLUGIN.__Construct', 'Running constructor');
         // Load plugin text domain
@@ -244,7 +266,10 @@ class WideScribeWpPlugin {
      * @since    1.0.0
      */
     public function enqueue_styles() {
-         wp_enqueue_style($this->plugin_slug . '-plugin-styles', wsApi.'/vxl/css/VXL.css', array(), self::VERSION);
+       
+         wp_enqueue_style($this->plugin_slug . '-plugin-stylesBase', wsApi.'/vxl/css/VXL.css', array(), self::VERSION);
+         wp_enqueue_style($this->plugin_slug . '-plugin-stylesEnv', wsApi.'/vxl/css/VXL_'.$this->environment.'.css', array(), self::VERSION);
+        
     }
     
     /**
@@ -489,25 +514,10 @@ class WideScribeWpPlugin {
         
         static function getTrinket($type){
            
-            switch ($type){
-                case 'type1':
-             
-                    return   '<div id="vxl_trinket" style="'.get_option('vxlStyle').'" onclick="vxl_getMain(event)" class="wp_trinket type1"><div class="wp_balanceText"></div></div>';
-                    break;
-                case 'type2':
-                      return   '<div id="vxl_trinket" style="'.get_option('vxlStyle').'" onclick="vxl_getMain(event)" class="wp_trinket type2"><div class="wp_balanceText"></div></div>';
-              
-                break;
-                case 'type3':
-                   
-                      return   '<div id="vxl_trinket" style="'.get_option('vxlStyle').'" onclick="vxl_getMain(event)" class="wp_trinket type3"><div class="wp_balanceText"></div></div>';
-             
-                break;
-                default:
-                      return   '<div id="vxl_trinket" style="'.get_option('vxlStyle').'" onclick="vxl_getMain(event)" class="wp_trinket type4"><div class="wp_balanceText"></div></div>';
-             
-                break;
-            }
+            
+            return   "<div id='vxl_trinket' style='".get_option('vxlStyle')."' onclick='vxl_getMain(event)' class='wp_trinket types $type'><div class='wp_balanceText wp_textSmall'></div></div><div id='vxl_msg' class='wp_trinket_msg $type'>Default message</div>";
+                 
+        
         }
         
 	function frontendHeader() {

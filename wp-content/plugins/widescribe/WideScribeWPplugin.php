@@ -30,11 +30,6 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'wsApi' ,  'https://vxlpay.appspot.com');
-//define( 'wsApi' ,  'https://beta.widescribe.com');
-//define( 'WideScribe_FAVICON', 'https://vxlpay.appspot.com/vxl/img/favicon.ico' );
-define( 'WideScribe_FAVICON', 'https://vxlpay.appspot.com/vxl/img/favicon.ico' );
-
 //define( 'wsApi' ,  'https://vxlpay.appspot.com/wp/');
 /*----------------------------------------------------------------------------*
  * Public-Facing Functionality
@@ -48,8 +43,6 @@ define( 'WideScribe_FAVICON', 'https://vxlpay.appspot.com/vxl/img/favicon.ico' )
  */
 
 require_once( plugin_dir_path( __FILE__ ) . 'public/ClassWideScribePlugin.php' );
-
-
 
 /*
  * Register hooks that are fired when the plugin is activated or deactivated.
@@ -70,10 +63,6 @@ require_once( plugin_dir_path( __FILE__ ) . 'public/ClassWideScribePlugin.php' )
  */
 
 add_action( 'plugins_loaded', array( 'WideScribeWpPlugin', 'get_instance' ) );
-
-
-
-
 
 /*----------------------------------------------------------------------------*
  * Dashboard and Administrative Functionality

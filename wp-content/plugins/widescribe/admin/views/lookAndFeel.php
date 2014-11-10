@@ -62,15 +62,15 @@
                                    <?php _e('Select the vxl counter and balance icon<br> ', $this->plugin->name); ?>
                                     
                                     <select name="vxlTrinketType" id="vxl_domain" rows="8" style="font-family:Courier New;" value ="<?php echo get_option('vxlTrinketType'); ?>">
-                                        <option value="type1" <?php if (get_option('vxlTrinketType') == 'type1') {
+                                        <option value="type1s" <?php if (get_option('vxlTrinketType') == 'type1') {
                                         print ' selected ';
                                     } ?> >  
                                             <?php _e('Type 1', $this->plugin->name); ?></option>
-                                        <option value="type2"  <?php if (get_option('vxlTrinketType') == 'type2') {
+                                        <option value="type2s"  <?php if (get_option('vxlTrinketType') == 'type2') {
                                                 print ' selected ';
                                             } ?> >    
                                             <?php _e('Type 2', $this->plugin->name); ?></option>
-                                        <option value="type3"  <?php if (get_option('vxlTrinketType') == 'type3') {
+                                        <option value="type3s"  <?php if (get_option('vxlTrinketType') == 'type3') {
                                                 print ' selected ';
                                             } ?> >   
             <?php _e('Type 3', $this->plugin->name); ?>

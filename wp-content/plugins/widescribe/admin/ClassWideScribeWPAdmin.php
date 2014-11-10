@@ -218,35 +218,50 @@ class WideScribeWpAdmin {
     }
 
     function lookAndFeelPanel() {
+    try{
         if (isset($_POST['submit'])) {
-            switch ($_POST['vxlAction']) {
-                case 'save':
-                    switch ($_POST['vxlTrinketType']) {
-                        case 'type1':
-                            // Switch does not exist, update option fires after switch
+         
+                switch ($_POST['vxlAction']) {
+                    case 'save':
+                        switch ($_POST['vxlTrinketType']) {
+                            case 'type1s':
+                                // Switch does not exist, update option fires after switch
+                                break;
+                            case 'type2s':
+                                // Switch does not exist, update option fires after switch
+                                break;
+                            case 'type3s':
+                                // Switch does not exist, update option fires after switch
+                                break;
+                            default:
+                                 throw new ErrorException($_POST['vxlTrinketType'].__(' is an invalid trinket design choice', $this->plugin->name, 3));
                             break;
-                        case 'type2':
-                            // Switch does not exist, update option fires after switch
-                            break;
-                        case 'type3':
-                            // Switch does not exist, update option fires after switch
-                            break;
-                        default:
-                            $this->errorMessage = $_POST['vxlIconType'] . __('is an icon type', $this->plugin->name);
-                            return;
-                            break;
-                    }
-                    update_option('vxlTrinketType', $_POST['vxlTrinketType']);
-                    update_option('vxlStyle', $_POST['vxlStyle']);
-                    $this->message = __('Updated the look and feel settings, you should now check how it looks by visiting your front page.', $this->plugin->name);
+                        }
+                        update_option('vxlTrinketType', $_POST['vxlTrinketType']);
+                        update_option('vxlStyle', $_POST['vxlStyle']);
+                        $this->message = __('Updated the look and feel settings, you should now check how it looks by visiting your front page.', $this->plugin->name);
 
-                    break;
-                default:
-                    $this->message = __('Invalid widescribe admin action selected', $this->plugin->name);
-                    break;
+                        break;
+                    default:
+                        $this->message = __('Invalid widescribe admin action selected', $this->plugin->name);
+                        break;
+                }
+
+                include_once(WP_PLUGIN_DIR . '/' . $this->plugin->name . '/admin/views/lookAndFeel.php');
             }
+            else{
+                include_once(WP_PLUGIN_DIR . '/' . $this->plugin->name . '/admin/views/lookAndFeel.php');
+
+            }
+            
         }
-        include_once(WP_PLUGIN_DIR . '/' . $this->plugin->name . '/admin/views/lookAndFeel.php');
+      
+        catch (Exception $e){
+                
+                 $this->errorMessage  = "ERROR ".    $e->getMessage();
+                 include_once(WP_PLUGIN_DIR . '/' . $this->plugin->name . '/admin/views/lookAndFeel.php');
+
+        }
     }
 
     /* This provides the edit of forms.
@@ -400,6 +415,7 @@ class WideScribeWpAdmin {
                             $this->errorMessage = __('Invalid post call received.', $this->plugin->name);
                             return;
                         }
+                        update_option('vxl_environment', $_POST['vxl_environment']);
                         update_option('vxl_partnerId', $_POST['vxl_partnerId']);
                         update_option('vxl_domain', $_POST['vxl_domain']);
                         update_option('vxl_email', $_POST['vxl_email']);
