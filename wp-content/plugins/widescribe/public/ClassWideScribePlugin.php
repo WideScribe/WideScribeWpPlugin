@@ -142,7 +142,7 @@ class WideScribeWpPlugin {
       
         if (isset($wp->query_vars['__api'])) {
             header('Content-Type: application/json');
-            print json_encode($this->handle_request());
+            print $this->handle_request();
             exit;
         }
     }
@@ -153,6 +153,7 @@ class WideScribeWpPlugin {
      */
     protected function handle_request() {
         global $wp;
+        try{
          //  print $this->api.'/'.$wp->query_vars['route'];
         $ch = curl_init();
         $curlConfig = array(
@@ -165,43 +166,27 @@ class WideScribeWpPlugin {
         
         curl_setopt_array($ch, $curlConfig);
         
-        $result = curl_exec($ch);
-        
-        if ($result === false) {
-            $errorMessage = "ERROR CURL:  " . curl_error($ch);
-          //  WideScribeWpPost::error("WideScribeWpPost.vxlcURL", $errorMessage );
-            print $errorMessage;
-            $result = new StdClass();
-            $result->status = 'WideScribe API at '.wAPI.$route. ' returned empty result '.$errorMessage;
-            curl_close($ch);
-            return $result;
-        }
-         
-        curl_close($ch);
-        //print $result;
-        $ro =  json_decode(utf8_encode($result));
       
-        if ($ro) {
-            return $ro;
+       
+        
+        $result = utf8_encode(curl_exec($ch));
+       
+        if ($result === false) {
+            throw new ErrorException("ERROR CURL: Curl failed  " . curl_error($ch));
         }
-        else{
-            $errorMessage =  "ERROR CURL: when attempting ". wsApi.'/'.$wp->query_vars['route']." , the response was not parsable json. Got : ( ".$result." )";
-           //  WideScribeWpPost::error("WideScribeWpPost.vxlcURL", $errorMessage );
-            print $errorMessage;
-            return $errorMessage;
+       
+        curl_close($ch);
+          
+        return $result;
+        
         }
         
-        /*
-        if (!$pugs)
-            $this->send_response('Please tell us how many pugs to send to widescribe.');
-        $pugs = file_get_contents($this->api . $pugs);
-        if ($pugs)
-            $this->send_response('200 OK', json_decode($pugs));
-        else
-            $this->send_response('Something went wrong with the pug bomb factory');
-         * 
-         * 
-         */
+        catch (ErrorException $e){
+          
+            $ro = array('error' => $e->getMessage());
+            return json_encode($ro);
+            
+        }
         
     }
 
@@ -515,7 +500,7 @@ class WideScribeWpPlugin {
         static function getTrinket($type){
            
             
-            return   "<div id='vxl_trinket' style='".get_option('vxlStyle')."' onclick='vxl_getMain(event)' class='wp_trinket types $type'><div class='wp_balanceText wp_textSmall'></div></div><div id='vxl_msg' class='wp_trinket_msg $type'>Default message</div>";
+            return   "<div id='vxl_trinket' style='".get_option('vxlStyle')."' onclick='vxl_getMain(true)' class='wp_trinket types $type'><div class='wp_balanceText wp_textSmall'></div></div><div id='vxl_msg' class='wp_trinket_msg $type'>Default message</div>";
                  
         
         }
@@ -600,6 +585,7 @@ window.addEventListener(\'message\',function(event) {
         if(!$this->error){
             return ;
         }
+        require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
         if (!$this->conn) {
             $this->conn = $this->getConn();
             if (!$this->conn) {
@@ -620,7 +606,7 @@ window.addEventListener(\'message\',function(event) {
     
     function log($funcName, $message, $data = null) {
         global $wpdb;
-        
+        require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
         if(!$this->log){
             return ;
         }

@@ -320,26 +320,25 @@ class WideScribeWpAdmin {
         if (isset($_POST['submit'])) {
 
             switch ($_POST['vxlAction']) {
-                case 'selectEnvironment':
-
-                    break;
                 case 'vxlwp_test':
-                    $this->message = WideScribeWpPost::testVXLconnection();
+                    $this->message = WideScribeWpAdmin::testVXLconnection();
                     break;
-                case 'create_log_tables':
-                    $this->message = WideScribeWpAdmin::createWSTables();
+                case 'vxlwp_backdoor':
+                    $this->message = WideScribeWpAdmin::testWSbackdoor();
                     break;
-                case 'empty_log_table':
-                    $this->message = WideScribeWpAdmin::truncateLog();
+                case 'create_watchdog_table':
+                    $this->message = WideScribeWpAdmin::createWatchdog();
                     break;
-                case 'empty_error_table':
-                    $this->message = WideScribeWpAdmin::truncateError();
+                case 'empty_watchdog_table':
+                    $this->message = WideScribeWpAdmin::truncateWatchdog();
                     break;
                 default:
                     $this->message = __('Invalid widescribe admin action selected (' . $_POST['vxlAction'] . ')', $this->plugin->name);
+                  
                     break;
             }
         }
+       
         include_once(WP_PLUGIN_DIR . '/' . $this->plugin->name . '/admin/views/operational.php');
     }
 
@@ -438,6 +437,8 @@ class WideScribeWpAdmin {
         include_once(WP_PLUGIN_DIR . '/' . $this->plugin->name . '/admin/views/partner.php');
     }
 
+    
+  
     /* saveContentWithWideScribe
      * 
      * This is attached to the save_post hook, and will save a copy of the wordpress content in widescribe. 
@@ -453,14 +454,13 @@ class WideScribeWpAdmin {
      */
 
     public function saveContentWithWideScribe($postId) {
-       
+    try{
         // Abort if the function is loaded without an action
         if (!isset($_POST['action'])) {
             
             return;
         }
-        $secret = sha1(get_option('vxl_sharedSecret'));
-        $partnerId = get_option('vxl_partnerId');
+     
 
         // Widescribe does not push content of pages to the server
         if (is_page()) {
@@ -473,31 +473,10 @@ class WideScribeWpAdmin {
         }
         // This is a post. Check if its charged.
         
-        WideScribeWpPost::log("WideScribeWpPost.vxlcURL", "Attempting to save a post ($postId) on the WideScribe cloud " , json_encode($fields));
+        WideScribeWpPost::log("WideScribeWpPost.vxlcURL", "Attempting to save a post ($postId) on the WideScribe cloud " , json_encode($_POST));
      
         // Route for saving articles in the widescribe database
-        if (!isset($secret)) {
-            $this->errorMessage = "ERROR : Was unable to register secret option when attemtping to store $postId to widescribe. The post will not be possible to charge using widescribe and will be handed out for free";
-
-            WideScribeWpAdmin::error("widescribeAdmin.saveContentWithWideScribe", $this->errorMessage, $postId);
-            return;
-        }
-        // Needs the partnedId
-        if (!isset($partnerId)) {
-            $this->errorMessage = "ERROR : Was unable to register shared secret option from database when attempting to store $postId to widescribe. The post will not be possible to charge using widescribe and will be handed out for free";
-            WideScribeWpAdmin::error("widescribeAdmin.saveContentWithWideScribe", $this->errorMessage, $postId);
-            return;
-        }
-
-        // END OF GUARD STATEMENTS
-        // Route Lookup the complete post content from the wordpress database
-        // Implement : Figure out the post object received here, and urlencode
-        // all the text and characters.
-        // $partnerID = getOption('partnerId');
-        //$secret = sha1(getOption('sharedSecret'));
-        // Nonce and verification
-        $wp_nonce = $_POST['_wpnonce'];
-        $_wp_http_referer = $_POST['_wp_http_referer'];
+      
 
         // Post Id
         $postId = $_POST['post_ID'];
@@ -512,29 +491,15 @@ class WideScribeWpAdmin {
         $post_type = $_POST['post_type'];
         $permaLink = get_permalink($postId);
         $original_post_status = $_POST['original_post_status'];
+        
+        $request = createWpRequest();
+        
+        if(!$request){
+            return false;
+        }
 
         $fields = array(
-            'secret' => $secret,
-            'nonce' => urlencode($wp_nonce),
-            '_wp_http_referer' => urlencode($_wp_http_referer),
-            'wpId' => urlencode($postId),
-            'partnerId' => $partnerId,
-            'action' => urlencode($action),
-            'post_name' => urlencode($post_name),
-            'post_content' => urlencode($content),
-            'post_title' => urlencode($post_title),
-            'post_status' => urlencode($post_status),
-            'post_type' => urlencode($post_type),
-            'permaLink' => urlencode($permaLink),
-            'original_post_status' => urlencode($original_post_status)
-        );
-
-        $fields = array(
-            'secret' => $secret,
-            'wpNonce' => ($wp_nonce),
-            '_wp_http_referer' => ($_wp_http_referer),
             'wpId' => ($postId),
-            'partnerId' => $partnerId,
             'action' => ($action),
             'post_name' => ($post_name),
             'post_content' => ($content),
@@ -544,31 +509,32 @@ class WideScribeWpAdmin {
             'permaLink' => ($permaLink),
             'original_post_status' => ($original_post_status)
         );
-
+        
+        $fields = array_merge($request, $fields);
+     
         $ro = WideScribeWpPost::vxlcURL('/wp/store', $fields);
 
-        // Check if the response was valid json.
+       // Check if the response was valid json.
         if (is_a($ro, 'ErrorException')) {
-          
-            WideScribeWpAdmin::error("WideScribeWpPost.saveContentWithWideScribe", 'The curl returned an error exception', $ro->getMessage(), $postId);
-            $this->errorMessage = $ro->getMessage();
-            return $ro;
+            throw $ro;
         }
-        
         if (!array_key_exists('status', $ro)) {
-            $this->errorMessage = "ERROR : The cURL attempt to save post $postId to widescribe failed. The post will not be possible to charge using widescribe and will be handed out for free. Response was " . json_encode($ro);
-            WideScribeWpAdmin::error("widescribeAdmin.saveContentWithWideScribe", $this->errorMessage, $ro, $postId);
-            return;
+            throw new ErrorException("ERROR : The cURL attempt to save post $postId to widescribe failed. The post will not be possible to charge using widescribe and will be handed out for free. Response was " . json_encode($ro));
         }
         if ($ro->status != 'success') {
-            $this->errorMessage = "ERROR : Attempt to save $postId to widescribe failed. Server response was [" . $ro->status . "] for postId $postId ";
-            WideScribeWpAdmin::error('widescribeAdmin.saveContentWithWideScribe', $this->errorMessage, $ro, $postId);
-
-            return;
+            throw new ErrorException("ERROR : Attempt to save $postId to widescribe failed. Server response was [" . $ro->status . "] for postId $postId ");
         }
         // Write a copy to the log so that it can be shown in the POST metabox directly under the Post editor
         WideScribeWpAdmin::log('widescribeAdmin.saveContentWithWideScribe', "Successfully updated post at WideScribe", null, $postId);
         return true;
+        
+    }
+    catch (ErrorException $e) {
+             WideScribeWpAdmin::error("widescribeAdmin.saveContentWithWideScribe", $e);
+           
+             $this->errorMessage = $e->getMessage();
+             return false;
+        }
     }
    
     static function error($funcName, $message, $data = null, $wpId = null) {
@@ -578,10 +544,12 @@ class WideScribeWpAdmin {
         if (!isset($data)) {
             $data = 'unset';
         }
+        if(is_a($message, 'ErrorException')){
+                $message = $message->getMessage(). '. Occured at '.$message->getLine().' in '.$message->getFile();
+        }
         if (!isset($message)) {
             $message = 'unset';
         }
-        
      
         $wpdb->insert($wpdb->prefix . 'widescribe_watchdog', array("context" => 'admin', "funcName" => $funcName, "message" => $message, "data" => $data, "wpId" => $wpId, 'error' => 1));
        
@@ -604,30 +572,37 @@ class WideScribeWpAdmin {
 
         return true;
     }
-
+    
 
     public function truncateWatchdog() {
         global $wpdb;
-        $wpdb->show_errors();
-        $charset_collate = '';
+        try{
+            $wpdb->show_errors();
+            $charset_collate = '';
 
-        $table_name = $wpdb->prefix . "widescribe_watchdog";
+            $table_name = $wpdb->prefix . "widescribe_watchdog";
 
-        $sql = "TRUNCATE $table_name ";
+            $sql = "TRUNCATE $table_name ";
 
-        require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+            require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 
 
-        if (!dbDelta($sql)) {
-            $this->errorMessage = "Error attempting to truncate error table. " . $wpdb->last_error;
-            WideScribeWpAdmin::error('truncateErrors', $this->errorMessage);
-            $wpdb->print_error();
-            return;
-        } // Create the log table
+            if ( false === $wpdb->query($sql)) {
+                    if ( $wp_error ) {
+                       throw new ErrorException($wpdb->last_error);
 
-        $message = 'Successfully truncated error table';
-        WideScribeWpAdmin::log('truncateErrors', $message);
-        return __($message, $this->plugin->name);
+                    } else {
+                         throw new ErrorException('The WPDB query failed');
+                    }
+            }
+
+            $message = 'Successfully truncated error table';
+
+            return __($message, $this->plugin->name);
+        }catch(ErrorException $e){
+             WideScribeWpAdmin::error("widescribeAdmin.saveContentWithWideScribe", $e);
+             $this->errorMessage = $e->getMessage();
+        }
     }
 
     /*
@@ -637,40 +612,52 @@ class WideScribeWpAdmin {
      * Not tested.
      */
 
-    static function createWSTables() {
+    static function createWatchdog() {
         global $wpdb;
+     
+        try{
+            $charset_collate = '';
 
-        $charset_collate = '';
+            if (!empty($wpdb->charset)) {
+                $charset_collate = "DEFAULT CHARACTER SET {$wpdb->charset}";
+            }
 
-        if (!empty($wpdb->charset)) {
-            $charset_collate = "DEFAULT CHARACTER SET {$wpdb->charset}";
+            if (!empty($wpdb->collate)) {
+                $charset_collate .= " COLLATE {$wpdb->collate}";
+            }
+
+            $table_name = $wpdb->prefix . "widescribe_watchdog";
+
+            $sql = "CREATE TABLE  IF NOT EXISTS $table_name (
+          `context` varchar(10) NOT NULL,
+      `funcName` varchar(55) NOT NULL,
+      `message` varchar(250) NOT NULL,
+      `data` varchar(250) NOT NULL,
+      `wpId` int(11) DEFAULT NULL,
+      `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+      `error` int(11) DEFAULT 0
+            ) $charset_collate;";
+
+            require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+
+            if ( false === $wpdb->query($sql)) {
+                    if ( $wp_error ) {
+                       throw new ErrorException('The plugin failed to create log and error tables. WideScribe requires the table wp_widscribe_watchdog to capture any errors that may occur and notify you. Please ensure that the CREATE TABLE MySQL permissions are granted for the Wordpress user. WordPress had this to say :'.$wpdb->last_error);
+
+                    } else {
+                         throw new ErrorException('The plugin failed to create log and error tables. WideScribe requires the table wp_widscribe_watchdog to capture any errors that may occur and notify you. Please ensure that the CREATE TABLE MySQL permissions are granted for the Wordpress user.');
+                    }
+            }
+            
+           return  'Successfully created Watchdog table';
+
+    }catch(ErrorException $e){
+             WideScribeWpAdmin::error("widescribeAdmin.saveContentWithWideScribe", $e);
+
+             return $e->getMessage();
         }
-
-        if (!empty($wpdb->collate)) {
-            $charset_collate .= " COLLATE {$wpdb->collate}";
-        }
-       
-        $table_name = $wpdb->prefix . "widescribe_watchdog";
-
-        $sql = "CREATE TABLE  IF NOT EXISTS $table_name (
-      `context` varchar(10) NOT NULL,
-  `funcName` varchar(55) NOT NULL,
-  `message` varchar(250) NOT NULL,
-  `data` varchar(250) NOT NULL,
-  `wpId` int(11) DEFAULT NULL,
-  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `error` int(11) DEFAULT 0
-        ) $charset_collate;";
-
-        require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
-
-        if (!dbDelta($sql)) {
-            WideScribeWpAdmin::error('createWSTables', 'Error creating vxl log table. If you see this message, then the reason is that the table already existed');
-            return "The plugin failed to create log and error tables. WideScribe requires the table wp_widscribe_watchdog to capture any errors that may occur and notify you. Please ensure that the CREATE TABLE MySQL permissions are granted for the Wordpress user.";
-        } 
         
        
-        return ;
     }
 
     /**
@@ -705,7 +692,7 @@ class WideScribeWpAdmin {
         } else {
             self::single_activate();
         }
-        if (WideScribeWpAdmin::createWStables() === false) {
+        if (WideScribeWpAdmin::createWatchdog() === false) {
             $message = 'Activated widescribe plugin, but failed to create local log tables';
             WideScribeWpAdmin::log('activate', $message);
             return $message;
@@ -891,17 +878,15 @@ class WideScribeWpAdmin {
     public function printError() {
         global $wpdb;
 
-        $tableStr = '<h3>VXL Errors</h3>';
-        $tableStr .= '<table><tr><td>id</td><td>Context</td><td>Function name</td><td>Message</td><td>Data</td></tr>';
+        $tableStr = '<h3>WideScribe watchdog errors</h3>';
+        $tableStr .= '<table>';
 
         $ro = $wpdb->get_results("SELECT * FROM " . $wpdb->prefix . "widescribe_watchdog WHERE error = 1");
-
+        
         foreach ($ro as $c) {
-            $tableStr .= '<tr>'
-                    . '<td>' . $c->id
-                    . '</td><td>' . htmlspecialchars($c->context)
-                    . '</td><td>' . htmlspecialchars($c->funcName)
-                    . '</td><td>' . htmlspecialchars($c->message)
+            $tableStr .= '<tr style="background-color : lightgrey">'
+                    .'<td>' . htmlspecialchars($c->funcName).'</td><td>' . htmlspecialchars($c->context).'</td></tr>'
+                    . '<tr></td><td>' . htmlspecialchars($c->message)
                     . '</td><td>' . htmlspecialchars($c->data)
                     . '</td></tr>';
         }
@@ -951,4 +936,62 @@ class WideScribeWpAdmin {
         return $premium;
 
     }
+     static function testVXLconnection() {
+        $fields = WideScribeWpPost::createWpRequest();
+        
+        $ro = WideScribeWpPost::vxlcURL('/wp/test', $fields);
+         
+        if (is_a($ro, 'ErrorException')) {
+            WideScribeWpPost::error("WideScribeWpAdmin.testVXLconnection", $ro);
+            return $ro->getMessage().' Occured at line '.$ro->getLine() . ' in '.$ro->getFile();
+        }
+        
+        if (!array_key_exists('status', $ro)) {
+            $errorMessage = "ERROR : The cURL attempt did not contain the required 'status' variable. : ".json_encode($ro);
+            WideScribeWpPost::error("WideScribeWpAdmin.testVXLconnection", $errorMessage);
+
+            return $errorMessage;
+        }
+     
+        if ($ro->status != 'success') {
+            $errorMessage = "ERROR : " . $ro->status . ".";
+            WideScribeWpPost::error('WideScribeWpAdmin.testVXLconnection', $errorMessage);
+
+            return $errorMessage;
+        }
+        
+        WideScribeWpPost::log('WideScribeWpAdmin.testVXLconnection', "Successfully negotiated connection with widescribe");
+        
+        return __('Connection to widescribe successful', 'widescribe');
+    }
+    
+    static function testWsBackdoor() {
+        $fields = WideScribeWpPost::createWpRequest();
+        $ro = WideScribeWpPost::vxlcURL('/wp/test', $fields, true);
+         
+        if (is_a($ro, 'ErrorException')) {
+            WideScribeWpPost::error("WideScribeWpAdmin.testVXLconnection", $ro);
+            return $ro->getMessage().' Occured at line '.$ro->getLine() . ' in '.$ro->getFile();
+        }
+        
+        if (!array_key_exists('status', $ro)) {
+            $errorMessage = "ERROR : The cURL attempt did not contain the required 'status' variable. : ".json_encode($ro);
+            WideScribeWpPost::error("WideScribeWpAdmin.testVXLconnection", $errorMessage);
+
+            return $errorMessage;
+        }
+     
+        if ($ro->status != 'success') {
+            $errorMessage = "ERROR : " . $ro->status . ".";
+            WideScribeWpPost::error('WideScribeWpAdmin.testVXLconnection', $errorMessage);
+
+            return $errorMessage;
+        }
+        
+        WideScribeWpPost::log('WideScribeWpAdmin.testVXLconnection', "Successfully negotiated connection with widescribe");
+        
+        return __('Connection to widescribe successful', 'widescribe');
+    }
+
+
 }

@@ -1,11 +1,11 @@
 <div class="wrap">
-    <h2><?php _e('Add New Partner', $this->plugin->name); ?></h2>
+    <h2><?php _e('Add New Site', $this->plugin->name); ?></h2>
 <?php if (isset($this->message)) { ?>
     <div class="updated fade"><p><?php echo $this->message; ?></p></div>  
 <?php } if (isset($this->errorMessage)) { ?>
     <div class="error fade"><p><?php echo $this->errorMessage; ?></p></div>  
 <?php } ?>
-    <p><?php _e('Create a brand new partner.'); ?></p>
+    <p><?php _e('Create a brand new site for your collection.'); ?></p>
     <form action="" method="post" name="ws_createpartner" id="ws_createpartner" class="validate" novalidate="novalidate">
     <input name="action" type="hidden" value="ws_createpartner" />
 <?php
@@ -67,6 +67,6 @@ $new_partner_defaultCurrencyCode = $creating && isset( $_POST['partner']['defaul
 		  </td>
 	   </tr>
     </table>
-    <?php submit_button( __( 'Add New Partner '), 'primary', 'ws_createpartner', true, array( 'id' => 'ws_createpartnersub' ) ); ?>
+    <?php submit_button( __( 'Add New Site '), 'primary', 'ws_createpartner', true, array( 'id' => 'ws_createpartnersub' ) ); ?>
     </form>        
 </div>

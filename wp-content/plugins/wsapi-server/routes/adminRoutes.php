@@ -76,7 +76,8 @@ $app->post('/admin/init', function () use($app)
     $ppInitKey = $bearer = str_replace('Bearer ', '', $authorization);
     $portal = Portal::getPortalByDomain($ppDomain);
     if (! empty($portal)) {
-        if (empty($portal->initKey)) {
+        VXLgate::log('/admin/init', 'Initkey is'.$portal->initKey, json_encode($portal));
+        if (!$portal->publicKey) {
             $result = array(
                 'success' => false,
                 'message' => 'Partner Portal Already Initialized',

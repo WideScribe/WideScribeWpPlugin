@@ -39,7 +39,7 @@ $app->post('/wp/store', function() use ($app) {
 
     $partner = new Partner($partnerId);
     if (!$partner) {
-        $response['status'] = "PartnerID ( $partnerId )  is not valid";
+        $response['status'] = "PartnerId ( $partnerId )  is not valid";
         VXLgate::error('wpvxl/store', $response['status'], $partnerId);
         print json_encode($response); return;
           
@@ -129,7 +129,7 @@ $app->post('/wp/voucher', function() use ($app) {
 
     $partner = new Partner($partnerId);
     if (!$partner) {
-        $response['status'] = "PartnerID ( $partnerId )  is not valid";
+        $response['status'] = "PartnerId ( $partnerId )  is not valid";
         VXLgate::error('wpvxl/voucher', $response['status'], $partnerId);
         print json_encode($response); return;
           

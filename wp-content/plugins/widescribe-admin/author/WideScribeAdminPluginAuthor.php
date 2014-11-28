@@ -77,13 +77,13 @@ class WideScribeAdminPluginAuthor
 
     function adminPanelsAndMetaBoxes()
     {
-        add_menu_page($this->plugin->displayName, $this->plugin->displayName, 'edit_posts', $this->plugin->name, null, 'dashicons-groups');
+        add_menu_page($this->plugin->displayName, $this->plugin->displayName, 'edit_posts', $this->plugin->name, null, 'https://vxlpay.appspot.com/vxl/img/favicon.ico');
         
-        $this->plugin->pages['all_partners_page'] = add_submenu_page($this->plugin->name, 'My Partners', 'My Partners', 'edit_posts', $this->plugin->name, array(
+        $this->plugin->pages['all_sites_page'] = add_submenu_page($this->plugin->name, 'My Sites', 'My Sites', 'edit_posts', $this->plugin->name, array(
             &$this,
             'partnersPanel'
         ));
-        $this->plugin->pages['new_partners_page'] = add_submenu_page($this->plugin->name, 'Add New Partner', 'Add New Partner', 'edit_posts', $this->plugin->name . '-add', array(
+        $this->plugin->pages['new_site_page'] = add_submenu_page($this->plugin->name, 'Add New Site', 'Add New Site', 'edit_posts', $this->plugin->name . '-add', array(
             &$this,
             'addNewPartnerPanel'
         ));
@@ -127,7 +127,7 @@ class WideScribeAdminPluginAuthor
                         break;
                 }
             }
-            wp_die('Unknown action!');
+            wp_die('Unknown action! ('.$_GET['action'].')');
         } else {
             $this->myPartnersPanel();
         }
@@ -254,7 +254,7 @@ class WideScribeAdminPluginAuthor
     function adminPageTitle($admin_title, $title)
     {
         $screen = get_current_screen();
-        if ($screen->id == $this->plugin->pages['all_partners_page'] && ! empty($_GET['action'])) {
+        if ($screen->id == $this->plugin->pages['all_sites_page'] && ! empty($_GET['action'])) {
             $pos = strpos($admin_title, $title);
             if ($pos !== false) {
                 $oldTitle = $title;

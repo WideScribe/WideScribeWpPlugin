@@ -46,11 +46,10 @@
                                 <p>
                                     <label for="vxlAction"><strong><?php _e('Choose an action', $this->plugin->name); ?></strong></label>
                                     <select name="vxlAction" id="vxlAction"  rows="8" style="font-family:Courier New;" value ="<?php echo get_option('vxl_domain'); ?>">
-                                        <option selected value="none">Select an operation</option>
-                                        <option value="create_log_tables">Re create log tables</option>
-                                        <option value="empty_log_table">Empty log table </option>
-                                        <option value="empty_error_table">Empty error table </option>
-                                        <option value="vxlwp_test">Test widescribe connection</option>
+                                        <option value="create_watchdog_table"><?php _e('Recreate watchdog table', $this->plugin->name); ?></option>
+                                        <option value="empty_watchdog_table"><?php _e('Empty watchdog table', $this->plugin->name); ?></option>
+                                        <option selected value="vxlwp_test"><?php _e('Test WideScribe connection', $this->plugin->name); ?></option>
+                                        <option selected value="vxlwp_backdoor"><?php _e('Test WideScribe backdoor API connection', $this->plugin->name); ?></option>
                                         
                                     </select>
                                 </p>
@@ -60,6 +59,18 @@
                                     <input name="submit" type="submit" name="Submit" class="button button-primary" value="<?php _e('Execute', $this->plugin->name); ?>" /> 
                                 </p>
                             </form>
+                        </div>
+                    </div>
+                     <div class="postbox">
+                        <h3 class="hndle"><?php _e('Error log', $this->plugin->name); ?></h3>
+
+                        <div class="inside">
+                                
+                            <?php _e('Error logged locally on WideScribe', $this->plugin->name); ?>
+                           
+                            
+                         <?php print $this->printError();?>
+                            
                         </div>
                     </div>
                     <!-- /postbox -->

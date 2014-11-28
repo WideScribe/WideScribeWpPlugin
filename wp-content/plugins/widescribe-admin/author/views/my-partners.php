@@ -1,6 +1,6 @@
 <div class="wrap">
     <h2>
-        <?php _e('My Partners', $this->plugin->name); ?>
+        <?php _e('My Sites', $this->plugin->name); ?>
         <a href="<?php menu_page_url('widescribe-admin-add'); ?>" class="add-new-h2">Add New</a>
 	</h2>
     <?php if (isset($this->message)) { ?>

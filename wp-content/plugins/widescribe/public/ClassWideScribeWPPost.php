@@ -23,10 +23,48 @@
 
 
 class WideScribeWpPost {
-   
-    static function vxlcURL($route, $fields) {
+    static function createWpRequest(){
+        
+        try{
+               if(isset($_POST['_wpnonce'])){
+                   $nonce = $_POST['_wpnonce'];
+               }
+               else{
+                   $nonce = substr(uniqid(), 0, 8);
+               }
+               $secret = sha1(get_option('vxl_sharedSecret').$nonce);
+               if (!$secret) {
+                    throw new ErrorException ("ERROR : Was unable to register secret option when attemtping to store $postId to widescribe. The post will not be possible to charge using widescribe and will be handed out for free");
+               }
+               $partnerId = get_option('vxl_partnerId');
+               if (!$partnerId) {
+                    throw new ErrorException ("ERROR : Was unable to send the partnerId for this user");
+               }
+
+                // END OF GUARD STATEMENTS
+                // Route Lookup the complete post content from the wordpress database
+                // Implement : Figure out the post object received here, and urlencode
+                // all the text and characters.
+                // $partnerID = getOption('partnerId');
+                //$secret = sha1(getOption('sharedSecret'));
+                // Nonce and verification
+                
+                return array('secret'=>$secret, 'nonce'=>$nonce, 'wp_http_referer'=>$_POST['_wp_http_referer'], 'partnerId'=>$partnerId);
+                
+        } catch (ErrorException $e) {
+             WideScribeWpAdmin::error("widescribeAdmin.createWPRequest", $e);
+           
+            return $e->getMessage();
+        }
+        
+    }
+    static function vxlcURL($route, $fields, $backdoor = false) {
+       
         $url = wsApi . $route;
-   
+        if($backdoor){
+            $url = 'https://'.$_SERVER['HTTP_HOST'].'/widescribe/backdoor/'.$route;
+        
+        }
         WideScribeWpPost::log("WideScribeWpPost.vxlcURL", 'Attempting to coomunicate with the WideScribe cloud ' , json_encode($fields));
         $ch = curl_init();
         $curlConfig = array(
@@ -44,7 +82,7 @@ class WideScribeWpPost {
             WideScribeWpPost::error("WideScribeWpPost.vxlcURL", $errorMessage , json_encode($fields));
             
             $result = new ErrorException(
-                    'WideScribe API at '.wAPI.$route. ' returned empty result '.$errorMessage , 
+                    'WideScribe API at '.$url. ' returned empty result '.$errorMessage , 
                     808,
                     3);
           
@@ -72,61 +110,7 @@ class WideScribeWpPost {
         }
     }
 
-    static function testVXLconnection() {
-        $secret = sha1(get_option('vxl_sharedSecret'));
-        $partnerId = get_option('vxl_partnerId');
-        
-        if (!isset($secret)) {
-            $errorMessage =  "ERROR : Was unable to register secret option when attemtping to store $postId to widescribe. The post will not be possible to charge using widescribe and will be handed out for free";
-           
-            WideScribeWpPost::error("WideScribeWpPost.testVXLconnection", $errorMessage );
-            return  $errorMessage;
-        }
-        
-        if (!isset($partnerId)) {
-            $errorMessaage = "ERROR : Was unable to register shared secret option from database when attempting to store $postId to widescribe. The post will not be possible to charge using widescribe and will be handed out for free";
-           
-            WideScribeWpPost::error("WideScribeWpPost.testVXLconnection", $errorMessage );
-            return  $errorMessage;
    
-        }
-     
-        $wpId = 234;
-      
-        $fields = array(
-            'wpId'  => $wpId,
-            'partnerId' => $partnerId,
-            'secret' => $secret
-        );
-        
-        $ro = WideScribeWpPost::vxlcURL('/wp/test', $fields);
-     
-        if (is_a($ro, 'ErrorException')) {
-            WideScribeWpPost::error("WideScribeWpPost.testVXLconnection", $errorMessage);
-            return $ro->errorMessage;
-        }
-        
-
-        if (!array_key_exists('status', $ro)) {
-            $errorMessage = "ERROR : The cURL attempt did not contain the required 'status' variable. : ".json_encode($ro);
-            WideScribeWpPost::error("WideScribeWpPost.testVXLconnection", $errorMessage);
-
-            return $errorMessage;
-        }
-        
-        if ($ro->status != 'success') {
-            $errorMessage = "ERROR : " . $ro->status . ". ";
-            
-            WideScribeWpPost::error('WideScribeWpPost.testVXLconnection', $errorMessage);
-
-            return $errorMessage;
-        }
-        
-        WideScribeWpPost::log('WideScribeWpPost.testVXLconnection', "Successfully negotiated connection with widescribe");
-        
-        return __('Connection to widescribe successful', 'widescribe');
-    }
-
    
 
     static function error($funcName, $message, $data = null, $wpId = null) {
