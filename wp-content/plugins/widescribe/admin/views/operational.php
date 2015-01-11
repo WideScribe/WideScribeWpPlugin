@@ -61,6 +61,65 @@
                             </form>
                         </div>
                     </div>
+                    
+                    
+                    <div class="postbox">
+
+                        <h3 class="hndle"><?php _e('Operational', $this->plugin->name); ?></h3>
+
+                        <div class="inside">
+                            <form method="post">
+                                  <?php _e('Select the environment for this installation<br> ', $this->plugin->name); ?>
+                                    <input name="vxlAction" type='hidden' value='save'>
+                                    <p>
+                                    <select name="vxl_environment" id="vxl_environment" rows="8" style="font-family:Courier New;" value ="<?php echo get_option('vxl_environment'); ?>">
+                                        <option value="PROD" <?php if (get_option('vxl_environment') == 'PROD') {
+                                        print ' selected ';
+                                    } ?> >  
+                                            <?php _e('Production', $this->plugin->name); ?></option>
+                                        <option value="QA"  <?php if (get_option('vxl_environment') == 'QA') {
+                                                print ' selected ';
+                                            } ?> >    
+                                            <?php _e('QA', $this->plugin->name); ?></option>
+                                        <option value="DEV"  <?php if (get_option('vxl_environment') == 'DEV') {
+                                                print ' selected ';
+                                            } ?> >   
+            <?php _e('Development', $this->plugin->name); ?>
+                                        </option>
+                                    </select>
+                                    </p>
+                                    <p>
+                                    <?php _e('Use CORS or Local API <br> ', $this->plugin->name); ?>
+                                    <select name="vxl_useBackdoor" id="vxl_useBackdoor" rows="8" style="font-family:Courier New;" value ="<?php echo get_option('vxl_useBackdoor'); ?>">
+                                        <option value="true" <?php if (get_option('vxl_useBackdoor') == 'true') {
+                                        print ' selected ';
+                                    } ?> >  
+                                            <?php _e('Local API', $this->plugin->name); ?></option>
+                                        
+                                        
+                                      <option value="false" <?php if (get_option('vxl_useBackdoor') == 'false') {
+                                        print ' selected ';
+                                    } ?> >  
+                                            <?php _e('Use CORS', $this->plugin->name); ?></option>
+                                           
+
+                                        </option>
+                                    </select>
+                                    </p>
+                                <p>
+                                    <input name="submit" type="submit" name="Submit" class="button button-primary" value="<?php _e('Save', $this->plugin->name); ?>" /> 
+                                </p>
+                            </form>
+                        </div>
+                     
+         
+
+                    </div>
+                    
+                    
+                   
+                    
+                    
                      <div class="postbox">
                         <h3 class="hndle"><?php _e('Error log', $this->plugin->name); ?></h3>
 

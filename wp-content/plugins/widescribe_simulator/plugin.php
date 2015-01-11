@@ -111,7 +111,7 @@ class WideScribe_Simulator extends WP_Widget {
                 wp_enqueue_script('jquery');
 		wp_register_script('jquery.mobile', ("https://code.jquery.com/mobile/1.4.4/jquery.mobile-1.2.0.min.js"), false);
                 wp_enqueue_script('jquery.mobile');
-               
+                
       		$this->load_file(self::slug, '/' . self::slug . '/js/WSsimulator.js', true);
 		$this->load_file(self::slug, '/' . self::slug . '/css/widget.css');
 	

@@ -1,5 +1,4 @@
 <?php
-
 class WideScribeAdminPluginAuthor
 {
     // Instance of the admin class, for using public functions
@@ -10,6 +9,7 @@ class WideScribeAdminPluginAuthor
      */
     public function __construct()
     {
+     
         $this->plugin = new stdClass();
         $this->plugin->pages = array();
         $this->plugin->name = 'widescribe-admin'; // Plugin Folder
@@ -34,6 +34,11 @@ class WideScribeAdminPluginAuthor
             &$this,
             'checkRequirement'
         ) );
+        add_action( 'admin_enqueue_scripts', array(
+            &$this,
+            'author_enqueue_scripts'
+        ) );
+    
     }
 
     /**
@@ -77,6 +82,7 @@ class WideScribeAdminPluginAuthor
 
     function adminPanelsAndMetaBoxes()
     {
+       
         add_menu_page($this->plugin->displayName, $this->plugin->displayName, 'edit_posts', $this->plugin->name, null, 'https://vxlpay.appspot.com/vxl/img/favicon.ico');
         
         $this->plugin->pages['all_sites_page'] = add_submenu_page($this->plugin->name, 'My Sites', 'My Sites', 'edit_posts', $this->plugin->name, array(
@@ -245,9 +251,16 @@ class WideScribeAdminPluginAuthor
         }
         include_once (WP_PLUGIN_DIR . '/' . $this->plugin->name . '/author/views/partner-new.php');
     }
-
+    function author_enqueue_scripts(){
+      
+       wp_enqueue_style( 'FlotCSS', plugins_url( 'widescribe-admin/assets/css/charts.css' ));
+        
+        wp_enqueue_script( 'author-flot-script', plugins_url( 'widescribe-admin/assets/flot/excanvas.min.js' ), array( 'jquery' ));
+        
+    }
     function statisticsPanel()
     {
+       
         include_once (WP_PLUGIN_DIR . '/' . $this->plugin->name . '/author/views/statistics.php');
     }
 

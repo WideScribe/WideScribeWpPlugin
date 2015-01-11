@@ -62,7 +62,7 @@ class WideScribeWpPost {
        
         $url = wsApi . $route;
         if($backdoor){
-            $url = 'https://'.$_SERVER['HTTP_HOST'].'/widescribe/backdoor/'.$route;
+            $url ='https://'.rtrim($_SERVER['HTTP_HOST'], '/').'/widescribe/backdoor'.$route;
         
         }
         WideScribeWpPost::log("WideScribeWpPost.vxlcURL", 'Attempting to coomunicate with the WideScribe cloud ' , json_encode($fields));

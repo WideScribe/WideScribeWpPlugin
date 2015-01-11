@@ -40,7 +40,7 @@
                     <div class="slide-thumb"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail( array(1000, 640) ); ?></a></div>
                  <?php else : ?>
                  
-                    <?php $postimgs =& get_children( array( 'post_parent' => $post->ID, 'post_type' => 'attachment', 'post_mime_type' => 'image', 'orderby' => 'menu_order', 'order' => 'ASC' ) );
+                    <?php $postimgs = get_children( array( 'post_parent' => $post->ID, 'post_type' => 'attachment', 'post_mime_type' => 'image', 'orderby' => 'menu_order', 'order' => 'ASC' ) );
                     if ( !empty($postimgs) ) :
                         $firstimg = array_shift( $postimgs );
                         $my_image = wp_get_attachment_image( $firstimg->ID, array( 1000, 640 ), false );

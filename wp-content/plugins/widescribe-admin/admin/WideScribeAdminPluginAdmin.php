@@ -32,6 +32,8 @@ class WideScribeAdminPluginAdmin
             &$this,
             'adminMenu'
         ));
+        
+       
     }
     
     /**
@@ -97,7 +99,7 @@ class WideScribeAdminPluginAdmin
    }
      public static function activate() {
 
-        if (WideScribeWpAdmin::createWStables() === false) {
+        if (WideScribeAdminPluginAdmin::createWStables() === false) {
             $message = 'Activated widescribe plugin, but failed to create local log tables';
             WideScribeWpAdmin::log('activate', $message);
             return $message;

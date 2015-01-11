@@ -134,7 +134,7 @@ class WideScribeWpAdmin {
 
         $screen = get_current_screen();
         if ($this->plugin_screen_hook_suffix == $screen->id) {
-            //wp_enqueue_style( $this->plugin_slug .'-admin-styles', plugins_url( 'assets/css/admin.css', __FILE__ ), array(), Plugin_Name::VERSION );
+          //  wp_enqueue_style( $this->plugin_slug .'-admin-styles', plugins_url( 'assets/css/admin.css', __FILE__ ), array(), Plugin_Name::VERSION );
         }
     }
 
@@ -171,7 +171,7 @@ class WideScribeWpAdmin {
     function adminPanelsAndMetaBoxes() {
 
         add_menu_page($this->plugin->displayName, $this->plugin->displayName, 'mange_options', 'widescribe.php', array(&$this, 'mainPanel'), WideScribe_FAVICON);
-        add_meta_box('wideScribePostMetaBox', 'WideScribe settings box', array(&$this, 'wideScribePostMetaBoxSetup'), 'Post', 'normal', 'high');
+        add_meta_box('wideScribePostMetaBox', 'WideScribe settings box', array(&$this, 'wideScribePostMetaBoxSetup'), 'Post', 'side', 'high');
        
         add_submenu_page('widescribe.php', 'Partner Settings', 'Partner settings', 'manage_options', 'Partner', array(&$this, 'partnerPanel'));
         add_submenu_page('widescribe.php', 'Operational', 'Operational', 'manage_options', 'Operational', array(&$this, 'operationalPanel'));
@@ -234,16 +234,16 @@ class WideScribeWpAdmin {
                                 // Switch does not exist, update option fires after switch
                                 break;
                             default:
-                                 throw new ErrorException($_POST['vxlTrinketType'].__(' is an invalid trinket design choice', $this->plugin->name, 3));
+                                 throw new ErrorException($_POST['vxlTrinketType']._e(' is an invalid trinket design choice', $this->plugin->name, 3));
                             break;
                         }
                         update_option('vxlTrinketType', $_POST['vxlTrinketType']);
                         update_option('vxlStyle', $_POST['vxlStyle']);
-                        $this->message = __('Updated the look and feel settings, you should now check how it looks by visiting your front page.', $this->plugin->name);
+                        $this->message = _e('Updated the look and feel settings, you should now check how it looks by visiting your front page.', $this->plugin->name);
 
                         break;
                     default:
-                        $this->message = __('Invalid widescribe admin action selected', $this->plugin->name);
+                        $this->message = _e('Invalid widescribe admin action selected', $this->plugin->name);
                         break;
                 }
 
@@ -287,11 +287,11 @@ class WideScribeWpAdmin {
                     }
                     update_option('vxl_formEnabled', $_POST['vxl_formEnabled']);
 
-                    $this->message = __('Updated the look and feel settings, you should now check how it looks by visiting your front page.', $this->plugin->name);
+                    $this->message = _e('Updated the look and feel settings, you should now check how it looks by visiting your front page.', $this->plugin->name);
 
                     break;
                 default:
-                    $this->message = __('Invalid widescribe admin action selected', $this->plugin->name);
+                    $this->message = _e('Invalid widescribe admin action selected', $this->plugin->name);
                     break;
             }
         }
@@ -308,7 +308,7 @@ class WideScribeWpAdmin {
 
                     break;
                 default:
-                    $this->message = __('Invalid widescribe admin action selected', $this->plugin->name);
+                    $this->message = _e('Invalid widescribe admin action selected', $this->plugin->name);
                     break;
             }
         }
@@ -332,8 +332,23 @@ class WideScribeWpAdmin {
                 case 'empty_watchdog_table':
                     $this->message = WideScribeWpAdmin::truncateWatchdog();
                     break;
+                case 'save':
+                     $enviornment = $_POST['vxl_environment'];
+                     $useBackdoor = $_POST['vxl_useBackdoor'];
+                     if(!in_array($_POST['vxl_useBackdoor'], array('true', 'false'))){
+                         $this->message = _e('Cannot set option vxl_useBackdoor : Invalid option value provided : ('.$_POST['vxl_useBackdoor'].')');
+                         break;
+                     }
+                     if(!in_array($_POST['vxl_environment'], array('DEV', 'QA', 'PROD'))){
+                         $this->message = _e('Cannot set option vxl_environment : Invalid option value provided : ('.$_POST['vxl_environment'].')');
+                         break;
+                     }
+                     update_option('vxl_environment', $_POST['vxl_environment']);
+                     update_option('vxl_useBackdoor', $_POST['vxl_useBackdoor']);
+                  
+                break;
                 default:
-                    $this->message = __('Invalid widescribe admin action selected (' . $_POST['vxlAction'] . ')', $this->plugin->name);
+                    $this->message = _e('Invalid widescribe admin action selected (' . $_POST['vxlAction'] . ')', $this->plugin->name);
                   
                     break;
             }
@@ -344,6 +359,7 @@ class WideScribeWpAdmin {
 
     function paywallPanel() {
         if (isset($_POST['submit'])) {
+         
             switch ($_POST['vxlAction']) {
                 case 'save':
 
@@ -370,16 +386,16 @@ class WideScribeWpAdmin {
                             // Switch does not ext, update option fires after switch
                             break;
                         default:
-                            $this->errorMessage = $_POST['vxl_trancherAt'] . __('is an invalid choice for text chopping', $this->plugin->name);
+                            $this->errorMessage = $_POST['vxl_trancherAt'] . _e('is an invalid choice for text chopping', $this->plugin->name);
                             return;
                             break;
                     }
                     update_option('vxl_trancherAt', $_POST['vxl_trancherAt']);
-                    $this->message = __('Updated the trancher settings', $this->plugin->name);
+                    $this->message = _e('Updated the trancher settings', $this->plugin->name);
                     break;
 
                 default:
-                    $this->message = __('Invalid widescribe admin action selected', $this->plugin->name);
+                    $this->message = _e('Invalid widescribe admin action selected', $this->plugin->name);
                     return;
                     break;
             }
@@ -403,30 +419,30 @@ class WideScribeWpAdmin {
                 case 'save':
                     // Check nonce, if it exists, other stuff exit too.
                     if (!isset($_POST[$this->plugin->name . '_nonce'])) {
-                        $this->errorMessage = __('nonce field is missing. Settings NOT saved.', $this->plugin->name);
+                        $this->errorMessage = _e('nonce field is missing. Settings NOT saved.', $this->plugin->name);
                     } elseif (!wp_verify_nonce($_POST[$this->plugin->name . '_nonce'], $this->plugin->name)) {
                         // Invalid nonce
-                        $this->errorMessage = __('Invalid nonce specified. Settings NOT saved.', $this->plugin->name);
+                        $this->errorMessage = _e('Invalid nonce specified. Settings NOT saved.', $this->plugin->name);
                     } else {
                         // Save
 
                         if (!array_key_exists('vxl_domain', $_POST)) {
-                            $this->errorMessage = __('Invalid post call received.', $this->plugin->name);
+                            $this->errorMessage = _e('Invalid post call received.', $this->plugin->name);
                             return;
                         }
-                        update_option('vxl_environment', $_POST['vxl_environment']);
+                      
                         update_option('vxl_partnerId', $_POST['vxl_partnerId']);
                         update_option('vxl_domain', $_POST['vxl_domain']);
                         update_option('vxl_email', $_POST['vxl_email']);
                         update_option('vxl_provider', $_POST['vxl_provider']);
                         update_option('vxl_sharedSecret', $_POST['vxl_sharedSecret']);
 
-                        $this->message = __('Settings Saved.', $this->plugin->name);
+                        $this->message = _e('Settings Saved.', $this->plugin->name);
                     }
 
                     break;
                 default:
-                    $this->message = __('Invalid widescribe admin action selected', $this->plugin->name);
+                    $this->message = _e('Invalid widescribe admin action selected', $this->plugin->name);
                     return;
                     break;
             }
@@ -455,6 +471,8 @@ class WideScribeWpAdmin {
 
     public function saveContentWithWideScribe($postId) {
     try{
+        
+      
         // Abort if the function is loaded without an action
         if (!isset($_POST['action'])) {
             
@@ -465,12 +483,13 @@ class WideScribeWpAdmin {
         // Widescribe does not push content of pages to the server
         if (is_page()) {
             return;
-        }
+        }  
        
         // Abort if the post is not charged for.
         if(!$this->isPremium()){
            return; 
         }
+      
         // This is a post. Check if its charged.
         
         WideScribeWpPost::log("WideScribeWpPost.vxlcURL", "Attempting to save a post ($postId) on the WideScribe cloud " , json_encode($_POST));
@@ -484,15 +503,19 @@ class WideScribeWpAdmin {
         // Context of the call, to allow filtering serverside
         $action = $_POST['action'];
 
-        $post_title = $_POST['post_title'];
-        $content = $_POST['content'];
-        $post_name = $_POST['post_name'];
-        $post_status = $_POST['post_status'];
-        $post_type = $_POST['post_type'];
+        $post_title = stripslashes($_POST['post_title']);
+        $content = stripslashes($_POST['content']);
+        $post_name = stripslashes($_POST['post_name']);
+        $post_status = stripslashes($_POST['post_status']);
+        $post_type = stripslashes($_POST['post_type']);
         $permaLink = get_permalink($postId);
         $original_post_status = $_POST['original_post_status'];
+        // Get the GMT unix timestamp for the postPublish time
+        $publishedTime = get_post_time( 'U', true, $postId, false );
+        $tags = json_encode(wp_get_post_tags($postId));
+        $cost = 2;
         
-        $request = createWpRequest();
+        $request = WideScribeWpPost::createWpRequest();
         
         if(!$request){
             return false;
@@ -507,7 +530,11 @@ class WideScribeWpAdmin {
             'post_status' => ($post_status),
             'post_type' => ($post_type),
             'permaLink' => ($permaLink),
-            'original_post_status' => ($original_post_status)
+            'original_post_status' => ($original_post_status),
+            'tags' => ($tags),
+            'cost' => $cost,
+            'publishedTime' => $publishedTime
+                
         );
         
         $fields = array_merge($request, $fields);
@@ -598,7 +625,7 @@ class WideScribeWpAdmin {
 
             $message = 'Successfully truncated error table';
 
-            return __($message, $this->plugin->name);
+            return _e($message, $this->plugin->name);
         }catch(ErrorException $e){
              WideScribeWpAdmin::error("widescribeAdmin.saveContentWithWideScribe", $e);
              $this->errorMessage = $e->getMessage();
@@ -834,21 +861,20 @@ class WideScribeWpAdmin {
         
         $tableStr = '<h3>Status for this p</h3>';
         if(!$this->isPremium()){
-              return 'This article is free. If you want to charge for this content, add a tag containing the words "Premium"';
+              return '<img style="float:left;" src="'.wsApi.'/vxl/img/wpStatusFree.png">This article is free. If you want to charge for this content, add a tag containing the words "Premium"';
         }
-        $tableStr .= '<table><tr><td>id</td><td>Context</td><td>Function name</td><td>Message</td><td>Data</td></tr>';
-
+      
         $ro = $wpdb->get_results("SELECT * FROM " . $wpdb->prefix . "widescribe_watchdog WHERE wpId = $wpId ORDER BY timestamp DESC LIMIT 1 ");
 
         foreach ($ro as $c) {
             if($c->error){
-                return 'An error has occured, and the WideScribe version of this article failed to syncrhonize. This is caused by a technical error. Please contanct WideScribe support with the following details : <br>'. $c->message .' at time '. $c->timestamp . 'CET<br>Additional info : '.$c->data;
+                return '<img style="float:left;" src="'.wsApi.'/vxl/img/wpStatusAlert.png">An error has occured, and the WideScribe version of this article failed to syncrhonize. This is caused by a technical error. Please contanct WideScribe support with the following details : <br>'. $c->message .' at time '. $c->timestamp . 'CET<br>Additional info : '.$c->data;
             }
             else{
-               return $c->message .' at time '. $c->timestamp ;
+               return '<img  style="float:left;" src="'.wsApi.'/vxl/img/wpStatusOK.png">'.$c->message .' at time '. $c->timestamp ;
             }
         }
-        return 'This article has never been synchronized with Widescribe. Please update th article and check this field again';
+        return '<img style="float:left;" src="'.wsApi.'/vxl/img/wpStatusAlert.png">This article has never been synchronized with Widescribe. Please update the article and check this field again';
     }
     
     public function printLog() {
@@ -925,7 +951,9 @@ class WideScribeWpAdmin {
         $posttags = get_the_tags();
         $premium = false;
         if ($posttags) {
+         
             foreach ($posttags as $tag) {
+             
                 if (strpos($tag->name, 'Premium') >= 0) {
                     $premium = true;
                     break;
@@ -962,7 +990,7 @@ class WideScribeWpAdmin {
         
         WideScribeWpPost::log('WideScribeWpAdmin.testVXLconnection', "Successfully negotiated connection with widescribe");
         
-        return __('Connection to widescribe successful', 'widescribe');
+        return _e('Connection to widescribe successful', 'widescribe');
     }
     
     static function testWsBackdoor() {
@@ -990,7 +1018,7 @@ class WideScribeWpAdmin {
         
         WideScribeWpPost::log('WideScribeWpAdmin.testVXLconnection', "Successfully negotiated connection with widescribe");
         
-        return __('Connection to widescribe successful', 'widescribe');
+        return _e('Connection to widescribe successful', 'widescribe');
     }
 
 

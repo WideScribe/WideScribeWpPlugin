@@ -51,7 +51,7 @@
 
 
 
-
+                                   <input name="vxlAction" type='hidden' value='save'>
                                 <select name="vxl_chargeMethod" id="vxl_domain" rows="8" style="font-family:Courier New;" value ="<?php echo get_option('vxl_trancherAtParagraphNo'); ?>">
                                     <option value="chargeByTag" <?php
                                             if (get_option('vxl_chargeMethod') == 'chargeByTag') {

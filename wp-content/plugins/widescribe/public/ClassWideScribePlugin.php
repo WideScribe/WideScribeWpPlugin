@@ -62,7 +62,8 @@ class WideScribeWpPlugin {
     private function __construct() {
         $this->log = false;
         $this->error = false;
-        $this->partnerName = get_option('vxl_partnerName');
+        $this->partnerId = get_option('vxl_partnerId');
+        $this->partnerName = get_option('vxl_provider');
         $this->environment = get_option('vxl_environment');
        
         switch($this->environment){
@@ -108,7 +109,10 @@ class WideScribeWpPlugin {
        
         // Prepare the filtering of the content delivery
         add_filter( 'the_content', array($this, 'fltr_add_voucher_form') );
-        add_filter( 'the_content', array($this, 'fltr_content_trancher') );
+       
+              add_filter( 'the_content', array($this, 'fltr_content_trancher') );
+       
+      
        
         if(isset($_POST['submit']) && array_key_exists('vxlAction', $_POST)){
            require_once( plugin_dir_path( __FILE__ ) . '/ClassWideScribeWPPost.php' );
@@ -142,7 +146,15 @@ class WideScribeWpPlugin {
       
         if (isset($wp->query_vars['__api'])) {
             header('Content-Type: application/json');
-            print $this->handle_request();
+            
+            $response = $this->handle_request();
+            /*$headers = explode(PHP_EOL, $response['headers']);
+            foreach($headers as $value){
+               // header($value);
+                print $value;
+            }
+            */
+            print $response['body'];
             exit;
         }
     }
@@ -161,30 +173,32 @@ class WideScribeWpPlugin {
             CURLOPT_POST           => true,
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_POSTFIELDS     => http_build_query($_POST),
-            CURLOPT_SSL_VERIFYPEER => FALSE
+            CURLOPT_SSL_VERIFYPEER => FALSE,
+            CURLOPT_VERBOSE => 1,
+            CURLOPT_HEADER => 1
         );
         
         curl_setopt_array($ch, $curlConfig);
-        
-      
-       
-        
-        $result = utf8_encode(curl_exec($ch));
-       
-        if ($result === false) {
+        $response = curl_exec($ch);
+        if ($response === false) {
             throw new ErrorException("ERROR CURL: Curl failed  " . curl_error($ch));
         }
+        $header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
        
+        $header = substr($response, 0, $header_size);
+       
+        $body = utf8_encode(substr($response, $header_size));
+        
         curl_close($ch);
           
-        return $result;
+        return array('headers' => $header, 'body' => $body);
         
         }
         
         catch (ErrorException $e){
-          
+            header("Content-type: application/json");
             $ro = array('error' => $e->getMessage());
-            return json_encode($ro);
+            return array('body'=>json_encode($ro));
             
         }
         
@@ -308,13 +322,7 @@ class WideScribeWpPlugin {
        return $content;
     }
     
-    
-   /*  fltr_content_trancher()
-    *  Trancher (to cut) is the word used to cut the content to enable the vxl
-    *  script to inject the remaining content when the payment has been sucessfully processed.
-    *  This function looks for the vxl trancher tag (::VXL::). It uses the setting from the options, 
-    *  and returns a  number of words (full sentence).
-    *     */
+  
     
     static function  isPremium(){
         $posttags = get_the_tags();
@@ -331,6 +339,13 @@ class WideScribeWpPlugin {
         return $premium;
 
     }
+      
+   /*  fltr_content_trancher()
+    *  Trancher (to cut) is the word used to cut the content to enable the vxl
+    *  script to inject the remaining content when the payment has been sucessfully processed.
+    *  This function looks for the vxl trancher tag (::VXL::). It uses the setting from the options, 
+    *  and returns a  number of words (full sentence).
+    *     */
     public function fltr_content_trancher($content){
         global $post;
       
@@ -338,9 +353,10 @@ class WideScribeWpPlugin {
         
         if(is_front_page()){
             // This is the front page, and shoud not be charged.
-        
-            print $content;
-            return;
+            if(!in_the_loop()){
+                 print $content;
+                 return;
+            }
         }
        
         // If not premium, just print the damn thing
@@ -395,14 +411,22 @@ class WideScribeWpPlugin {
             break;
 
         }
-       
         
-        if($trancherAtPos < strlen($content)){
-           $content = substr($content, 0, $trancherAtPos).$this->addVxlFooter();
-        }
-        
-	print  '<div id="trancher_inject">'.$content.'</div>';
+        if(in_the_loop()){
+            
+              $content = substr($content, 0, $trancherAtPos).$this->addVxlInLoop();
+
+
+         }else{
+              $content = substr($content, 0, $trancherAtPos).$this->addVxlFooter();
+
+         }
+          print  '<div id="inject'.  get_the_ID() .'" class="trancher_inject">'.$content.'</div>';
+          
     }
+    
+    
+    
     
     /* getNextParagrah
      * 
@@ -451,22 +475,39 @@ class WideScribeWpPlugin {
      /*  addVxlFooter()
       *  This adds a vxl footer to a page, enabling the user to click to pay to see the rest
       *  Depending on the default behaviour of the system, this might be where the actual payment is
-      *  done. if the autopay option is turned on, the user pays when entering the article.
+      *  
       */
     function addVxlFooter(){
-        $this->log('fltr_comment_trancher', "Filter addVXLfooter running");
-        return '<br><div id="#VXL_inject_footer" onclick="knock()">
-            <a onclick="knock()"><h3>Please sign in</h3></a>
-            The remainder of this article is can be read by purchasing access.
-            
-            Our site has joined the WideScribe community of independent media, which give all
-            new users 50 kr to explore the quality news from a variety of sources.
-            You can get access by paying 2 kr through WideScribe or by subscribing to WideScribe network.
-            
-        If you are a new customer, please <a onClick="knock()"> register </a> and claim your 50 kr 
-        registration bonus. 
-            
-        .</div>';
+        return '   <div class="VXL_inject_fader"></div><div class="VXL_inject_footer">
+         
+            <div class="VXL_left">
+                <div class="companyLogo">
+                 <img src="'.wsApi.'/vxl/img/partner/28_head.png" alt="'.$this->partnerName.'">
+                </div>
+                <p>is part of the</p>
+              
+            </div>
+            <div class="VXL_left">
+               
+                <div class="companyLogo">
+                <img src="'.wsApi.'/vxl/img/ws_logo.png" alt="WideScribe">
+                </div>
+               <p> network of quality sites.</p>
+               <p> All sites on WideScribe charge for content, each article costs 0.2€ to read.</p>
+               <p>Please register with WideScribe and get €5 now, and experience how it works to support quality journalism by paying for what you read</p>
+            </div>
+        </div>';
+    }
+    
+     /*  addVXLinloop()
+      *  This adds a pay now button to to tranchered post enabling the user to click open the post in the post loop.
+      */
+    function addVxlInLoop(){
+     
+        return '<div class="VXL_inject_fader"></div><div class="VXL_inject_footer">
+                <button class="payNowButton">Read on ➋</button>
+            </div>'
+      ;
     }
    
 
@@ -500,7 +541,7 @@ class WideScribeWpPlugin {
         static function getTrinket($type){
            
             
-            return   "<div id='vxl_trinket' style='".get_option('vxlStyle')."' onclick='vxl_getMain(true)' class='wp_trinket types $type'><div class='wp_balanceText wp_textSmall'></div></div><div id='vxl_msg' class='wp_trinket_msg $type'>Default message</div>";
+            return   "<div id='vxl_trinket' style='".get_option('vxlStyle')."' class='wp_trinket types $type'><div id='trinketTxt' class='wp_balanceText wp_textSmall'></div></div><div id='vxl_msg' class='wp_trinket_msg $type'>Please visit widescribe.com</div>";
                  
         
         }
@@ -516,10 +557,13 @@ class WideScribeWpPlugin {
             <div id="VXL_inject">
                '.WideScribeWpPlugin::getTrinket(get_option('vxlTrinketType')).'
                 <div id="VXL_darken"></div>
-                <div id="VXL_fs" style="display:none;">
+                <div id="VXL_fs" class="fs_hidden">
                      <div id="VXL_header">
                     </div>
                      <div id="VXL_content">
+                    
+                     <img align="center" src="'.wsApi.'/vxl/img/ws_logo.gif" alt="WideScribeLogo">
+               <p>Loading</p>
                     </div>
                      <div id="VXL_footer">
                     </div>
@@ -542,15 +586,18 @@ class WideScribeWpPlugin {
 <script type=\"text/javascript\">
 jQuery(document).ready(function($) {
 
-window.provider = \'$this->partnerName\';
-window.waitMessage = \"Just a moment, please...\";
-window.live = false;
-window.addEventListener(\'message\',function(event) {
-    if(event.origin !== \'https://vxlpay.appspot.com') return;
-    window.vxltoken = event.data;},false);
+window.provider = \'".$this->partnerName."';
+
+window.useBackdoor = ".get_option('vxl_useBackdoor').";
+window.waitMessage = '\Wait whilst loading WideScribe\';
 });
 
 </script>");
+               /*Commented out of script 
+     window.addEventListener(\'message\',function(event) {        
+    if(event.origin !== \'https://vxlpay.appspot.com') return;
+    window.vxltoken = event.data;},false);
+});     */
             return ;
 	}
 	

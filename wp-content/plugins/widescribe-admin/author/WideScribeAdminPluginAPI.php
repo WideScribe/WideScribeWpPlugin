@@ -25,6 +25,10 @@ class WideScribeAdminPluginAPI
         $this->_portalId = empty($portalId)?esc_url( home_url( '/' )):$portalId;
         $this->_publicKey = empty($publicKey)?esc_attr( get_option($this->plugin->name.'_public_key')):$publicKey;
         $this->_privateKey = empty($privateKey)?esc_attr( get_option($this->plugin->name.'_private_key')):$privateKey;
+        
+        // Load admin style sheet and JavaScript.
+          add_action('admin_enqueue_scripts', array($this, 'enqueue_admin_styles'));
+          add_action('admin_enqueue_scripts', array($this, 'enqueue_admin_scripts'));
     }
     
     protected function makeRequest($route, $options = array(), $parseJson = true, $expectedResponseCode = array(200))

@@ -11,7 +11,7 @@
 		
 	<?php else : ?>
     <?php
-    	$postimgs =& get_children( array( 'post_parent' => $post->ID, 'post_type' => 'attachment', 'post_mime_type' => 'image', 'orderby' => 'menu_order', 'order' => 'ASC' ) );
+                $postimgs = get_children( array( 'post_parent' => $post->ID, 'post_type' => 'attachment', 'post_mime_type' => 'image', 'orderby' => 'menu_order', 'order' => 'ASC' ) );
 		if ( !empty($postimgs) ) {
 			$firstimg = array_shift( $postimgs );
 			$th_image = wp_get_attachment_image( $firstimg->ID, 'full', false );
